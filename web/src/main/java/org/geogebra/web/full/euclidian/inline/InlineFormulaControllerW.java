@@ -1,4 +1,4 @@
-package org.geogebra.web.full.euclidian;
+package org.geogebra.web.full.euclidian.inline;
 
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.dom.client.Style;

@@ -1,8 +1,7 @@
-package org.geogebra.web.html5.euclidian;
+package org.geogebra.web.full.euclidian.inline;
 
 import org.geogebra.common.euclidian.EuclidianView;
-import org.geogebra.common.euclidian.TableController;
-import org.geogebra.common.kernel.commands.CmdEllipseHyperbola;
+import org.geogebra.common.euclidian.inline.InlineTableController;
 import org.geogebra.common.kernel.geos.GeoInlineTable;
 import org.geogebra.common.util.debug.Log;
 import org.geogebra.web.html5.js.ResourcesInjector;
@@ -23,9 +22,11 @@ import com.google.gwt.user.client.ui.RootPanel;
 
 import jsinterop.annotations.JsFunction;
 
-public class TableControllerW implements TableController {
-	private final EuclidianView view;
+public class InlineTableControllerW implements InlineTableController {
+
 	private static boolean hypergridLoaded;
+
+	private final EuclidianView view;
 	private GeoInlineTable table;
 	private Element elemR;
 	private Element elemE;
@@ -41,7 +42,7 @@ public class TableControllerW implements TableController {
 	 * @param view view
 	 * @param table editable table
 	 */
-	public TableControllerW(EuclidianView view, GeoInlineTable table) {
+	public InlineTableControllerW(EuclidianView view, GeoInlineTable table) {
 		this.table = table;
 		this.view = view;
 		CarotaUtil.ensureInitialized(view.getFontSize());
@@ -50,14 +51,6 @@ public class TableControllerW implements TableController {
 			initTable();
 		} else {
 			load();
-		}
-	}
-
-	@Override
-	public void removeFromDom() {
-		Element prev = DOM.getElementById("hypergrid");
-		if (prev != null) {
-			prev.removeFromParent();
 		}
 	}
 
@@ -87,6 +80,14 @@ public class TableControllerW implements TableController {
 	@Override
 	public void setAngle(double angle) {
 		// nothing for now
+	}
+
+	@Override
+	public void removeFromDom() {
+		Element prev = DOM.getElementById("hypergrid");
+		if (prev != null) {
+			prev.removeFromParent();
+		}
 	}
 
 	private void prepareCarota() {
@@ -152,8 +153,8 @@ public class TableControllerW implements TableController {
 		style.setLeft(view.toScreenCoordX(table.getLocation().x), Style.Unit.PX);
 		style.setTop(view.toScreenCoordY(table.getLocation().y), Style.Unit.PX);
 		style.setZIndex(51);
-		style.setWidth(2*CELL_WIDTH, Style.Unit.PX);
-		style.setHeight(2* CELL_HEIGHT, Style.Unit.PX);
+		style.setWidth(2 * CELL_WIDTH, Style.Unit.PX);
+		style.setHeight(2 * CELL_HEIGHT, Style.Unit.PX);
 	}
 
 	private native void initTable(JsArrayMixed data,
