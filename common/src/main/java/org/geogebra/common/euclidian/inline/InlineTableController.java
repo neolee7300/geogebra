@@ -29,4 +29,6 @@ public interface InlineTableController {
 	void setAngle(double angle);
 
 	void removeFromDom();
+
+	void update();
 }

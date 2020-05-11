@@ -38,7 +38,7 @@ public class InlineTableControllerW implements InlineTableController {
 
 	private Element elemR;
 	private Element elemE;
-	private CarotaDocument exampleRenderer;
+	private CarotaDocument renderer;
 	private CarotaDocument editor;
 
 	/**
@@ -59,15 +59,17 @@ public class InlineTableControllerW implements InlineTableController {
 	}
 
 	public void update() {
-		GPoint2D location = table.getLocation();
+		if (style != null) {
+			GPoint2D location = table.getLocation();
 
-		setLocation(view.toScreenCoordX(location.x),
-				view.toScreenCoordY(location.y));
+			setLocation(view.toScreenCoordX(location.x),
+					view.toScreenCoordY(location.y));
 
-		setWidth(2 * CELL_WIDTH);
-		setHeight(2 * CELL_HEIGHT);
+			setWidth(2 * CELL_WIDTH + 3);
+			setHeight(2 * CELL_HEIGHT + 3);
 
-		setAngle(0);
+			setAngle(0);
+		}
 	}
 
 	@Override
@@ -108,11 +110,10 @@ public class InlineTableControllerW implements InlineTableController {
 
 	private void prepareCarota() {
 		this.elemR = DOM.createDiv();
-		RootPanel.getBodyElement().appendChild(elemR);
 		elemR.getStyle().setWidth(CELL_WIDTH, Style.Unit.PX);
 		elemR.getStyle().setHeight(CELL_HEIGHT, Style.Unit.PX);
 		elemR.getStyle().setVisibility(Style.Visibility.HIDDEN);
-		this.exampleRenderer = Carota.get().getEditor().create(elemR);
+		this.renderer = Carota.get().getEditor().create(elemR);
 
 		elemE = DOM.createDiv();
 		elemE.getStyle().setWidth(CELL_WIDTH, Style.Unit.PX);
@@ -158,14 +159,12 @@ public class InlineTableControllerW implements InlineTableController {
 		tableElement.addClassName("mowWidget");
 		parent.appendChild(tableElement);
 
-		initTable(tableElement, dataJ, elemR, elemE,
-				editor, exampleRenderer, new EditCallback() {
-			@Override
-			public void onEdit(int x, int y, String value) {
-				table.setContents(y, x, value);
-				view.getApplication().storeUndoInfo();
-			}
-		});
+		EditCallback callback = (x, y, value) -> {
+			table.setContents(y, x, value);
+			view.getApplication().storeUndoInfo();
+		};
+
+		initTable(tableElement, dataJ, elemE, editor, renderer, callback);
 
 		style = tableElement.getStyle();
 		style.setPosition(Style.Position.ABSOLUTE);
@@ -173,11 +172,12 @@ public class InlineTableControllerW implements InlineTableController {
 		update();
 	}
 
-	private native void initTable(Element parent, JsArrayMixed data,
-			Element elemR, Element elemE,
-			CarotaDocument exampleEditor, CarotaDocument exampleRenderer,
+	private native void initTable(Element parent, JsArrayMixed data, Element elemE,
+			CarotaDocument exampleEditor, CarotaDocument renderer,
 			EditCallback callback) /*-{
 		var grid = new $wnd.fin.Hypergrid(parent);
+
+		grid.properties.backgroundColor = 'white';
 		grid.properties.showHeaderRow = false;
 		grid.properties.rowHeaderNumbers = false;
 		grid.properties.rowHeaderCheckboxes = false;
@@ -193,12 +193,12 @@ public class InlineTableControllerW implements InlineTableController {
 			paint: function(gc, config) {
 				var x = config.bounds.x,
 					y = config.bounds.y;
-				if (exampleRenderer && exampleRenderer.load) {
-					exampleRenderer.width(config.bounds.width);
-					elemR.style.width = config.bounds.width+"px";
-					exampleRenderer.load(JSON.parse(config.value || "[]"), false);
-					var canvas = elemR.querySelector("canvas");
-					canvas && gc.drawImage(canvas, x, y);
+				if (renderer) {
+					renderer.load(JSON.parse(config.value || "[]"), false);
+					renderer.setWidth(config.bounds.width);
+					gc.translate(x, y);
+					renderer.draw(gc);
+					gc.translate(-x, -y);
 				}
 			}
 		});
