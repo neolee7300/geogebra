@@ -1,5 +1,6 @@
 package org.geogebra.web.full.euclidian.inline;
 
+import org.geogebra.common.awt.GPoint2D;
 import org.geogebra.common.euclidian.EuclidianView;
 import org.geogebra.common.euclidian.inline.InlineTableController;
 import org.geogebra.common.kernel.geos.GeoInlineTable;
@@ -24,34 +25,49 @@ import jsinterop.annotations.JsFunction;
 
 public class InlineTableControllerW implements InlineTableController {
 
+	private static final int CELL_HEIGHT = 36;
+	private static final int CELL_WIDTH = 100;
+
 	private static boolean hypergridLoaded;
 
-	private final EuclidianView view;
 	private GeoInlineTable table;
+	private final EuclidianView view;
+
+	private Element tableElement;
+	private Style style;
+
 	private Element elemR;
 	private Element elemE;
 	private CarotaDocument exampleRenderer;
 	private CarotaDocument editor;
-	private Style style;
-
-	private static final int CELL_HEIGHT = 36;
-	private static final int CELL_WIDTH = 100;
 
 	/**
 	 *
 	 * @param view view
 	 * @param table editable table
 	 */
-	public InlineTableControllerW(EuclidianView view, GeoInlineTable table) {
+	public InlineTableControllerW(GeoInlineTable table, EuclidianView view, Element parent) {
 		this.table = table;
 		this.view = view;
 		CarotaUtil.ensureInitialized(view.getFontSize());
 		prepareCarota();
 		if (hypergridLoaded) {
-			initTable();
+			initTable(parent);
 		} else {
-			load();
+			load(parent);
 		}
+	}
+
+	public void update() {
+		GPoint2D location = table.getLocation();
+
+		setLocation(view.toScreenCoordX(location.x),
+				view.toScreenCoordY(location.y));
+
+		setWidth(2 * CELL_WIDTH);
+		setHeight(2 * CELL_HEIGHT);
+
+		setAngle(0);
 	}
 
 	@Override
@@ -64,29 +80,29 @@ public class InlineTableControllerW implements InlineTableController {
 
 	@Override
 	public void setLocation(int x, int y) {
-		// nothing for now
+		style.setLeft(x, Style.Unit.PX);
+		style.setTop(y, Style.Unit.PX);
 	}
 
 	@Override
 	public void setWidth(int width) {
-		// nothing for now
+		style.setWidth(width, Style.Unit.PX);
 	}
 
 	@Override
 	public void setHeight(int height) {
-		// nothing for now
+		style.setHeight(height, Style.Unit.PX);
 	}
 
 	@Override
 	public void setAngle(double angle) {
-		// nothing for now
+		style.setProperty("transform", "rotate(" + angle + "rad)");
 	}
 
 	@Override
 	public void removeFromDom() {
-		Element prev = DOM.getElementById("hypergrid");
-		if (prev != null) {
-			prev.removeFromParent();
+		if (tableElement != null) {
+			tableElement.removeFromParent();
 		}
 	}
 
@@ -104,7 +120,7 @@ public class InlineTableControllerW implements InlineTableController {
 		this.editor = Carota.get().getEditor().create(elemE);
 	}
 
-	private void load() {
+	private void load(Element parent) {
 		ScriptElement gmInject = Document.get().createScriptElement();
 		// TODO add as dependency
 		gmInject.setSrc("https://fin-hypergrid.github.io/core/demo/build/fin-hypergrid.js");
@@ -113,7 +129,7 @@ public class InlineTableControllerW implements InlineTableController {
 			@Override
 			public void onLoad() {
 				hypergridLoaded = true;
-				initTable();
+				initTable(parent);
 			}
 
 			@Override
@@ -128,7 +144,7 @@ public class InlineTableControllerW implements InlineTableController {
 		});
 	}
 
-	private void initTable() {
+	private void initTable(Element parent) {
 		JsArrayMixed dataJ = JsArrayMixed.createArray().cast();
 		for (int i = 0; i < table.getRows(); i++) {
 			JsArrayString rowJ = JsArrayString.createArray().cast();
@@ -137,34 +153,34 @@ public class InlineTableControllerW implements InlineTableController {
 			}
 			dataJ.push(rowJ);
 		}
-		initTable(dataJ, elemR, elemE, editor, exampleRenderer, new EditCallback() {
+
+		tableElement = DOM.createDiv();
+		tableElement.addClassName("mowWidget");
+		parent.appendChild(tableElement);
+
+		initTable(tableElement, dataJ, elemR, elemE,
+				editor, exampleRenderer, new EditCallback() {
 			@Override
 			public void onEdit(int x, int y, String value) {
 				table.setContents(y, x, value);
 				view.getApplication().storeUndoInfo();
 			}
 		});
-		toFront();
-	}
 
-	private void toFront() {
-		style = DOM.getElementById("hypergrid").getStyle();
+		style = tableElement.getStyle();
 		style.setPosition(Style.Position.ABSOLUTE);
-		style.setLeft(view.toScreenCoordX(table.getLocation().x), Style.Unit.PX);
-		style.setTop(view.toScreenCoordY(table.getLocation().y), Style.Unit.PX);
-		style.setZIndex(51);
-		style.setWidth(2 * CELL_WIDTH, Style.Unit.PX);
-		style.setHeight(2 * CELL_HEIGHT, Style.Unit.PX);
+
+		update();
 	}
 
-	private native void initTable(JsArrayMixed data,
+	private native void initTable(Element parent, JsArrayMixed data,
 			Element elemR, Element elemE,
 			CarotaDocument exampleEditor, CarotaDocument exampleRenderer,
 			EditCallback callback) /*-{
-		var grid = new $wnd.fin.Hypergrid();
-		grid.properties.showHeaderRow=false;
-		grid.properties.rowHeaderNumbers=false;
-		grid.properties.rowHeaderCheckboxes=false;
+		var grid = new $wnd.fin.Hypergrid(parent);
+		grid.properties.showHeaderRow = false;
+		grid.properties.rowHeaderNumbers = false;
+		grid.properties.rowHeaderCheckboxes = false;
 		grid.setData(data);
 		for (var row = 0; row < data.length; row++) {
 			grid.setRowHeight(row, 36)
