@@ -1,5 +1,7 @@
 package org.geogebra.common.euclidian.inline;
 
+import org.geogebra.common.awt.GGraphics2D;
+
 public interface InlineTableController {
 
 	void format(String key, Object val);
@@ -31,4 +33,10 @@ public interface InlineTableController {
 	void removeFromDom();
 
 	void update();
+
+	void draw(GGraphics2D g2);
+
+	void toForeground(int x, int y);
+
+	void toBackground();
 }

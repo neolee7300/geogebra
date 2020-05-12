@@ -1,10 +1,13 @@
 package org.geogebra.web.full.euclidian.inline;
 
+import com.google.gwt.canvas.dom.client.Context2d;
+import org.geogebra.common.awt.GGraphics2D;
 import org.geogebra.common.awt.GPoint2D;
 import org.geogebra.common.euclidian.EuclidianView;
 import org.geogebra.common.euclidian.inline.InlineTableController;
 import org.geogebra.common.kernel.geos.GeoInlineTable;
 import org.geogebra.common.util.debug.Log;
+import org.geogebra.web.html5.awt.GGraphics2DW;
 import org.geogebra.web.html5.js.ResourcesInjector;
 import org.geogebra.web.html5.util.ScriptLoadCallback;
 import org.geogebra.web.richtext.impl.Carota;
@@ -19,7 +22,6 @@ import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.ScriptElement;
 import com.google.gwt.dom.client.Style;
 import com.google.gwt.user.client.DOM;
-import com.google.gwt.user.client.ui.RootPanel;
 
 import jsinterop.annotations.JsFunction;
 
@@ -35,6 +37,7 @@ public class InlineTableControllerW implements InlineTableController {
 
 	private Element tableElement;
 	private Style style;
+	Context2d tableCanvasContext;
 
 	private Element elemR;
 	private Element elemE;
@@ -69,6 +72,31 @@ public class InlineTableControllerW implements InlineTableController {
 			setHeight(2 * CELL_HEIGHT + 3);
 
 			setAngle(0);
+		}
+	}
+
+	@Override
+	public void draw(GGraphics2D g2) {
+		if (tableCanvasContext != null && !"visible".equals(style.getVisibility())) {
+			GPoint2D location = table.getLocation();
+			int x = view.toScreenCoordX(location.x);
+			int y = view.toScreenCoordY(location.y);
+
+			((GGraphics2DW) g2).drawImage(tableCanvasContext.getCanvas(), x, y);
+		}
+	}
+
+	@Override
+	public void toForeground(int x, int y) {
+		if (style != null) {
+			style.setVisibility(Style.Visibility.VISIBLE);
+		}
+	}
+
+	@Override
+	public void toBackground() {
+		if (style != null) {
+			style.setVisibility(Style.Visibility.HIDDEN);
 		}
 	}
 
@@ -164,7 +192,7 @@ public class InlineTableControllerW implements InlineTableController {
 			view.getApplication().storeUndoInfo();
 		};
 
-		initTable(tableElement, dataJ, elemE, editor, renderer, callback);
+		tableCanvasContext = initTable(tableElement, dataJ, elemE, editor, renderer, callback);
 
 		style = tableElement.getStyle();
 		style.setPosition(Style.Position.ABSOLUTE);
@@ -172,7 +200,7 @@ public class InlineTableControllerW implements InlineTableController {
 		update();
 	}
 
-	private native void initTable(Element parent, JsArrayMixed data, Element elemE,
+	private native Context2d initTable(Element parent, JsArrayMixed data, Element elemE,
 			CarotaDocument exampleEditor, CarotaDocument renderer,
 			EditCallback callback) /*-{
 		var grid = new $wnd.fin.Hypergrid(parent);
@@ -181,6 +209,9 @@ public class InlineTableControllerW implements InlineTableController {
 		grid.properties.showHeaderRow = false;
 		grid.properties.rowHeaderNumbers = false;
 		grid.properties.rowHeaderCheckboxes = false;
+		grid.properties.gridLinesH = false;
+		grid.properties.gridLinesV = false;
+
 		grid.setData(data);
 		for (var row = 0; row < data.length; row++) {
 			grid.setRowHeight(row, 36)
@@ -202,6 +233,25 @@ public class InlineTableControllerW implements InlineTableController {
 				}
 			}
 		});
+		var borderRenderer = grid.cellRenderers.BaseClass.extend({
+			paint: function (gc, config) {
+				var bounds = config.bounds, x = bounds.x, y = bounds.y, w = bounds.width, h = bounds.height;
+
+				gc.save();
+				gc.translate(-.5, .5); // paint "sharp" lines on pixels instead of "blury" lines between pixels
+				gc.cache.lineWidth = 1;
+
+				var color = '#000D';
+				if (color) {
+					gc.cache.strokeStyle = color;
+					gc.rect(x, y, w, h);
+					gc.stroke();
+				}
+
+				gc.restore();
+			}
+		});
+
 		var richtextEditor = grid.cellEditors.BaseClass.extend({
 			template: '<div style="position:absolute;background-color:white"><div/></div>',
 			showEditor: function() {
@@ -229,10 +279,13 @@ public class InlineTableControllerW implements InlineTableController {
 			takeFocus: function() {}
 		})
 		grid.cellRenderers.add('Carota', richtextRenderer);
+		grid.cellRenderers.add('Border', borderRenderer);
 		grid.cellEditors.add('CarotaEditor', richtextEditor);
-		grid.properties.renderer = ['Carota'];
+		grid.properties.renderer = ['Carota', 'Border'];
 		grid.properties.editor = 'CarotaEditor';
 		grid.repaint();
+
+		return parent.querySelector("canvas").getContext("2d");
 	}-*/;
 
 	@JsFunction

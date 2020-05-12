@@ -40,7 +40,9 @@ public class DrawInlineTable extends Drawable implements DrawInline {
 
 	@Override
 	public void draw(GGraphics2D g2) {
-		// TODO
+		if (tableController != null) {
+			tableController.draw(g2);
+		}
 	}
 
 	@Override
@@ -89,12 +91,17 @@ public class DrawInlineTable extends Drawable implements DrawInline {
 	}
 
 	@Override
-	public void toForeground(int x, int y) {
-
+	public void toBackground() {
+		if (tableController != null) {
+			tableController.toBackground();
+		}
 	}
 
 	@Override
-	public void toBackground() {
-
+	public void toForeground(int x, int y) {
+		if (tableController != null) {
+			GPoint2D p = rectangle.getInversePoint(x, y);
+			tableController.toForeground((int) p.getX(), (int) p.getY());
+		}
 	}
 }
