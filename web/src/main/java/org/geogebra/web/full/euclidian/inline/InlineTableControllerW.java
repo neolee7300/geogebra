@@ -1,14 +1,16 @@
 package org.geogebra.web.full.euclidian.inline;
 
-import com.google.gwt.canvas.dom.client.Context2d;
+import com.google.gwt.dom.client.CanvasElement;
 import org.geogebra.common.awt.GGraphics2D;
 import org.geogebra.common.awt.GPoint2D;
 import org.geogebra.common.euclidian.EuclidianView;
 import org.geogebra.common.euclidian.inline.InlineTableController;
 import org.geogebra.common.kernel.geos.GeoInlineTable;
 import org.geogebra.common.util.debug.Log;
+import org.geogebra.web.full.euclidian.inline.table.Hypergrid;
 import org.geogebra.web.html5.awt.GGraphics2DW;
 import org.geogebra.web.html5.js.ResourcesInjector;
+import org.geogebra.web.html5.util.Dom;
 import org.geogebra.web.html5.util.ScriptLoadCallback;
 import org.geogebra.web.richtext.impl.Carota;
 import org.geogebra.web.richtext.impl.CarotaDocument;
@@ -37,12 +39,14 @@ public class InlineTableControllerW implements InlineTableController {
 
 	private Element tableElement;
 	private Style style;
-	Context2d tableCanvasContext;
+	private CanvasElement tableCanvas;
 
 	private Element elemR;
 	private Element elemE;
 	private CarotaDocument renderer;
 	private CarotaDocument editor;
+
+	private Hypergrid hypergrid;
 
 	/**
 	 *
@@ -77,12 +81,12 @@ public class InlineTableControllerW implements InlineTableController {
 
 	@Override
 	public void draw(GGraphics2D g2) {
-		if (tableCanvasContext != null && !"visible".equals(style.getVisibility())) {
+		if (tableCanvas != null && !"visible".equals(style.getVisibility())) {
 			GPoint2D location = table.getLocation();
 			int x = view.toScreenCoordX(location.x);
 			int y = view.toScreenCoordY(location.y);
 
-			((GGraphics2DW) g2).drawImage(tableCanvasContext.getCanvas(), x, y);
+			((GGraphics2DW) g2).drawImage(tableCanvas, x, y);
 		}
 	}
 
@@ -90,6 +94,7 @@ public class InlineTableControllerW implements InlineTableController {
 	public void toForeground(int x, int y) {
 		if (style != null) {
 			style.setVisibility(Style.Visibility.VISIBLE);
+			hypergrid.editAt(x, y);
 		}
 	}
 
@@ -192,15 +197,16 @@ public class InlineTableControllerW implements InlineTableController {
 			view.getApplication().storeUndoInfo();
 		};
 
-		tableCanvasContext = initTable(tableElement, dataJ, elemE, editor, renderer, callback);
+		hypergrid = initTable(tableElement, dataJ, elemE, editor, renderer, callback);
 
 		style = tableElement.getStyle();
+		tableCanvas = Dom.querySelectorForElement(tableElement, "canvas").cast();
 		style.setPosition(Style.Position.ABSOLUTE);
 
 		update();
 	}
 
-	private native Context2d initTable(Element parent, JsArrayMixed data, Element elemE,
+	private native Hypergrid initTable(Element parent, JsArrayMixed data, Element elemE,
 			CarotaDocument exampleEditor, CarotaDocument renderer,
 			EditCallback callback) /*-{
 		var grid = new $wnd.fin.Hypergrid(parent);
@@ -211,6 +217,7 @@ public class InlineTableControllerW implements InlineTableController {
 		grid.properties.rowHeaderCheckboxes = false;
 		grid.properties.gridLinesH = false;
 		grid.properties.gridLinesV = false;
+		grid.properties.enableContinuousRepaint = true;
 
 		grid.setData(data);
 		for (var row = 0; row < data.length; row++) {
@@ -283,9 +290,8 @@ public class InlineTableControllerW implements InlineTableController {
 		grid.cellEditors.add('CarotaEditor', richtextEditor);
 		grid.properties.renderer = ['Carota', 'Border'];
 		grid.properties.editor = 'CarotaEditor';
-		grid.repaint();
 
-		return parent.querySelector("canvas").getContext("2d");
+		return grid;
 	}-*/;
 
 	@JsFunction
