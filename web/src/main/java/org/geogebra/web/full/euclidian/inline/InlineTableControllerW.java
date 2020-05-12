@@ -1,6 +1,7 @@
 package org.geogebra.web.full.euclidian.inline;
 
 import com.google.gwt.dom.client.CanvasElement;
+import com.google.gwt.user.client.Timer;
 import org.geogebra.common.awt.GGraphics2D;
 import org.geogebra.common.awt.GPoint2D;
 import org.geogebra.common.euclidian.EuclidianView;
@@ -204,6 +205,14 @@ public class InlineTableControllerW implements InlineTableController {
 		style.setPosition(Style.Position.ABSOLUTE);
 
 		update();
+
+		new Timer() {
+
+			@Override
+			public void run() {
+				hypergrid.editAt(0, 0);
+			}
+		}.schedule(500);
 	}
 
 	private native Hypergrid initTable(Element parent, JsArrayMixed data, Element elemE,
