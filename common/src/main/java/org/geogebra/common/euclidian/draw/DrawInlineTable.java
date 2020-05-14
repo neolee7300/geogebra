@@ -87,7 +87,7 @@ public class DrawInlineTable extends Drawable implements DrawInline {
 
 	@Override
 	public void updateContent() {
-
+		// not yet implemented
 	}
 
 	@Override

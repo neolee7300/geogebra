@@ -7,6 +7,11 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true, namespace = JsPackage.GLOBAL)
 public class Hypergrid {
 
+	/**
+	 * edit cell at (x,y) position
+	 * @param x coordinate of click
+	 * @param y coordinate of click
+	 */
 	@JsOverlay
 	public final void editAt(int x, int y) {
 		GridCell gridCell = getGridCellFromMousePoint(new Point(x, y));
@@ -16,15 +21,4 @@ public class Hypergrid {
 	private native void editAt(CellEvent e);
 
 	private native GridCell getGridCellFromMousePoint(Point p);
-}
-
-@JsType(isNative = true, namespace = JsPackage.GLOBAL)
-class GridCell {
-
-	public CellEvent cellEvent;
-}
-
-@JsType(isNative = true, namespace = JsPackage.GLOBAL)
-class CellEvent {
-
 }

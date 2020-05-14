@@ -66,6 +66,7 @@ public class InlineTableControllerW implements InlineTableController {
 		}
 	}
 
+	@Override
 	public void update() {
 		if (style != null) {
 			GPoint2D location = table.getLocation();
@@ -251,10 +252,12 @@ public class InlineTableControllerW implements InlineTableController {
 		});
 		var borderRenderer = grid.cellRenderers.BaseClass.extend({
 			paint: function (gc, config) {
-				var bounds = config.bounds, x = bounds.x, y = bounds.y, w = bounds.width, h = bounds.height;
+				var bounds = config.bounds, x = bounds.x,
+					y = bounds.y, w = bounds.width, h = bounds.height;
 
 				gc.save();
-				gc.translate(-.5, .5); // paint "sharp" lines on pixels instead of "blury" lines between pixels
+				// paint "sharp" lines on pixels instead of "blury" lines between pixels
+				gc.translate(-.5, .5);
 				gc.cache.lineWidth = 1;
 
 				var color = '#000D';
