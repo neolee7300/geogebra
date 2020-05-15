@@ -1,7 +1,7 @@
 
 buildscript {
     dependencies {
-        classpath 'org.wisepersist:gwt-gradle-plugin:1.0.9'
+        classpath 'org.wisepersist:gwt-gradle-plugin:1.0.13'
     }
 }
 
@@ -105,10 +105,13 @@ gwt {
     
     maxHeapSize = '2000M'
 
+    jsInteropExports {
+        shouldGenerate = true;
+    }
+
     compiler {
         // Customize the GWT compiler here
         strict = true
-        // enableClosureCompiler = true;        
         disableCastChecking = true
       
         if (project.hasProperty("greport")) {
