@@ -1,7 +1,7 @@
 package org.geogebra.web.full.euclidian.inline;
 
+import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.dom.client.CanvasElement;
-import com.google.gwt.user.client.Timer;
 import org.geogebra.common.awt.GGraphics2D;
 import org.geogebra.common.awt.GPoint2D;
 import org.geogebra.common.euclidian.EuclidianView;
@@ -88,7 +88,9 @@ public class InlineTableControllerW implements InlineTableController {
 			int x = view.toScreenCoordX(location.x);
 			int y = view.toScreenCoordY(location.y);
 
-			((GGraphics2DW) g2).drawImage(tableCanvas, x, y);
+			if (tableCanvas.getWidth() != 0) {
+				((GGraphics2DW) g2).drawImage(tableCanvas, x, y);
+			}
 		}
 	}
 
@@ -96,8 +98,10 @@ public class InlineTableControllerW implements InlineTableController {
 	public void toForeground(int x, int y) {
 		if (style != null) {
 			style.setVisibility(Style.Visibility.VISIBLE);
-			hypergrid.editAt(x, y);
 		}
+
+		Scheduler.get().scheduleFixedDelay(
+				() -> hypergrid == null || !hypergrid.editAt(x, y), 10);
 	}
 
 	@Override
@@ -206,14 +210,6 @@ public class InlineTableControllerW implements InlineTableController {
 		style.setPosition(Style.Position.ABSOLUTE);
 
 		update();
-
-		new Timer() {
-
-			@Override
-			public void run() {
-				hypergrid.editAt(0, 0);
-			}
-		}.schedule(500);
 	}
 
 	private native Hypergrid initTable(Element parent, JsArrayMixed data, Element elemE,

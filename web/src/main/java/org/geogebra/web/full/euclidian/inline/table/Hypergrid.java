@@ -13,9 +13,14 @@ public class Hypergrid {
 	 * @param y coordinate of click
 	 */
 	@JsOverlay
-	public final void editAt(int x, int y) {
-		GridCell gridCell = getGridCellFromMousePoint(new Point(x, y));
-		editAt(gridCell.cellEvent);
+	public final boolean editAt(int x, int y) {
+		try {
+			GridCell gridCell = getGridCellFromMousePoint(new Point(x, y));
+			editAt(gridCell.cellEvent);
+			return true;
+		} catch (Throwable t) {
+			return false;
+		}
 	}
 
 	private native void editAt(CellEvent e);
