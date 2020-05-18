@@ -24,6 +24,8 @@ public class Hypergrid {
 		}
 	}
 
+	public native void clearMostRecentSelection();
+
 	private native void editAt(CellEvent e);
 
 	private native GridCell getGridCellFromMousePoint(Point p);

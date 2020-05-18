@@ -108,6 +108,7 @@ public class InlineTableControllerW implements InlineTableController {
 	public void toBackground() {
 		if (style != null) {
 			style.setVisibility(Style.Visibility.HIDDEN);
+			hypergrid.clearMostRecentSelection();
 		}
 	}
 
