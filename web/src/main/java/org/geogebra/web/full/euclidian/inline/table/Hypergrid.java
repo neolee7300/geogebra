@@ -11,6 +11,7 @@ public class Hypergrid {
 	 * edit cell at (x,y) position
 	 * @param x coordinate of click
 	 * @param y coordinate of click
+	 * @return whether the selection was successful
 	 */
 	@JsOverlay
 	public final boolean editAt(int x, int y) {
