@@ -268,7 +268,8 @@ public class InlineTableControllerW implements InlineTableController {
 		});
 
 		var richtextEditor = grid.cellEditors.BaseClass.extend({
-			template: '<div style="position:absolute;background-color:white;box-sizing:border-box;border:1px solid #000D"><div/></div>',
+			template: '<div style="position:absolute;background-color:white;'
+				+ 'box-sizing:border-box;border:1px solid #000D"><div/></div>',
 			showEditor: function() {
 				this.el.style.display = 'inline';
 				this.el.firstChild.appendChild(elemE);

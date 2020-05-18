@@ -12,7 +12,6 @@ import org.geogebra.common.kernel.geos.GeoInlineTable;
 
 public class DrawInlineTable extends Drawable implements DrawInline {
 
-	private GeoInlineTable table;
 	private final InlineTableController tableController;
 
 	private final TransformableRectangle rectangle;
@@ -23,7 +22,6 @@ public class DrawInlineTable extends Drawable implements DrawInline {
 	 */
 	public DrawInlineTable(EuclidianView view, GeoInlineTable table) {
 		super(view, table);
-		this.table = table;
 		tableController = view.getApplication().createTableController(view, table);
 		rectangle = new TransformableRectangle(view, table);
 		update();
