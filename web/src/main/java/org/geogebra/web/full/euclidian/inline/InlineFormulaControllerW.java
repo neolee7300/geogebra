@@ -1,10 +1,10 @@
-package org.geogebra.web.full.euclidian;
+package org.geogebra.web.full.euclidian.inline;
 
 import com.google.gwt.core.client.Scheduler;
+import com.google.gwt.dom.client.Element;
 import com.google.gwt.dom.client.Style;
 import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.ui.AbsolutePanel;
-import com.google.gwt.user.client.ui.Panel;
 import com.himamis.retex.editor.share.event.MathFieldListener;
 import com.himamis.retex.editor.share.model.MathSequence;
 import org.geogebra.common.awt.GColor;
@@ -39,7 +39,7 @@ public class InlineFormulaControllerW implements InlineFormulaController {
 	 * @param app the application
 	 * @param parent parent panel (generally, the euclidian view)
 	 */
-	public InlineFormulaControllerW(GeoFormula formula, AppW app, Panel parent) {
+	public InlineFormulaControllerW(GeoFormula formula, AppW app, Element parent) {
 		this.formula = formula;
 		this.mathFieldEditor = new MathFieldEditor(app, new FormulaMathFieldListener());
 
@@ -52,7 +52,7 @@ public class InlineFormulaControllerW implements InlineFormulaController {
 		});
 		widget.setVisible(false);
 		widget.addStyleName("mowWidget");
-		parent.add(widget);
+		parent.appendChild(widget.getElement());
 
 		this.style = widget.getElement().getStyle();
 		style.setPosition(Style.Position.ABSOLUTE);
