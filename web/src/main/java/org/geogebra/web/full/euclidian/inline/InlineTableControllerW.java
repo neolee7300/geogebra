@@ -257,12 +257,9 @@ public class InlineTableControllerW implements InlineTableController {
 				gc.translate(-.5, .5);
 				gc.cache.lineWidth = 1;
 
-				var color = '#000D';
-				if (color) {
-					gc.cache.strokeStyle = color;
-					gc.rect(x, y, w, h);
-					gc.stroke();
-				}
+                gc.strokeStyle = '#212121';
+				gc.rect(x, y, w, h);
+				gc.stroke();
 
 				gc.restore();
 			}
@@ -270,7 +267,7 @@ public class InlineTableControllerW implements InlineTableController {
 
 		var richtextEditor = grid.cellEditors.BaseClass.extend({
 			template: '<div style="position:absolute;background-color:white;'
-				+ 'box-sizing:border-box;border:1px solid #000D"><div/></div>',
+				+ 'box-sizing:border-box;border:1px solid #212121"><div/></div>',
 			showEditor: function() {
 				this.el.style.display = 'inline';
 				this.el.firstChild.appendChild(elemE);
