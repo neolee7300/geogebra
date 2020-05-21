@@ -30,11 +30,6 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
     private float arScaleAtStart;
     private float arScale = 1;
 
-    // Ratio
-    private double arRatioAtStart;
-    private float ratioChange = 1;      // change of ratio when ratio is set from menu
-    private String arRatioText = "1";   // current ratio used for Ratio snack bar and ratio settings
-
     protected float rotateAngel = 0;
     protected Coords hittingFloor = Coords.createInhomCoorsInD3();
     protected boolean hittingFloorOk;
@@ -69,6 +64,8 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
     private ARMotionEvent lastARMotionEvent;
 
     protected ARSnackBarManagerInterface mArSnackBarManagerInterface;
+
+    private ARRatio arRatio = new ARRatio();
 
     abstract public void onSurfaceCreated();
 
@@ -360,7 +357,6 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
         // 1 ggb unit ==  1 meter
         double ggbToRw = 1.0 / mView.getXscale();
         // ratio
-        double ratio;
         double projectFactor = projectMatrix.get(1, 1);
         double precisionPoT = DoubleUtil.getPowerOfTen(projectFactor);
         double precision = Math.round(projectFactor / precisionPoT) * precisionPoT
@@ -369,24 +365,12 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
         float fittingScreenScale = (float) (DrawClippingCube3D.REDUCTION_ENLARGE
                 * (mDistance / projectFactor)
                 / mView.getRenderer().getWidth());
-        ratio = fittingScreenScale / ggbToRw; // fittingScreenScale = ggbToRw * ratio
-        double pot = DoubleUtil.getPowerOfTen(ratio);
-        ratio = ratio / pot;
-        if (ratio < 2f / MAX_FACTOR_TO_EMPHASIZE) {
-            ratio = 1f;
-        } else if (ratio < 5f / MAX_FACTOR_TO_EMPHASIZE) {
-            ratio = 2f;
-        } else if (ratio < 10f / MAX_FACTOR_TO_EMPHASIZE) {
-            ratio = 5f;
-        } else {
-            ratio = 10f;
-        }
-        ratio = ratio * pot;
+        double fittingScreenRatio = arRatio.getFittingScreenRatio(fittingScreenScale, ggbToRw);
 
         int mToCm = 100;
-        arRatioAtStart = ratio * mToCm;
+        arRatio.setArRatioAtStart(fittingScreenRatio * mToCm);
 
-        arScaleAtStart = (float) (ggbToRw * ratio); // arScaleAtStart ~= thicknessMin
+        arScaleAtStart = (float) (ggbToRw * fittingScreenRatio); // arScaleAtStart ~= thicknessMin
         arScale = (float) thicknessMin;
         arScaleFactor = arScaleAtStart / arScale;
         updateSettingsScale(arScaleFactor);
@@ -396,7 +380,7 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
 
     private float getARScaleParameter() {
         return arGestureManager == null ? arScale :
-                arScale * arGestureManager.getScaleFactor() * ratioChange;
+                arScale * arGestureManager.getScaleFactor() * arRatio.getRatioChange();
     }
 
     public void fromARCoordsToGGBCoords(Coords coords, Coords ret) {
@@ -451,44 +435,7 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
         if (!mView.isARRatioShown() || !objectIsPlaced) {
             return;
         }
-
-        double ratio;
-        if (arGestureManager != null) {
-            ratio = arRatioAtStart * arGestureManager.getScaleFactor() * ratioChange
-                            * getUnitConversion();
-        } else {
-            ratio = arRatioAtStart;
-        }
-        String text;
-        if (mView.getARRatioMetricSystem() == EuclidianView3D.RATIO_UNIT_INCHES) {
-            ratio = (double) Math.round(ratio * 100d) / 100d;
-            mView.setARRatioUnit("inch");
-        } else {
-            if (ratio >= 100) {
-                // round double for precision 3 in m
-                ratio = (double) Math.round(ratio) / 100d;
-                mView.setARRatioUnit("m");
-            } else if (ratio < 0.5 ) {
-                // round double for precision 3 in mm
-                ratio = (double) Math.round(ratio * 1000d) / 100d;
-                mView.setARRatioUnit("mm");
-            } else {
-                // round double for precision 3 in cm
-                ratio = (double) Math.round(ratio * 100d) / 100d;
-                mView.setARRatioUnit("cm");
-            }
-        }
-        text = getRatioMessage(ratio);
-        mArSnackBarManagerInterface.showRatio(text);
-    }
-
-    private String getRatioMessage(double ratio) {
-        if(DoubleUtil.isInteger(ratio)) {
-            arRatioText = String.format("%d", (long) ratio);
-        } else {
-            arRatioText = String.format("%.4s", ratio);
-        }
-        return String.format("1 : %s %s", arRatioText, mView.getARRatioUnit());
+        arRatio.calculateAndShowRatio(mView, arGestureManager, mArSnackBarManagerInterface);
     }
 
     public void fitThickness() {
@@ -497,7 +444,8 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
             float mDistance = (float) viewModelMatrix.getOrigin().calcNorm3();
             // 1 pixel thickness in ggb == 0.25 mm (for distance smaller than DESK_DISTANCE_MAX)
             double thicknessMin = getThicknessMin(mDistance);
-            arScale = (float) (thicknessMin / (arGestureManager.getScaleFactor() * ratioChange));
+            arScale = (float) (thicknessMin / (arGestureManager.getScaleFactor()
+                    * arRatio.getRatioChange()));
             arScaleFactor = arScaleAtStart / arScale;
             updateSettingsScale(previousARScale / arScale);
         }
@@ -523,26 +471,14 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
     }
 
     public String getARRatioInString() {
-        return arRatioText;
+        return arRatio.getArRatioText();
     }
 
     public void setARRatio(double ratio) {
-        if (mView.getARRatioMetricSystem() == EuclidianView3D.RATIO_UNIT_INCHES) {
-            ratioChange = (float) ((ratio * EuclidianView3D.FROM_INCH_TO_CM) / arRatioAtStart);
-        } else {
-            ratioChange = (float) ((ratio) / arRatioAtStart);
-        }
+        arRatio.setARRatio(mView, ratio);
         arGestureManager.resetScaleFactor();
         fitThickness();
         calculateAndShowRatio();
-    }
-
-    private float getUnitConversion() {
-        if (mView.getARRatioMetricSystem() == EuclidianView3D.RATIO_UNIT_INCHES) {
-            return EuclidianView3D.FROM_CM_TO_INCH;
-        } else {
-            return 1;
-        }
     }
 
     public void setRatioIsShown(boolean ratioIsShown) {
