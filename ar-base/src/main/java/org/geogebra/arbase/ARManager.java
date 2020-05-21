@@ -158,7 +158,7 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
         viewModelMatrix.setMul(viewMatrix, modelMatrix);
         ARMotionEvent arMotionEvent = mouseTouchGestureQueueHelper.poll(); // can be null
         // to update hitting o&d
-        if (isDrawing()) {
+        if (drawing) {
             renderer.getView().setARDrawing(true);
             renderer.setView();
             if (((EuclidianController3D) renderer.getView().getEuclidianController())
