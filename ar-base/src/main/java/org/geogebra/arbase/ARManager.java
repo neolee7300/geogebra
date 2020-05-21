@@ -92,6 +92,10 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
         return false;
     }
 
+    public boolean isDrawing(){
+        return drawing;
+    }
+
     abstract public void setBackgroundColor();
 
     abstract public void setBackgroundStyle(Renderer.BackgroundStyle backgroundStyle);
@@ -154,7 +158,7 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
         viewModelMatrix.setMul(viewMatrix, modelMatrix);
         ARMotionEvent arMotionEvent = mouseTouchGestureQueueHelper.poll(); // can be null
         // to update hitting o&d
-        if (drawing) {
+        if (isDrawing()) {
             renderer.getView().setARDrawing(true);
             renderer.setView();
             if (((EuclidianController3D) renderer.getView().getEuclidianController())
