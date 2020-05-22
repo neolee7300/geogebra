@@ -87,6 +87,8 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
     abstract protected void drawTargetRenderer(float[] cameraView, float[] cameraPerspective,
                                                float[] modelMatrix);
 
+    abstract protected ARHitResult getBestHitForScreenCenter();
+
     protected void addGestureRecognizers(){
         arGestureManager.addGestureRecognizers();
     }
