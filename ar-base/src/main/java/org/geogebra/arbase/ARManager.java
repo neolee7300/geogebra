@@ -80,6 +80,13 @@ abstract public class ARManager<TouchEventType> implements ARManagerInterface<To
 
     abstract public void setSession() throws ARException;
 
+    abstract protected void drawBackground(Object frame);
+
+    abstract protected void drawDetectionPlanes(Object camera, float[] projmtx);
+
+    abstract protected void drawTargetRenderer(float[] cameraView, float[] cameraPerspective,
+                                               float[] modelMatrix);
+
     protected void addGestureRecognizers(){
         arGestureManager.addGestureRecognizers();
     }
