@@ -63,7 +63,7 @@ public class UniFontInfo extends FontInfo {
 
 	@Override
 	public void addKern(final char left, final char right, final double k) {
-		super.addKern(get(left), get(right), k);
+		super.addKern(left, get(right), k);
 	}
 
 	@Override
@@ -83,7 +83,7 @@ public class UniFontInfo extends FontInfo {
 	@Override
 	public void addLigature(final char left, final char right,
 			final char ligChar) {
-		super.addLigature(get(left), get(right), ligChar);
+		super.addLigature(left, get(right), ligChar);
 	}
 
 	@Override
@@ -145,22 +145,6 @@ public class UniFontInfo extends FontInfo {
 			return null;
 		}
 		return nextLarger[unicode.get(c)];
-	}
-
-	@Override
-	public void setExtension(final char c, final char[] ext) {
-		super.setExtension(get(c), ext);
-	}
-
-	@Override
-	public void setMetrics(final char c, final double[] arr) {
-		super.setMetrics(get(c), arr);
-	}
-
-	@Override
-	public void setNextLarger(final char c, final char larger,
-			final FontInfo fontLarger) {
-		super.setNextLarger(get(c), larger, fontLarger);
 	}
 
 	@Override

@@ -224,24 +224,36 @@ public class FontInfo {
 
 	char current;
 
-	public void setMetrics(char c, Integer... metrics) {
+	public void setMetrics(char c, int... metrics) {
+		current = c;
 
+		if (metrics.length == 2) {
+			setMetrics(current, new double[] {metrics[0] / 1000., metrics[1] / 1000., 0, 0});
+		} else if (metrics.length == 3) {
+			setMetrics(current, new double[] {metrics[0] / 1000., metrics[1] / 1000., metrics[2] / 1000., 0});
+		} else {
+			setMetrics(current, new double[] {metrics[0] / 1000., metrics[1] / 1000., metrics[3] / 1000., 0});
+		}
 	}
 
 	public void setNextLarger(FontInfo fi, char nextLarger) {
-
+		setNextLarger(current, nextLarger, fi);
 	}
 
 	public void setKern(char[] kernCode, int[] kernValue) {
-
+		for (int i = 0; i < kernCode.length; i++) {
+			addKern(current, kernCode[i], kernValue[i] / 1000.);
+		}
 	}
 
 	public void setLigatures(char... chars) {
-
+		for (int i = 0; i < chars.length; i += 2) {
+			addLigature(current, chars[i], chars[i + 1]);
+		}
 	}
 
-	public void setExtension(char a, char b, char c, char d) {
-
+	public void setExtension(char... cc) {
+		setExtension(current, cc);
 	}
 
 	public void setMetrics(char c, double[] arr) {
