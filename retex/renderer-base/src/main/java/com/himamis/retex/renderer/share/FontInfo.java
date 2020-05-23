@@ -236,7 +236,7 @@ public class FontInfo {
 
 	}
 
-	public void setLigatures(Char... chars) {
+	public void setLigatures(char... chars) {
 
 	}
 

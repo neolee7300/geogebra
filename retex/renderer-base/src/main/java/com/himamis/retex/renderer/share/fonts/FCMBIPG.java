@@ -1,2526 +1,594 @@
-/* FCMBIPG.java
- * =========================================================================
- * This file is part of the JLaTeXMath Library - http://forge.scilab.org/jlatexmath
- *
- * Copyright (C) 2018 DENIZET Calixte
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or (at
- * your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * General Public License for more details.
- *
- * A copy of the GNU General Public License can be found in the file
- * LICENSE.txt provided with the source distribution of this program (see
- * the META-INF directory in the source jar). This license can also be
- * found on the GNU website at http://www.gnu.org/licenses/gpl.html.
- *
- * If you did not receive a copy of the GNU General Public License along
- * with this program, contact the lead developer, or write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA.
- *
- * Linking this library statically or dynamically with other modules
- * is making a combined work based on this library. Thus, the terms
- * and conditions of the GNU General Public License cover the whole
- * combination.
- *
- * As a special exception, the copyright holders of this library give you
- * permission to link this library with independent modules to produce
- * an executable, regardless of the license terms of these independent
- * modules, and to copy and distribute the resulting executable under terms
- * of your choice, provided that you also meet, for each linked independent
- * module, the terms and conditions of the license of that module.
- * An independent module is a module which is not derived from or based
- * on this library. If you modify this library, you may extend this exception
- * to your version of the library, but you are not obliged to do so.
- * If you do not wish to do so, delete this exception statement from your
- * version.
- *
- */
-
 package com.himamis.retex.renderer.share.fonts;
 
+import com.himamis.retex.renderer.share.Configuration;
+import com.himamis.retex.renderer.share.FontInfo;
 import com.himamis.retex.renderer.share.UniFontInfo;
 
 final class FCMBIPG extends UniFontInfo {
 
 	FCMBIPG(final String ttfPath) {
-		super(204, ttfPath, 0.451, 0.355, 1, '\u0000');
+		super(204, ttfPath, 451, 355, 1000, '\0');
 	}
 
 	@Override
 	protected final void initMetrics() {
-		setInfo('\u0020', // char code: 32
-				new double[] { 0.355, 0.0, 0., 0. }, // metrics: width, height,
-														// depth, italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u00A8', // char code: 168
-				new double[] { 0.255, 0.644, 0., 0.216 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0374', // char code: 884
-				new double[] { 0.224, 0.714, 0., 0.144 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0375', // char code: 885
-				new double[] { 0.224, 0.005, 0.215, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u037A', // char code: 890
-				new double[] { 0.128, -0.032, 0.211, 0.064 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0384', // char code: 900
-				new double[] { 0.192, 0.714, 0., 0.15 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u039F', '\u03A9', '\u1FBC', '\u1FFC' }, // kern
-																					// codes
-				new double[] { -0.128, -0.064, -0.032, -0.128, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0385', // char code: 901
-				new double[] { 0.319, 0.714, 0., 0.206 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0387', // char code: 903
-				new double[] { 0.319, 0.446, 0., 0.021 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0390', // char code: 912
-				new double[] { 0.287, 0.714, 0.006, 0.188 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0391', // char code: 913
-				new double[] { 0.869, 0.7, 0., 0. }, // metrics: width, height,
-														// depth, italic
-				null, // ligatures
-				new char[] { '\u0398', '\u039F', '\u03A4', '\u03A5', '\u03A6',
-						'\u03A8', '\u03AB', '\u03BD' }, // kern
-														// codes
-				new double[] { -0.096, -0.096, -0.096, -0.16, -0.096, -0.141,
-						-0.16, -0.112 }, // kern
-											// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0392', // char code: 914
-				new double[] { 0.818, 0.689, 0., 0.046 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0393', // char code: 915
-				new double[] { 0.691, 0.681, 0., 0.102 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u0394', '\u039B', '\u1FBC' }, // kern
-																		// codes
-				new double[] { -0.153, -0.128, -0.141, -0.153 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0394', // char code: 916
-				new double[] { 0.958, 0.699, 0., 0. }, // metrics: width,
-														// height, depth, italic
-				null, // ligatures
-				new char[] { '\u039F', '\u03A5', '\u03AB' }, // kern codes
-				new double[] { -0.038, -0.16, -0.16 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0395', // char code: 917
-				new double[] { 0.755, 0.681, 0., 0.086 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0396', // char code: 918
-				new double[] { 0.703, 0.688, 0., 0.115 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0397', // char code: 919
-				new double[] { 0.9, 0.687, 0., 0.144 }, // metrics: width,
-														// height, depth, italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0398', // char code: 920
-				new double[] { 0.894, 0.699, 0.011, 0.04 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u03A5', '\u03AB', '\u1FBC' }, // kern
-																		// codes
-				new double[] { -0.096, -0.096, -0.096, -0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u0399', // char code: 921
-				new double[] { 0.436, 0.687, 0., 0.15 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u039A', // char code: 922
-				new double[] { 0.901, 0.687, 0., 0.119 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u039F' }, // kern codes
-				new double[] { -0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u039B', // char code: 923
-				new double[] { 0.805, 0.699, 0., 0. }, // metrics: width,
-														// height, depth, italic
-				null, // ligatures
-				new char[] { '\u039F', '\u03A5', '\u03AB' }, // kern codes
-				new double[] { -0.038, -0.115, -0.115 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u039C', // char code: 924
-				new double[] { 1.091, 0.688, 0., 0.143 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u039D', // char code: 925
-				new double[] { 0.9, 0.687, 0., 0.144 }, // metrics: width,
-														// height, depth, italic
-				null, // ligatures
-				new char[] { '\u0391', '\u1FBC' }, // kern codes
-				new double[] { -0.096, -0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u039E', // char code: 926
-				new double[] { 0.766, 0.676, 0., 0.117 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u039F', // char code: 927
-				new double[] { 0.864, 0.699, 0.011, 0.041 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u0391', '\u03A3', '\u1FBC' }, // kern codes
-				new double[] { -0.096, -0.064, -0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03A0', // char code: 928
-				new double[] { 0.9, 0.681, 0., 0.142 }, // metrics: width,
-														// height, depth, italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03A1', // char code: 929
-				new double[] { 0.786, 0.687, 0., 0.073 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u1FBC' }, // kern codes
-				new double[] { -0.192, -0.192 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03A3', // char code: 931
-				new double[] { 0.83, 0.688, 0., 0.089 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u1FBC' }, // kern codes
-				new double[] { -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03A4', // char code: 932
-				new double[] { 0.8, 0.676, 0., 0.118 }, // metrics: width,
-														// height, depth, italic
-				null, // ligatures
-				new char[] { '\u0391', '\u1FBC' }, // kern codes
-				new double[] { -0.096, -0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03A5', // char code: 933
-				new double[] { 0.805, 0.687, 0., 0.166 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u0394', '\u039B', '\u1FBC' }, // kern
-																		// codes
-				new double[] { -0.16, -0.16, -0.16, -0.16 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03A6', // char code: 934
-				new double[] { 0.83, 0.687, 0., 0.031 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u1FBC' }, // kern codes
-				new double[] { -0.096, -0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03A7', // char code: 935
-				new double[] { 0.869, 0.687, 0., 0.101 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03A8', // char code: 936
-				new double[] { 0.894, 0.687, 0., 0.077 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u1FBC' }, // kern codes
-				new double[] { -0.141, -0.141 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03A9', // char code: 937
-				new double[] { 0.83, 0.698, 0., 0.065 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03AA', // char code: 938
-				new double[] { 0.436, 0.893, 0., 0.219 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03AB', // char code: 939
-				new double[] { 0.805, 0.893, 0., 0.166 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u0394', '\u039B', '\u1FBC' }, // kern
-																		// codes
-				new double[] { -0.16, -0.16, -0.16, -0.16 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03AC', // char code: 940
-				new double[] { 0.639, 0.714, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03AD', // char code: 941
-				new double[] { 0.447, 0.714, 0.006, 0.055 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03B4', '\u03C3', '\u03C5',
-						'\u03C7', '\u03CD', '\u03E1', '\u1F70', '\u1F7A',
-						'\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7',
-						'\u1FE6' }, // kern
-									// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032, -0.01,
-						-0.032, -0.192, -0.032, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03AE', // char code: 942
-				new double[] { 0.594, 0.713, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03AF', // char code: 943
-				new double[] { 0.287, 0.714, 0.006, 0.101 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03B0', // char code: 944
-				new double[] { 0.575, 0.738, 0.005, 0.07 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03B1', // char code: 945
-				new double[] { 0.639, 0.452, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u03E1', '\u1F50', '\u1F52', '\u1F54',
-						'\u1F55', '\u1F56', '\u1F57', '\u1F78', '\u1F7A',
-						'\u1FE6' }, // kern codes
-				new double[] { -0.096, -0.096, -0.109, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.255, -0.096,
-						-0.096, -0.096, -0.096, -0.096, -0.096, -0.032, -0.096,
-						-0.096 }, // kern
-									// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03B2', // char code: 946
-				new double[] { 0.511, 0.702, 0.212, 0.082 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03AF', '\u03B5', '\u03B9', '\u03BF',
-						'\u03C4', '\u03C6', '\u03C7', '\u03C8', '\u03CC',
-						'\u03E1', '\u1F72', '\u1F76', '\u1F78', '\u1FD6' }, // kern
-																			// codes
-				new double[] { 0.032, 0.032, 0.032, 0.032, 0.032, 0.032, 0.032,
-						-0.032, 0.064, 0.032, -0.064, 0.032, 0.032, 0.032,
-						0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03B3', // char code: 947
-				new double[] { 0.575, 0.46, 0.224, 0.058 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03C7', '\u03E1' }, // kern codes
-				new double[] { 0.019, -0.192 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03B4', // char code: 948
-				new double[] { 0.537, 0.702, 0.005, 0.029 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03B3', '\u03BC', '\u03BD',
-						'\u03C0', '\u03C5', '\u03C7', '\u03CD', '\u03E1',
-						'\u1F70', '\u1F7A', '\u1FB2', '\u1FB3', '\u1FB4',
-						'\u1FB6', '\u1FB7', '\u1FE6' }, // kern
-														// codes
-				new double[] { -0.032, -0.032, -0.096, -0.051, -0.045, -0.032,
-						-0.032, -0.019, -0.032, -0.192, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03B5', // char code: 949
-				new double[] { 0.447, 0.451, 0.006, 0.051 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03B4', '\u03C3', '\u03C5',
-						'\u03C7', '\u03CD', '\u03E1', '\u1F70', '\u1F7A',
-						'\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7',
-						'\u1FE6' }, // kern
-									// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032, -0.01,
-						-0.032, -0.192, -0.032, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03B6', // char code: 950
-				new double[] { 0.479, 0.696, 0.188, 0.06 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03AD', '\u03AE', '\u03B1', '\u03B3',
-						'\u03B4', '\u03B5', '\u03B7', '\u03B8', '\u03BC',
-						'\u03BD', '\u03BF', '\u03C0', '\u03C3', '\u03C4',
-						'\u03C5', '\u03C6', '\u03C7', '\u03C8', '\u03C9',
-						'\u03CC', '\u03CD', '\u03CE', '\u03E1', '\u1F70',
-						'\u1F72', '\u1F74', '\u1F78', '\u1F7A', '\u1F7C',
-						'\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7',
-						'\u1FC2', '\u1FC3', '\u1FC4', '\u1FC6', '\u1FC7',
-						'\u1FE6', '\u1FF2', '\u1FF3', '\u1FF4', '\u1FF6',
-						'\u1FF7' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.096, -0.128, -0.064,
-						-0.096, -0.096, -0.064, -0.064, -0.102, -0.096, -0.096,
-						-0.096, -0.096, -0.096, -0.096, -0.096, -0.032, -0.096,
-						-0.096, -0.096, -0.096, -0.064, -0.096, -0.096, -0.096,
-						-0.096, -0.096, -0.096, -0.096, -0.096, -0.096, -0.096,
-						-0.096, -0.096, -0.096, -0.096, -0.096, -0.096, -0.096,
-						-0.096, -0.096, -0.096, -0.096, -0.096 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03B7', // char code: 951
-				new double[] { 0.594, 0.452, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u03E1', '\u1F7A',
-						'\u1FE6' }, // kern
-									// codes
-				new double[] { -0.032, -0.032, -0.032, -0.192, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03B8', // char code: 952
-				new double[] { 0.591, 0.702, 0.006, 0.075 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03AF', '\u03B5', '\u03B9', '\u03C8',
-						'\u03E1', '\u1F72', '\u1F76', '\u1FD6' }, // kern
-																	// codes
-				new double[] { 0.032, 0.032, 0.032, 0.032, 0.032, -0.064, 0.032,
-						0.032, 0.032 }, // kern
-										// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03B9', // char code: 953
-				new double[] { 0.287, 0.445, 0.006, 0.011 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03BA', // char code: 954
-				new double[] { 0.607, 0.458, 0.006, 0.063 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B2', '\u03BD', '\u03E1' }, // kern codes
-				new double[] { 0.032, -0.032, -0.192 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03BB', // char code: 955
-				new double[] { 0.517, 0.701, 0.006, 0.014 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03B3', '\u03B8', '\u03BC',
-						'\u03BD', '\u03C3', '\u03C4', '\u03C5', '\u03C7',
-						'\u03CD', '\u03E1', '\u1F70', '\u1F7A', '\u1FB2',
-						'\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7', '\u1FE6' }, // kern
-																			// codes
-				new double[] { -0.016, -0.016, -0.16, -0.051, 0.016, -0.096,
-						-0.032, -0.032, -0.064, -0.064, -0.064, -0.192, -0.016,
-						-0.064, -0.016, -0.016, -0.016, -0.016, -0.016,
-						-0.064 }, // kern
-									// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03BC', // char code: 956
-				new double[] { 0.575, 0.445, 0.235, 0.001 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03B3', '\u03B6', '\u03B8',
-						'\u03BD', '\u03BF', '\u03C0', '\u03C3', '\u03C5',
-						'\u03C6', '\u03C7', '\u03C9', '\u03CC', '\u03CD',
-						'\u03CE', '\u03E1', '\u1F70', '\u1F78', '\u1F7A',
-						'\u1F7C', '\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6',
-						'\u1FB7', '\u1FE6', '\u1FF2', '\u1FF3', '\u1FF4',
-						'\u1FF6', '\u1FF7' }, // kern
-												// codes
-				new double[] { -0.064, -0.064, -0.096, -0.032, -0.07, -0.096,
-						-0.032, -0.032, -0.032, -0.064, -0.032, -0.067, -0.032,
-						-0.032, -0.064, -0.032, -0.255, -0.064, -0.032, -0.064,
-						-0.032, -0.064, -0.064, -0.064, -0.064, -0.064, -0.064,
-						-0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03BD', // char code: 957
-				new double[] { 0.479, 0.451, 0.01, 0.06 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03BB', '\u03BD', '\u03BF',
-						'\u03C1', '\u03C9', '\u03CC', '\u03CE', '\u03E1',
-						'\u1F70', '\u1F78', '\u1F7C', '\u1FB2', '\u1FB3',
-						'\u1FB4', '\u1FB6', '\u1FB7', '\u1FF2', '\u1FF3',
-						'\u1FF4', '\u1FF6', '\u1FF7' }, // kern
-														// codes
-				new double[] { -0.026, -0.026, -0.051, -0.032, -0.032, -0.006,
-						0.01, -0.032, 0.01, -0.192, -0.026, -0.032, 0.01,
-						-0.026, -0.026, -0.026, -0.026, -0.026, 0.01, 0.01,
-						0.01, 0.01, 0.01 }, // kern
-											// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03BE', // char code: 958
-				new double[] { 0.479, 0.696, 0.188, 0.031 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03AD', '\u03B1', '\u03B3', '\u03B5',
-						'\u03BF', '\u03C3', '\u03C4', '\u03C5', '\u03C6',
-						'\u03C7', '\u03CC', '\u03CD', '\u03E1', '\u1F70',
-						'\u1F72', '\u1F78', '\u1F7A', '\u1FB2', '\u1FB3',
-						'\u1FB4', '\u1FB6', '\u1FB7', '\u1FE6' }, // kern
-																	// codes
-				new double[] { -0.032, -0.064, -0.032, -0.045, -0.064, -0.064,
-						-0.064, -0.032, -0.032, -0.045, -0.032, -0.064, -0.032,
-						-0.064, -0.032, -0.064, -0.064, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03BF', // char code: 959
-				new double[] { 0.543, 0.452, 0.006, 0.019 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03BB', '\u03BC', '\u03BD', '\u03C4',
-						'\u03C5', '\u03C7', '\u03CD', '\u03E1', '\u1F7A',
-						'\u1FE6' }, // kern codes
-				new double[] { -0.032, -0.032, -0.013, -0.045, -0.038, -0.064,
-						-0.032, -0.064, -0.192, -0.064, -0.064 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03C0', // char code: 960
-				new double[] { 0.655, 0.452, 0.006, 0.076 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AF', '\u03B9', '\u03BA', '\u03BF', '\u03C8',
-						'\u03CC', '\u03E1', '\u1F76', '\u1F78', '\u1FD6' }, // kern
-																			// codes
-				new double[] { 0.032, 0.032, 0.032, -0.064, 0.032, -0.064,
-						-0.192, 0.032, -0.064, 0.032 }, // kern
-														// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03C1', // char code: 961
-				new double[] { 0.543, 0.451, 0.212, 0.022 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AF', '\u03B3', '\u03B6', '\u03B9', '\u03BD',
-						'\u03BF', '\u03C3', '\u03C7', '\u03C8', '\u03CC',
-						'\u03E1', '\u1F76', '\u1F78', '\u1FD6' }, // kern
-																	// codes
-				new double[] { 0.032, -0.064, 0.032, 0.032, -0.057, 0.032,
-						0.032, -0.013, 0.019, 0.032, -0.192, 0.032, 0.032,
-						0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03C2', // char code: 962
-				new double[] { 0.479, 0.452, 0.159, 0.034 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03C3', // char code: 963
-				new double[] { 0.575, 0.476, 0.005, 0.076 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03BF', '\u03C1', '\u03C9',
-						'\u03CC', '\u03CE', '\u03E1', '\u1F70', '\u1F78',
-						'\u1F7C', '\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6',
-						'\u1FB7', '\u1FE4', '\u1FE5', '\u1FF2', '\u1FF3',
-						'\u1FF4', '\u1FF6', '\u1FF7' }, // kern
-														// codes
-				new double[] { -0.051, -0.051, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.192, -0.051, -0.032, -0.032, -0.051, -0.051,
-						-0.051, -0.051, -0.051, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03C4', // char code: 964
-				new double[] { 0.527, 0.484, 0.005, 0.074 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03AD', '\u03B1', '\u03B5', '\u03BF',
-						'\u03C7', '\u03C9', '\u03CC', '\u03CE', '\u03E1',
-						'\u1F70', '\u1F72', '\u1F78', '\u1F7C', '\u1FB2',
-						'\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7', '\u1FF2',
-						'\u1FF3', '\u1FF4', '\u1FF6', '\u1FF7' }, // kern
-																	// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032, -0.192, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03C5', // char code: 965
-				new double[] { 0.594, 0.462, 0.005, 0.018 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03C6', // char code: 966
-				new double[] { 0.671, 0.452, 0.218, 0.031 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AE', '\u03B3', '\u03B7', '\u03BC', '\u03BD',
-						'\u03C4', '\u03C5', '\u03C7', '\u03CD', '\u03E1',
-						'\u1F74', '\u1F7A', '\u1FC2', '\u1FC3', '\u1FC4',
-						'\u1FC6', '\u1FC7', '\u1FE6' }, // kern
-														// codes
-				new double[] { -0.032, -0.064, -0.032, -0.045, -0.045, -0.032,
-						-0.064, -0.013, -0.064, -0.192, -0.032, -0.064, -0.032,
-						-0.032, -0.032, -0.064, -0.064, -0.064 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03C7', // char code: 967
-				new double[] { 0.543, 0.452, 0.217, 0.022 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03AD', '\u03AE', '\u03AF', '\u03B1',
-						'\u03B3', '\u03B4', '\u03B5', '\u03B7', '\u03B8',
-						'\u03B9', '\u03BA', '\u03BB', '\u03BD', '\u03BE',
-						'\u03BF', '\u03C0', '\u03C1', '\u03C3', '\u03C4',
-						'\u03C5', '\u03C6', '\u03C8', '\u03C9', '\u03CC',
-						'\u03CD', '\u03CE', '\u03E1', '\u1F70', '\u1F72',
-						'\u1F74', '\u1F76', '\u1F78', '\u1F7A', '\u1F7C',
-						'\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7',
-						'\u1FC2', '\u1FC3', '\u1FC4', '\u1FC6', '\u1FC7',
-						'\u1FD6', '\u1FE6', '\u1FF2', '\u1FF3', '\u1FF4',
-						'\u1FF6', '\u1FF7' }, // kern
-												// codes
-				new double[] { -0.077, -0.032, -0.067, -0.032, -0.077, -0.051,
-						-0.077, -0.032, -0.067, -0.064, -0.032, -0.064, -0.077,
-						-0.096, -0.051, -0.096, -0.051, -0.051, -0.045, -0.051,
-						-0.051, -0.096, -0.032, -0.077, -0.096, -0.051, -0.077,
-						-0.192, -0.077, -0.032, -0.067, -0.032, -0.096, -0.051,
-						-0.077, -0.077, -0.077, -0.077, -0.077, -0.077, -0.067,
-						-0.067, -0.067, -0.067, -0.067, -0.032, -0.051, -0.077,
-						-0.077, -0.077, -0.077, -0.077 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03C8', // char code: 968
-				new double[] { 0.639, 0.454, 0.213, 0.042 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03C5', '\u03C7', '\u03CD', '\u03E1',
-						'\u1F7A', '\u1FE6' }, // kern
-												// codes
-				new double[] { -0.045, -0.064, -0.006, -0.064, -0.192, -0.064,
-						-0.064 }, // kern
-									// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03C9', // char code: 969
-				new double[] { 0.766, 0.446, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u03E1', '\u1F72', '\u1F7A', '\u1FE6' }, // kern
-																	// codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, -0.192, 0.032, -0.032,
-						-0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03CA', // char code: 970
-				new double[] { 0.287, 0.638, 0.006, 0.192 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03CB', // char code: 971
-				new double[] { 0.575, 0.638, 0.005, 0.071 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03CC', // char code: 972
-				new double[] { 0.543, 0.714, 0.006, 0.019 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03BB', '\u03BC', '\u03BD', '\u03C4',
-						'\u03C5', '\u03C7', '\u03CD', '\u03E1', '\u1F7A',
-						'\u1FE6' }, // kern codes
-				new double[] { -0.032, -0.032, -0.013, -0.045, -0.038, -0.064,
-						-0.032, -0.064, -0.192, -0.064, -0.064 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03CD', // char code: 973
-				new double[] { 0.575, 0.713, 0.005, 0.037 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03CE', // char code: 974
-				new double[] { 0.766, 0.713, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03D8', // char code: 984
-				new double[] { 0.575, 0.694, 0.003, 0.096 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03D9', // char code: 985
-				new double[] { 0.575, 0.451, 0.222, 0.003 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03E1' }, // kern codes
-				new double[] { -0.255 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03DA', // char code: 986
-				new double[] { 0.894, 0.677, 0., 0.118 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03DB', // char code: 987
-				new double[] { 0.575, 0.504, 0.106, 0.08 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03E1' }, // kern codes
-				new double[] { -0.192 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03DC', // char code: 988
-				new double[] { 0.723, 0.681, 0., 0.102 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03DD', // char code: 989
-				new double[] { 0.575, 0.696, 0., 0.14 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03DF', // char code: 991
-				new double[] { 0.447, 0.696, 0.211, 0.047 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03E1' }, // kern codes
-				new double[] { -0.192 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03E0', // char code: 992
-				new double[] { 0.881, 0.705, 0., 0. }, // metrics: width,
-														// height, depth, italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u03E1', // char code: 993
-				new double[] { 0.83, 0.701, 0.028, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03E1' }, // kern codes
-				new double[] { -0.192 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F00', // char code: 7936
-				new double[] { 0.639, 0.695, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F01', // char code: 7937
-				new double[] { 0.639, 0.696, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F02', // char code: 7938
-				new double[] { 0.639, 0.713, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F03', // char code: 7939
-				new double[] { 0.639, 0.713, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F04', // char code: 7940
-				new double[] { 0.639, 0.713, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F05', // char code: 7941
-				new double[] { 0.639, 0.714, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.051, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F06', // char code: 7942
-				new double[] { 0.639, 0.724, 0.006, 0.037 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F07', // char code: 7943
-				new double[] { 0.639, 0.724, 0.006, 0.037 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F10', // char code: 7952
-				new double[] { 0.447, 0.695, 0.006, 0.051 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03B4', '\u03C3', '\u03C5',
-						'\u03C7', '\u03CD', '\u03E1', '\u1F70', '\u1F7A',
-						'\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7',
-						'\u1FE6' }, // kern
-									// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032, -0.01,
-						-0.032, -0.192, -0.032, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F11', // char code: 7953
-				new double[] { 0.447, 0.696, 0.006, 0.051 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03B4', '\u03C3', '\u03C5',
-						'\u03C7', '\u03CD', '\u03E1', '\u1F70', '\u1F7A',
-						'\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7',
-						'\u1FE6' }, // kern
-									// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032, -0.01,
-						-0.032, -0.192, -0.032, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F12', // char code: 7954
-				new double[] { 0.447, 0.713, 0.006, 0.061 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03B4', '\u03C3', '\u03C5',
-						'\u03C7', '\u03CD', '\u03E1', '\u1F70', '\u1F7A',
-						'\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7',
-						'\u1FE6' }, // kern
-									// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032, -0.01,
-						-0.032, -0.192, -0.032, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F13', // char code: 7955
-				new double[] { 0.447, 0.714, 0.006, 0.061 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03B4', '\u03C3', '\u03C5',
-						'\u03C7', '\u03CD', '\u03E1', '\u1F70', '\u1F7A',
-						'\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7',
-						'\u1FE6' }, // kern
-									// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032, -0.01,
-						-0.032, -0.192, -0.032, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F14', // char code: 7956
-				new double[] { 0.447, 0.714, 0.006, 0.102 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03B4', '\u03C3', '\u03C5',
-						'\u03C7', '\u03CD', '\u03E1', '\u1F70', '\u1F7A',
-						'\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7',
-						'\u1FE6' }, // kern
-									// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032, -0.01,
-						-0.032, -0.192, -0.032, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F15', // char code: 7957
-				new double[] { 0.447, 0.713, 0.006, 0.102 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03B4', '\u03C3', '\u03C5',
-						'\u03C7', '\u03CD', '\u03E1', '\u1F70', '\u1F7A',
-						'\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7',
-						'\u1FE6' }, // kern
-									// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032, -0.01,
-						-0.032, -0.192, -0.032, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F20', // char code: 7968
-				new double[] { 0.594, 0.695, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F21', // char code: 7969
-				new double[] { 0.594, 0.696, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F22', // char code: 7970
-				new double[] { 0.594, 0.713, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F23', // char code: 7971
-				new double[] { 0.594, 0.714, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F24', // char code: 7972
-				new double[] { 0.594, 0.714, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F25', // char code: 7973
-				new double[] { 0.594, 0.713, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F26', // char code: 7974
-				new double[] { 0.594, 0.723, 0.214, 0.066 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F27', // char code: 7975
-				new double[] { 0.594, 0.723, 0.214, 0.066 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F30', // char code: 7984
-				new double[] { 0.287, 0.695, 0.006, 0.102 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F31', // char code: 7985
-				new double[] { 0.287, 0.696, 0.006, 0.072 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F32', // char code: 7986
-				new double[] { 0.287, 0.713, 0.006, 0.108 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F33', // char code: 7987
-				new double[] { 0.287, 0.714, 0.006, 0.108 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F34', // char code: 7988
-				new double[] { 0.287, 0.714, 0.006, 0.149 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F35', // char code: 7989
-				new double[] { 0.287, 0.713, 0.006, 0.149 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F36', // char code: 7990
-				new double[] { 0.287, 0.724, 0.006, 0.2 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F37', // char code: 7991
-				new double[] { 0.287, 0.724, 0.006, 0.2 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F40', // char code: 8000
-				new double[] { 0.543, 0.695, 0.006, 0.024 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03BB', '\u03BC', '\u03BD', '\u03C4',
-						'\u03C5', '\u03C7', '\u03CD', '\u03E1', '\u1F7A',
-						'\u1FE6' }, // kern codes
-				new double[] { -0.032, -0.032, -0.013, -0.045, -0.038, -0.064,
-						-0.032, -0.064, -0.192, -0.064, -0.064 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F41', // char code: 8001
-				new double[] { 0.543, 0.696, 0.006, 0.019 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03BB', '\u03BC', '\u03BD', '\u03C4',
-						'\u03C5', '\u03C7', '\u03CD', '\u03E1', '\u1F7A',
-						'\u1FE6' }, // kern codes
-				new double[] { -0.032, -0.032, -0.013, -0.045, -0.038, -0.064,
-						-0.032, -0.064, -0.192, -0.064, -0.064 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F42', // char code: 8002
-				new double[] { 0.543, 0.713, 0.006, 0.019 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03BB', '\u03BC', '\u03BD', '\u03C4',
-						'\u03C5', '\u03C7', '\u03CD', '\u03E1', '\u1F7A',
-						'\u1FE6' }, // kern codes
-				new double[] { -0.032, -0.032, -0.013, -0.045, -0.038, -0.064,
-						-0.032, -0.064, -0.192, -0.064, -0.064 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F43', // char code: 8003
-				new double[] { 0.543, 0.714, 0.006, 0.019 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03BB', '\u03BC', '\u03BD', '\u03C4',
-						'\u03C5', '\u03C7', '\u03CD', '\u03E1', '\u1F7A',
-						'\u1FE6' }, // kern codes
-				new double[] { -0.032, -0.032, -0.013, -0.045, -0.038, -0.064,
-						-0.032, -0.064, -0.192, -0.064, -0.064 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F44', // char code: 8004
-				new double[] { 0.543, 0.714, 0.006, 0.054 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03BB', '\u03BC', '\u03BD', '\u03C4',
-						'\u03C5', '\u03C7', '\u03CD', '\u03E1', '\u1F7A',
-						'\u1FE6' }, // kern codes
-				new double[] { -0.032, -0.032, -0.013, -0.045, -0.038, -0.064,
-						-0.032, -0.064, -0.192, -0.064, -0.064 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F45', // char code: 8005
-				new double[] { 0.543, 0.713, 0.006, 0.054 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03BB', '\u03BC', '\u03BD', '\u03C4',
-						'\u03C5', '\u03C7', '\u03CD', '\u03E1', '\u1F7A',
-						'\u1FE6' }, // kern codes
-				new double[] { -0.032, -0.032, -0.013, -0.045, -0.038, -0.064,
-						-0.032, -0.064, -0.192, -0.064, -0.064 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F50', // char code: 8016
-				new double[] { 0.575, 0.695, 0.005, 0.037 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F51', // char code: 8017
-				new double[] { 0.575, 0.696, 0.005, 0.037 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F52', // char code: 8018
-				new double[] { 0.575, 0.714, 0.005, 0.037 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F53', // char code: 8019
-				new double[] { 0.575, 0.714, 0.005, 0.037 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F54', // char code: 8020
-				new double[] { 0.575, 0.713, 0.005, 0.037 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F55', // char code: 8021
-				new double[] { 0.575, 0.714, 0.005, 0.037 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F56', // char code: 8022
-				new double[] { 0.575, 0.724, 0.005, 0.081 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F57', // char code: 8023
-				new double[] { 0.575, 0.724, 0.005, 0.081 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F60', // char code: 8032
-				new double[] { 0.766, 0.695, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F61', // char code: 8033
-				new double[] { 0.766, 0.696, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F62', // char code: 8034
-				new double[] { 0.766, 0.713, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F63', // char code: 8035
-				new double[] { 0.766, 0.714, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F64', // char code: 8036
-				new double[] { 0.766, 0.714, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F65', // char code: 8037
-				new double[] { 0.766, 0.714, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F66', // char code: 8038
-				new double[] { 0.766, 0.724, 0.006, 0.027 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F67', // char code: 8039
-				new double[] { 0.766, 0.724, 0.006, 0.027 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F70', // char code: 8048
-				new double[] { 0.639, 0.713, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F72', // char code: 8050
-				new double[] { 0.447, 0.714, 0.006, 0.051 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AC', '\u03B1', '\u03B4', '\u03C3', '\u03C5',
-						'\u03C7', '\u03CD', '\u03E1', '\u1F70', '\u1F7A',
-						'\u1FB2', '\u1FB3', '\u1FB4', '\u1FB6', '\u1FB7',
-						'\u1FE6' }, // kern
-									// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032, -0.01,
-						-0.032, -0.192, -0.032, -0.032, -0.032, -0.032, -0.032,
-						-0.032, -0.032, -0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F74', // char code: 8052
-				new double[] { 0.594, 0.714, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F76', // char code: 8054
-				new double[] { 0.287, 0.714, 0.006, 0.018 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F78', // char code: 8056
-				new double[] { 0.543, 0.714, 0.006, 0.019 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03BB', '\u03BC', '\u03BD', '\u03C4',
-						'\u03C5', '\u03C7', '\u03CD', '\u03E1', '\u1F7A',
-						'\u1FE6' }, // kern codes
-				new double[] { -0.032, -0.032, -0.013, -0.045, -0.038, -0.064,
-						-0.032, -0.064, -0.192, -0.064, -0.064 }, // kern
-																	// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F7A', // char code: 8058
-				new double[] { 0.575, 0.714, 0.005, 0.037 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F7C', // char code: 8060
-				new double[] { 0.766, 0.714, 0.006, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F80', // char code: 8064
-				new double[] { 0.639, 0.695, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F81', // char code: 8065
-				new double[] { 0.639, 0.696, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F82', // char code: 8066
-				new double[] { 0.639, 0.713, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F83', // char code: 8067
-				new double[] { 0.639, 0.713, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F84', // char code: 8068
-				new double[] { 0.639, 0.713, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F85', // char code: 8069
-				new double[] { 0.639, 0.714, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.051, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F86', // char code: 8070
-				new double[] { 0.639, 0.724, 0.211, 0.037 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F87', // char code: 8071
-				new double[] { 0.639, 0.724, 0.211, 0.037 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F90', // char code: 8080
-				new double[] { 0.594, 0.695, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F91', // char code: 8081
-				new double[] { 0.594, 0.696, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F92', // char code: 8082
-				new double[] { 0.594, 0.713, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F93', // char code: 8083
-				new double[] { 0.594, 0.714, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F94', // char code: 8084
-				new double[] { 0.594, 0.714, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F95', // char code: 8085
-				new double[] { 0.594, 0.713, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F96', // char code: 8086
-				new double[] { 0.594, 0.723, 0.214, 0.066 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1F97', // char code: 8087
-				new double[] { 0.594, 0.723, 0.214, 0.066 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FA0', // char code: 8096
-				new double[] { 0.766, 0.695, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FA1', // char code: 8097
-				new double[] { 0.766, 0.696, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FA2', // char code: 8098
-				new double[] { 0.766, 0.713, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FA3', // char code: 8099
-				new double[] { 0.766, 0.714, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FA4', // char code: 8100
-				new double[] { 0.766, 0.714, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FA5', // char code: 8101
-				new double[] { 0.766, 0.714, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FA6', // char code: 8102
-				new double[] { 0.766, 0.724, 0.211, 0.027 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FA7', // char code: 8103
-				new double[] { 0.766, 0.724, 0.211, 0.027 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FB2', // char code: 8114
-				new double[] { 0.639, 0.713, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FB3', // char code: 8115
-				new double[] { 0.639, 0.452, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u03E1', '\u1F50', '\u1F52', '\u1F54',
-						'\u1F55', '\u1F56', '\u1F57', '\u1F78', '\u1F7A',
-						'\u1FE6' }, // kern codes
-				new double[] { -0.096, -0.096, -0.109, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.255, -0.096,
-						-0.096, -0.096, -0.096, -0.096, -0.096, -0.032, -0.096,
-						-0.096 }, // kern
-									// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FB4', // char code: 8116
-				new double[] { 0.639, 0.714, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FB6', // char code: 8118
-				new double[] { 0.639, 0.636, 0.006, 0.011 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FB7', // char code: 8119
-				new double[] { 0.639, 0.636, 0.211, 0.011 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B8', '\u03BD', '\u03BF', '\u03C0',
-						'\u03C4', '\u03C5', '\u03C7', '\u03C8', '\u03CC',
-						'\u03CD', '\u1F78', '\u1F7A' }, // kern codes
-				new double[] { -0.096, -0.096, -0.096, -0.032, -0.051, -0.096,
-						-0.096, -0.096, -0.032, -0.032, -0.096, -0.032,
-						-0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FBC', // char code: 8124
-				new double[] { 0.869, 0.7, 0.211, 0. }, // metrics: width,
-														// height, depth, italic
-				null, // ligatures
-				new char[] { '\u0398', '\u039F', '\u03A4', '\u03A5', '\u03A6',
-						'\u03A8', '\u03AB', '\u03BD' }, // kern
-														// codes
-				new double[] { -0.096, -0.096, -0.096, -0.16, -0.096, -0.141,
-						-0.16, -0.112 }, // kern
-											// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FBE', // char code: 8126
-				new double[] { 0.255, 0.157, 0.155, 0.006 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FBF', // char code: 8127
-				new double[] { 0.255, 0.695, 0., 0.168 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u039F', '\u03A9', '\u1FBC', '\u1FFC' }, // kern
-																					// codes
-				new double[] { -0.16, -0.064, -0.032, -0.16, -0.032 }, // kern
-																		// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FC0', // char code: 8128
-				new double[] { 0.383, 0.635, 0., 0.16 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u1FBC' }, // kern codes
-				new double[] { -0.128, -0.128 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FC1', // char code: 8129
-				new double[] { 0.511, 0.723, 0., 0.122 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FC2', // char code: 8130
-				new double[] { 0.594, 0.714, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FC3', // char code: 8131
-				new double[] { 0.594, 0.452, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u03E1', '\u1F7A',
-						'\u1FE6' }, // kern
-									// codes
-				new double[] { -0.032, -0.032, -0.032, -0.192, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FC4', // char code: 8132
-				new double[] { 0.594, 0.713, 0.214, 0.026 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FC6', // char code: 8134
-				new double[] { 0.594, 0.636, 0.214, 0.04 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FC7', // char code: 8135
-				new double[] { 0.594, 0.636, 0.214, 0.04 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03BD', '\u03C5', '\u03CD', '\u1F7A', '\u1FE6' }, // kern
-																					// codes
-				new double[] { -0.032, -0.032, -0.032, -0.032, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FCC', // char code: 8140
-				new double[] { 0.9, 0.687, 0.211, 0.144 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FCD', // char code: 8141
-				new double[] { 0.319, 0.713, 0., 0.125 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u039F', '\u1FBC' }, // kern codes
-				new double[] { -0.096, -0.032, -0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FCE', // char code: 8142
-				new double[] { 0.319, 0.714, 0., 0.166 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u039F', '\u1FBC' }, // kern codes
-				new double[] { -0.096, -0.032, -0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FCF', // char code: 8143
-				new double[] { 0.383, 0.724, 0., 0.186 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u1FBC' }, // kern codes
-				new double[] { -0.128, -0.128 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FD2', // char code: 8146
-				new double[] { 0.287, 0.714, 0.006, 0.188 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FD6', // char code: 8150
-				new double[] { 0.287, 0.636, 0.006, 0.174 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FD7', // char code: 8151
-				new double[] { 0.287, 0.724, 0.006, 0.2 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B3', '\u03B7', '\u03B8', '\u03BA', '\u03BD',
-						'\u03BF', '\u03C2', '\u03C3', '\u03C4', '\u03C7',
-						'\u03CC', '\u03E1', '\u1F40', '\u1F41', '\u1F44',
-						'\u1F45', '\u1F78' }, // kern
-												// codes
-				new double[] { -0.08, -0.019, -0.038, -0.064, -0.064, -0.032,
-						-0.032, -0.032, -0.096, -0.064, -0.032, -0.192, -0.032,
-						-0.032, -0.032, -0.032, -0.032 }, // kern
-															// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FDD', // char code: 8157
-				new double[] { 0.319, 0.714, 0., 0.125 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u039F', '\u1FBC' }, // kern codes
-				new double[] { -0.096, -0.032, -0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FDE', // char code: 8158
-				new double[] { 0.319, 0.713, 0., 0.166 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u039F', '\u1FBC' }, // kern codes
-				new double[] { -0.096, -0.032, -0.096 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FDF', // char code: 8159
-				new double[] { 0.383, 0.724, 0., 0.186 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u1FBC' }, // kern codes
-				new double[] { -0.128, -0.128 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FE2', // char code: 8162
-				new double[] { 0.575, 0.739, 0.005, 0.07 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FE4', // char code: 8164
-				new double[] { 0.543, 0.695, 0.212, 0.024 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AF', '\u03B3', '\u03B6', '\u03B9', '\u03BD',
-						'\u03BF', '\u03C3', '\u03C7', '\u03C8', '\u03CC',
-						'\u03E1', '\u1F76', '\u1F78', '\u1FD6' }, // kern
-																	// codes
-				new double[] { 0.032, -0.064, 0.032, 0.032, -0.057, 0.032,
-						0.032, -0.013, 0.019, 0.032, -0.192, 0.032, 0.032,
-						0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FE5', // char code: 8165
-				new double[] { 0.543, 0.696, 0.212, 0.022 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AF', '\u03B3', '\u03B6', '\u03B9', '\u03BD',
-						'\u03BF', '\u03C3', '\u03C7', '\u03C8', '\u03CC',
-						'\u03E1', '\u1F76', '\u1F78', '\u1FD6' }, // kern
-																	// codes
-				new double[] { 0.032, -0.064, 0.032, 0.032, -0.057, 0.032,
-						0.032, -0.013, 0.019, 0.032, -0.192, 0.032, 0.032,
-						0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FE6', // char code: 8166
-				new double[] { 0.575, 0.636, 0.005, 0.055 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FE7', // char code: 8167
-				new double[] { 0.575, 0.724, 0.005, 0.081 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03B8', '\u03BC', '\u03BD', '\u03C7', '\u03C8',
-						'\u03E1' }, // kern
-									// codes
-				new double[] { -0.032, -0.013, -0.045, -0.032, 0.032, -0.192 }, // kern
-																				// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FED', // char code: 8173
-				new double[] { 0.319, 0.714, 0., 0.206 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FEF', // char code: 8175
-				new double[] { 0.192, 0.714, 0., 0.131 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u039F', '\u03A9', '\u1FBC', '\u1FFC' }, // kern
-																					// codes
-				new double[] { -0.128, -0.064, -0.032, -0.128, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FF2', // char code: 8178
-				new double[] { 0.766, 0.714, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FF3', // char code: 8179
-				new double[] { 0.766, 0.446, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u03E1', '\u1F72', '\u1F7A', '\u1FE6' }, // kern
-																	// codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, -0.192, 0.032, -0.032,
-						-0.032 }, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FF4', // char code: 8180
-				new double[] { 0.766, 0.713, 0.211, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FF6', // char code: 8182
-				new double[] { 0.766, 0.635, 0.006, 0.001 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FF7', // char code: 8183
-				new double[] { 0.766, 0.635, 0.211, 0.001 }, // metrics: width,
-																// height,
-																// depth, italic
-				null, // ligatures
-				new char[] { '\u03AD', '\u03B3', '\u03B5', '\u03BC', '\u03BD',
-						'\u03BE', '\u03C4', '\u03C5', '\u03C7', '\u03CD',
-						'\u1F72', '\u1F7A', '\u1FE6' }, // kern codes
-				new double[] { 0.032, -0.128, 0.032, -0.032, -0.032, 0.032,
-						-0.054, -0.032, -0.032, -0.032, 0.032, -0.032, -0.032 }, // kern
-																					// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FFC', // char code: 8188
-				new double[] { 0.83, 0.698, 0.211, 0.065 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u1FFE', // char code: 8190
-				new double[] { 0.255, 0.696, 0., 0.106 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				new char[] { '\u0391', '\u039F', '\u03A9', '\u1FBC', '\u1FFC' }, // kern
-																					// codes
-				new double[] { -0.192, -0.064, -0.032, -0.192, -0.032 }, // kern
-																			// values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u2019', // char code: 8217
-				new double[] { 0.319, 0.696, 0., 0.095 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u2329', // char code: 9001
-				new double[] { 0.473, 0.751, 0.25, 0.091 }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
-		setInfo('\u232A', // char code: 9002
-				new double[] { 0.473, 0.751, 0.25, 0. }, // metrics: width,
-															// height, depth,
-															// italic
-				null, // ligatures
-				null, // kern codes
-				null, // kern values
-				null, '\0', // next larger
-				null); // extension: top, mid, rep, bot
+		setMetrics('\040', 355, 0);
+
+		setMetrics('\250', 255, 644, 0, 216);
+
+		setMetrics('\u0374', 224, 714, 0, 144);
+
+		setMetrics('\u0375', 224, 5, 215);
+
+		setMetrics('\u037a', 128, -32, 211, 64);
+
+		setMetrics('\u0384', 192, 714, 0, 150);
+		setKern(new char[] {'\u0391', '\u039f', '\u03a9', '\u1fbc', '\u1ffc'}, new int[] {-128, -64, -32, -128, -32});
+
+		setMetrics('\u0385', 319, 714, 0, 206);
+
+		setMetrics('\u0387', 319, 446, 0, 21);
+
+		setMetrics('\u0390', 287, 714, 6, 188);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u0391', 869, 700);
+		setKern(new char[] {'\u0398', '\u039f', '\u03a4', '\u03a5', '\u03a6', '\u03a8', '\u03ab', '\u03bd'}, new int[] {-96, -96, -96, -160, -96, -141, -160, -112});
+
+		setMetrics('\u0392', 818, 689, 0, 46);
+
+		setMetrics('\u0393', 691, 681, 0, 102);
+		setKern(new char[] {'\u0391', '\u0394', '\u039b', '\u1fbc'}, new int[] {-153, -128, -141, -153});
+
+		setMetrics('\u0394', 958, 699);
+		setKern(new char[] {'\u039f', '\u03a5', '\u03ab'}, new int[] {-38, -160, -160});
+
+		setMetrics('\u0395', 755, 681, 0, 86);
+
+		setMetrics('\u0396', 703, 688, 0, 115);
+
+		setMetrics('\u0397', 900, 687, 0, 144);
+
+		setMetrics('\u0398', 894, 699, 11, 40);
+		setKern(new char[] {'\u0391', '\u03a5', '\u03ab', '\u1fbc'}, new int[] {-96, -96, -96, -96});
+
+		setMetrics('\u0399', 436, 687, 0, 150);
+
+		setMetrics('\u039a', 901, 687, 0, 119);
+		setKern(new char[] {'\u039f'}, new int[] {-96});
+
+		setMetrics('\u039b', 805, 699);
+		setKern(new char[] {'\u039f', '\u03a5', '\u03ab'}, new int[] {-38, -115, -115});
+
+		setMetrics('\u039c', 1091, 688, 0, 143);
+
+		setMetrics('\u039d', 900, 687, 0, 144);
+		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-96, -96});
+
+		setMetrics('\u039e', 766, 676, 0, 117);
+
+		setMetrics('\u039f', 864, 699, 11, 41);
+		setKern(new char[] {'\u0391', '\u03a3', '\u1fbc'}, new int[] {-96, -64, -96});
+
+		setMetrics('\u03a0', 900, 681, 0, 142);
+
+		setMetrics('\u03a1', 786, 687, 0, 73);
+		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-192, -192});
+
+		setMetrics('\u03a3', 830, 688, 0, 89);
+		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-32, -32});
+
+		setMetrics('\u03a4', 800, 676, 0, 118);
+		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-96, -96});
+
+		setMetrics('\u03a5', 805, 687, 0, 166);
+		setKern(new char[] {'\u0391', '\u0394', '\u039b', '\u1fbc'}, new int[] {-160, -160, -160, -160});
+
+		setMetrics('\u03a6', 830, 687, 0, 31);
+		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-96, -96});
+
+		setMetrics('\u03a7', 869, 687, 0, 101);
+
+		setMetrics('\u03a8', 894, 687, 0, 77);
+		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-141, -141});
+
+		setMetrics('\u03a9', 830, 698, 0, 65);
+
+		setMetrics('\u03aa', 436, 893, 0, 219);
+
+		setMetrics('\u03ab', 805, 893, 0, 166);
+		setKern(new char[] {'\u0391', '\u0394', '\u039b', '\u1fbc'}, new int[] {-160, -160, -160, -160});
+
+		setMetrics('\u03ac', 639, 714, 6);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u03ad', 447, 714, 6, 55);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03b4', '\u03c3', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f70', '\u1f7a', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32, -10, -32, -192, -32, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u03ae', 594, 713, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u03af', 287, 714, 6, 101);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u03b0', 575, 738, 5, 70);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u03b1', 639, 452, 6);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u03e1', '\u1f50', '\u1f52', '\u1f54', '\u1f55', '\u1f56', '\u1f57', '\u1f78', '\u1f7a', '\u1fe6'}, new int[] {-96, -96, -109, -32, -51, -96, -96, -96, -32, -32, -96, -255, -96, -96, -96, -96, -96, -96, -32, -96, -96});
+
+		setMetrics('\u03b2', 511, 702, 212, 82);
+		setKern(new char[] {'\u03ad', '\u03af', '\u03b5', '\u03b9', '\u03bf', '\u03c4', '\u03c6', '\u03c7', '\u03c8', '\u03cc', '\u03e1', '\u1f72', '\u1f76', '\u1f78', '\u1fd6'}, new int[] {32, 32, 32, 32, 32, 32, 32, -32, 64, 32, -64, 32, 32, 32, 32});
+
+		setMetrics('\u03b3', 575, 460, 224, 58);
+		setKern(new char[] {'\u03c7', '\u03e1'}, new int[] {19, -192});
+
+		setMetrics('\u03b4', 537, 702, 5, 29);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03b3', '\u03bc', '\u03bd', '\u03c0', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f70', '\u1f7a', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6'}, new int[] {-32, -32, -96, -51, -45, -32, -32, -19, -32, -192, -32, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u03b5', 447, 451, 6, 51);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03b4', '\u03c3', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f70', '\u1f7a', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32, -10, -32, -192, -32, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u03b6', 479, 696, 188, 60);
+		setKern(new char[] {'\u03ac', '\u03ad', '\u03ae', '\u03b1', '\u03b3', '\u03b4', '\u03b5', '\u03b7', '\u03b8', '\u03bc', '\u03bd', '\u03bf', '\u03c0', '\u03c3', '\u03c4', '\u03c5', '\u03c6', '\u03c7', '\u03c8', '\u03c9', '\u03cc', '\u03cd', '\u03ce', '\u03e1', '\u1f70', '\u1f72', '\u1f74', '\u1f78', '\u1f7a', '\u1f7c', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fc2', '\u1fc3', '\u1fc4', '\u1fc6', '\u1fc7', '\u1fe6', '\u1ff2', '\u1ff3', '\u1ff4', '\u1ff6', '\u1ff7'}, new int[] {-96, -96, -96, -96, -128, -64, -96, -96, -64, -64, -102, -96, -96, -96, -96, -96, -96, -96, -32, -96, -96, -96, -96, -64, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96, -96});
+
+		setMetrics('\u03b7', 594, 452, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u03e1', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -192, -32, -32});
+
+		setMetrics('\u03b8', 591, 702, 6, 75);
+		setKern(new char[] {'\u03ad', '\u03af', '\u03b5', '\u03b9', '\u03c8', '\u03e1', '\u1f72', '\u1f76', '\u1fd6'}, new int[] {32, 32, 32, 32, 32, -64, 32, 32, 32});
+
+		setMetrics('\u03b9', 287, 445, 6, 11);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u03ba', 607, 458, 6, 63);
+		setKern(new char[] {'\u03b2', '\u03bd', '\u03e1'}, new int[] {32, -32, -192});
+
+		setMetrics('\u03bb', 517, 701, 6, 14);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03b3', '\u03b8', '\u03bc', '\u03bd', '\u03c3', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f70', '\u1f7a', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6'}, new int[] {-16, -16, -160, -51, 16, -96, -32, -32, -64, -64, -64, -192, -16, -64, -16, -16, -16, -16, -16, -64});
+
+		setMetrics('\u03bc', 575, 445, 235, 1);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03b3', '\u03b6', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c3', '\u03c5', '\u03c6', '\u03c7', '\u03c9', '\u03cc', '\u03cd', '\u03ce', '\u03e1', '\u1f70', '\u1f78', '\u1f7a', '\u1f7c', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6', '\u1ff2', '\u1ff3', '\u1ff4', '\u1ff6', '\u1ff7'}, new int[] {-64, -64, -96, -32, -70, -96, -32, -32, -32, -64, -32, -67, -32, -32, -64, -32, -255, -64, -32, -64, -32, -64, -64, -64, -64, -64, -64, -32, -32, -32, -32, -32});
+
+		setMetrics('\u03bd', 479, 451, 10, 60);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03bb', '\u03bd', '\u03bf', '\u03c1', '\u03c9', '\u03cc', '\u03ce', '\u03e1', '\u1f70', '\u1f78', '\u1f7c', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1ff2', '\u1ff3', '\u1ff4', '\u1ff6', '\u1ff7'}, new int[] {-26, -26, -51, -32, -32, -6, 10, -32, 10, -192, -26, -32, 10, -26, -26, -26, -26, -26, 10, 10, 10, 10, 10});
+
+		setMetrics('\u03be', 479, 696, 188, 31);
+		setKern(new char[] {'\u03ac', '\u03ad', '\u03b1', '\u03b3', '\u03b5', '\u03bf', '\u03c3', '\u03c4', '\u03c5', '\u03c6', '\u03c7', '\u03cc', '\u03cd', '\u03e1', '\u1f70', '\u1f72', '\u1f78', '\u1f7a', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6'}, new int[] {-32, -64, -32, -45, -64, -64, -64, -32, -32, -45, -32, -64, -32, -64, -32, -64, -64, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u03bf', 543, 452, 6, 19);
+		setKern(new char[] {'\u03b3', '\u03bb', '\u03bc', '\u03bd', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -13, -45, -38, -64, -32, -64, -192, -64, -64});
+
+		setMetrics('\u03c0', 655, 452, 6, 76);
+		setKern(new char[] {'\u03af', '\u03b9', '\u03ba', '\u03bf', '\u03c8', '\u03cc', '\u03e1', '\u1f76', '\u1f78', '\u1fd6'}, new int[] {32, 32, 32, -64, 32, -64, -192, 32, -64, 32});
+
+		setMetrics('\u03c1', 543, 451, 212, 22);
+		setKern(new char[] {'\u03af', '\u03b3', '\u03b6', '\u03b9', '\u03bd', '\u03bf', '\u03c3', '\u03c7', '\u03c8', '\u03cc', '\u03e1', '\u1f76', '\u1f78', '\u1fd6'}, new int[] {32, -64, 32, 32, -57, 32, 32, -13, 19, 32, -192, 32, 32, 32});
+
+		setMetrics('\u03c2', 479, 452, 159, 34);
+
+		setMetrics('\u03c3', 575, 476, 5, 76);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03bf', '\u03c1', '\u03c9', '\u03cc', '\u03ce', '\u03e1', '\u1f70', '\u1f78', '\u1f7c', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe4', '\u1fe5', '\u1ff2', '\u1ff3', '\u1ff4', '\u1ff6', '\u1ff7'}, new int[] {-51, -51, -32, -32, -32, -32, -32, -192, -51, -32, -32, -51, -51, -51, -51, -51, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u03c4', 527, 484, 5, 74);
+		setKern(new char[] {'\u03ac', '\u03ad', '\u03b1', '\u03b5', '\u03bf', '\u03c7', '\u03c9', '\u03cc', '\u03ce', '\u03e1', '\u1f70', '\u1f72', '\u1f78', '\u1f7c', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1ff2', '\u1ff3', '\u1ff4', '\u1ff6', '\u1ff7'}, new int[] {-32, -32, -32, -32, -32, -32, -32, -32, -32, -192, -32, -32, -32, -32, -32, -32, -32, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u03c5', 594, 462, 5, 18);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u03c6', 671, 452, 218, 31);
+		setKern(new char[] {'\u03ae', '\u03b3', '\u03b7', '\u03bc', '\u03bd', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f74', '\u1f7a', '\u1fc2', '\u1fc3', '\u1fc4', '\u1fc6', '\u1fc7', '\u1fe6'}, new int[] {-32, -64, -32, -45, -45, -32, -64, -13, -64, -192, -32, -64, -32, -32, -32, -64, -64, -64});
+
+		setMetrics('\u03c7', 543, 452, 217, 22);
+		setKern(new char[] {'\u03ac', '\u03ad', '\u03ae', '\u03af', '\u03b1', '\u03b3', '\u03b4', '\u03b5', '\u03b7', '\u03b8', '\u03b9', '\u03ba', '\u03bb', '\u03bd', '\u03be', '\u03bf', '\u03c0', '\u03c1', '\u03c3', '\u03c4', '\u03c5', '\u03c6', '\u03c8', '\u03c9', '\u03cc', '\u03cd', '\u03ce', '\u03e1', '\u1f70', '\u1f72', '\u1f74', '\u1f76', '\u1f78', '\u1f7a', '\u1f7c', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fc2', '\u1fc3', '\u1fc4', '\u1fc6', '\u1fc7', '\u1fd6', '\u1fe6', '\u1ff2', '\u1ff3', '\u1ff4', '\u1ff6', '\u1ff7'}, new int[] {-77, -32, -67, -32, -77, -51, -77, -32, -67, -64, -32, -64, -77, -96, -51, -96, -51, -51, -45, -51, -51, -96, -32, -77, -96, -51, -77, -192, -77, -32, -67, -32, -96, -51, -77, -77, -77, -77, -77, -77, -67, -67, -67, -67, -67, -32, -51, -77, -77, -77, -77, -77});
+
+		setMetrics('\u03c8', 639, 454, 213, 42);
+		setKern(new char[] {'\u03b3', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f7a', '\u1fe6'}, new int[] {-45, -64, -6, -64, -192, -64, -64});
+
+		setMetrics('\u03c9', 766, 446, 6);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, -192, 32, -32, -32});
+
+		setMetrics('\u03ca', 287, 638, 6, 192);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u03cb', 575, 638, 5, 71);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u03cc', 543, 714, 6, 19);
+		setKern(new char[] {'\u03b3', '\u03bb', '\u03bc', '\u03bd', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -13, -45, -38, -64, -32, -64, -192, -64, -64});
+
+		setMetrics('\u03cd', 575, 713, 5, 37);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u03ce', 766, 713, 6);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u03d8', 575, 694, 3, 96);
+
+		setMetrics('\u03d9', 575, 451, 222, 3);
+		setKern(new char[] {'\u03e1'}, new int[] {-255});
+
+		setMetrics('\u03da', 894, 677, 0, 118);
+
+		setMetrics('\u03db', 575, 504, 106, 80);
+		setKern(new char[] {'\u03e1'}, new int[] {-192});
+
+		setMetrics('\u03dc', 723, 681, 0, 102);
+
+		setMetrics('\u03dd', 575, 696, 0, 140);
+
+		setMetrics('\u03df', 447, 696, 211, 47);
+		setKern(new char[] {'\u03e1'}, new int[] {-192});
+
+		setMetrics('\u03e0', 881, 705);
+
+		setMetrics('\u03e1', 830, 701, 28);
+		setKern(new char[] {'\u03e1'}, new int[] {-192});
+
+		setMetrics('\u1f00', 639, 695, 6);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f01', 639, 696, 6);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f02', 639, 713, 6);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f03', 639, 713, 6);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f04', 639, 713, 6);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f05', 639, 714, 6);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -51, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f06', 639, 724, 6, 37);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f07', 639, 724, 6, 37);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f10', 447, 695, 6, 51);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03b4', '\u03c3', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f70', '\u1f7a', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32, -10, -32, -192, -32, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f11', 447, 696, 6, 51);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03b4', '\u03c3', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f70', '\u1f7a', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32, -10, -32, -192, -32, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f12', 447, 713, 6, 61);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03b4', '\u03c3', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f70', '\u1f7a', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32, -10, -32, -192, -32, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f13', 447, 714, 6, 61);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03b4', '\u03c3', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f70', '\u1f7a', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32, -10, -32, -192, -32, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f14', 447, 714, 6, 102);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03b4', '\u03c3', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f70', '\u1f7a', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32, -10, -32, -192, -32, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f15', 447, 713, 6, 102);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03b4', '\u03c3', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f70', '\u1f7a', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32, -10, -32, -192, -32, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f20', 594, 695, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f21', 594, 696, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f22', 594, 713, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f23', 594, 714, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f24', 594, 714, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f25', 594, 713, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f26', 594, 723, 214, 66);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f27', 594, 723, 214, 66);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f30', 287, 695, 6, 102);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f31', 287, 696, 6, 72);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f32', 287, 713, 6, 108);
+
+		setMetrics('\u1f33', 287, 714, 6, 108);
+
+		setMetrics('\u1f34', 287, 714, 6, 149);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f35', 287, 713, 6, 149);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f36', 287, 724, 6, 200);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f37', 287, 724, 6, 200);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f40', 543, 695, 6, 24);
+		setKern(new char[] {'\u03b3', '\u03bb', '\u03bc', '\u03bd', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -13, -45, -38, -64, -32, -64, -192, -64, -64});
+
+		setMetrics('\u1f41', 543, 696, 6, 19);
+		setKern(new char[] {'\u03b3', '\u03bb', '\u03bc', '\u03bd', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -13, -45, -38, -64, -32, -64, -192, -64, -64});
+
+		setMetrics('\u1f42', 543, 713, 6, 19);
+		setKern(new char[] {'\u03b3', '\u03bb', '\u03bc', '\u03bd', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -13, -45, -38, -64, -32, -64, -192, -64, -64});
+
+		setMetrics('\u1f43', 543, 714, 6, 19);
+		setKern(new char[] {'\u03b3', '\u03bb', '\u03bc', '\u03bd', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -13, -45, -38, -64, -32, -64, -192, -64, -64});
+
+		setMetrics('\u1f44', 543, 714, 6, 54);
+		setKern(new char[] {'\u03b3', '\u03bb', '\u03bc', '\u03bd', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -13, -45, -38, -64, -32, -64, -192, -64, -64});
+
+		setMetrics('\u1f45', 543, 713, 6, 54);
+		setKern(new char[] {'\u03b3', '\u03bb', '\u03bc', '\u03bd', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -13, -45, -38, -64, -32, -64, -192, -64, -64});
+
+		setMetrics('\u1f50', 575, 695, 5, 37);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u1f51', 575, 696, 5, 37);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u1f52', 575, 714, 5, 37);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u1f53', 575, 714, 5, 37);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u1f54', 575, 713, 5, 37);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u1f55', 575, 714, 5, 37);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u1f56', 575, 724, 5, 81);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u1f57', 575, 724, 5, 81);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u1f60', 766, 695, 6);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1f61', 766, 696, 6);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1f62', 766, 713, 6);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1f63', 766, 714, 6);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1f64', 766, 714, 6);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1f65', 766, 714, 6);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1f66', 766, 724, 6, 27);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1f67', 766, 724, 6, 27);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1f70', 639, 713, 6);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f72', 447, 714, 6, 51);
+		setKern(new char[] {'\u03ac', '\u03b1', '\u03b4', '\u03c3', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f70', '\u1f7a', '\u1fb2', '\u1fb3', '\u1fb4', '\u1fb6', '\u1fb7', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32, -10, -32, -192, -32, -32, -32, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f74', 594, 714, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f76', 287, 714, 6, 18);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1f78', 543, 714, 6, 19);
+		setKern(new char[] {'\u03b3', '\u03bb', '\u03bc', '\u03bd', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -13, -45, -38, -64, -32, -64, -192, -64, -64});
+
+		setMetrics('\u1f7a', 575, 714, 5, 37);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u1f7c', 766, 714, 6);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1f80', 639, 695, 211);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f81', 639, 696, 211);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f82', 639, 713, 211);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f83', 639, 713, 211);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f84', 639, 713, 211);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f85', 639, 714, 211);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -51, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f86', 639, 724, 211, 37);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f87', 639, 724, 211, 37);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1f90', 594, 695, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f91', 594, 696, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f92', 594, 713, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f93', 594, 714, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f94', 594, 714, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f95', 594, 713, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f96', 594, 723, 214, 66);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1f97', 594, 723, 214, 66);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1fa0', 766, 695, 211);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1fa1', 766, 696, 211);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1fa2', 766, 713, 211);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1fa3', 766, 714, 211);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1fa4', 766, 714, 211);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1fa5', 766, 714, 211);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1fa6', 766, 724, 211, 27);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1fa7', 766, 724, 211, 27);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1fb2', 639, 713, 211);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1fb3', 639, 452, 211);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u03e1', '\u1f50', '\u1f52', '\u1f54', '\u1f55', '\u1f56', '\u1f57', '\u1f78', '\u1f7a', '\u1fe6'}, new int[] {-96, -96, -109, -32, -51, -96, -96, -96, -32, -32, -96, -255, -96, -96, -96, -96, -96, -96, -32, -96, -96});
+
+		setMetrics('\u1fb4', 639, 714, 211);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1fb6', 639, 636, 6, 11);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1fb7', 639, 636, 211, 11);
+		setKern(new char[] {'\u03b3', '\u03b8', '\u03bd', '\u03bf', '\u03c0', '\u03c4', '\u03c5', '\u03c7', '\u03c8', '\u03cc', '\u03cd', '\u1f78', '\u1f7a'}, new int[] {-96, -96, -96, -32, -51, -96, -96, -96, -32, -32, -96, -32, -96});
+
+		setMetrics('\u1fbc', 869, 700, 211);
+		setKern(new char[] {'\u0398', '\u039f', '\u03a4', '\u03a5', '\u03a6', '\u03a8', '\u03ab', '\u03bd'}, new int[] {-96, -96, -96, -160, -96, -141, -160, -112});
+
+		setMetrics('\u1fbe', 255, 157, 155, 6);
+
+		setMetrics('\u1fbf', 255, 695, 0, 168);
+		setKern(new char[] {'\u0391', '\u039f', '\u03a9', '\u1fbc', '\u1ffc'}, new int[] {-160, -64, -32, -160, -32});
+
+		setMetrics('\u1fc0', 383, 635, 0, 160);
+		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-128, -128});
+
+		setMetrics('\u1fc1', 511, 723, 0, 122);
+
+		setMetrics('\u1fc2', 594, 714, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1fc3', 594, 452, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u03e1', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -192, -32, -32});
+
+		setMetrics('\u1fc4', 594, 713, 214, 26);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1fc6', 594, 636, 214, 40);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1fc7', 594, 636, 214, 40);
+		setKern(new char[] {'\u03bd', '\u03c5', '\u03cd', '\u1f7a', '\u1fe6'}, new int[] {-32, -32, -32, -32, -32});
+
+		setMetrics('\u1fcc', 900, 687, 211, 144);
+
+		setMetrics('\u1fcd', 319, 713, 0, 125);
+		setKern(new char[] {'\u0391', '\u039f', '\u1fbc'}, new int[] {-96, -32, -96});
+
+		setMetrics('\u1fce', 319, 714, 0, 166);
+		setKern(new char[] {'\u0391', '\u039f', '\u1fbc'}, new int[] {-96, -32, -96});
+
+		setMetrics('\u1fcf', 383, 724, 0, 186);
+		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-128, -128});
+
+		setMetrics('\u1fd2', 287, 714, 6, 188);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1fd6', 287, 636, 6, 174);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1fd7', 287, 724, 6, 200);
+		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03ba', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7', '\u03cc', '\u03e1', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f78'}, new int[] {-80, -19, -38, -64, -64, -32, -32, -32, -96, -64, -32, -192, -32, -32, -32, -32, -32});
+
+		setMetrics('\u1fdd', 319, 714, 0, 125);
+		setKern(new char[] {'\u0391', '\u039f', '\u1fbc'}, new int[] {-96, -32, -96});
+
+		setMetrics('\u1fde', 319, 713, 0, 166);
+		setKern(new char[] {'\u0391', '\u039f', '\u1fbc'}, new int[] {-96, -32, -96});
+
+		setMetrics('\u1fdf', 383, 724, 0, 186);
+		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-128, -128});
+
+		setMetrics('\u1fe2', 575, 739, 5, 70);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u1fe4', 543, 695, 212, 24);
+		setKern(new char[] {'\u03af', '\u03b3', '\u03b6', '\u03b9', '\u03bd', '\u03bf', '\u03c3', '\u03c7', '\u03c8', '\u03cc', '\u03e1', '\u1f76', '\u1f78', '\u1fd6'}, new int[] {32, -64, 32, 32, -57, 32, 32, -13, 19, 32, -192, 32, 32, 32});
+
+		setMetrics('\u1fe5', 543, 696, 212, 22);
+		setKern(new char[] {'\u03af', '\u03b3', '\u03b6', '\u03b9', '\u03bd', '\u03bf', '\u03c3', '\u03c7', '\u03c8', '\u03cc', '\u03e1', '\u1f76', '\u1f78', '\u1fd6'}, new int[] {32, -64, 32, 32, -57, 32, 32, -13, 19, 32, -192, 32, 32, 32});
+
+		setMetrics('\u1fe6', 575, 636, 5, 55);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u1fe7', 575, 724, 5, 81);
+		setKern(new char[] {'\u03b8', '\u03bc', '\u03bd', '\u03c7', '\u03c8', '\u03e1'}, new int[] {-32, -13, -45, -32, 32, -192});
+
+		setMetrics('\u1fed', 319, 714, 0, 206);
+
+		setMetrics('\u1fef', 192, 714, 0, 131);
+		setKern(new char[] {'\u0391', '\u039f', '\u03a9', '\u1fbc', '\u1ffc'}, new int[] {-128, -64, -32, -128, -32});
+
+		setMetrics('\u1ff2', 766, 714, 211);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1ff3', 766, 446, 211);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u03e1', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, -192, 32, -32, -32});
+
+		setMetrics('\u1ff4', 766, 713, 211);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1ff6', 766, 635, 6, 1);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1ff7', 766, 635, 211, 1);
+		setKern(new char[] {'\u03ad', '\u03b3', '\u03b5', '\u03bc', '\u03bd', '\u03be', '\u03c4', '\u03c5', '\u03c7', '\u03cd', '\u1f72', '\u1f7a', '\u1fe6'}, new int[] {32, -128, 32, -32, -32, 32, -54, -32, -32, -32, 32, -32, -32});
+
+		setMetrics('\u1ffc', 830, 698, 211, 65);
+
+		setMetrics('\u1ffe', 255, 696, 0, 106);
+		setKern(new char[] {'\u0391', '\u039f', '\u03a9', '\u1fbc', '\u1ffc'}, new int[] {-192, -64, -32, -192, -32});
+
+		setMetrics('\u2019', 319, 696, 0, 95);
+
+		setMetrics('\u2329', 473, 751, 250, 91);
+
+		setMetrics('\u232a', 473, 751, 250);
+
 	}
 }
