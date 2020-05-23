@@ -2,7 +2,6 @@ package com.himamis.retex.renderer.share.fonts;
 
 import com.himamis.retex.renderer.share.Configuration;
 import com.himamis.retex.renderer.share.FontInfo;
-import com.himamis.retex.renderer.share.UniFontInfo;
 
 final class MSBM10 extends FontInfo {
 
