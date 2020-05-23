@@ -93,6 +93,14 @@ public class FontInfo {
 	public static ArrayList<FontInfo> fonts = new ArrayList<>();
 
 	public String c(char ch) {
+		if (ch == '\0') {
+			return "0";
+		}
+
+		if (ch < 511) {
+			return "'\\" + String.format("%03o", (int) ch) + "'";
+		}
+
 		return "'\\u" + String.format("%04x", (int) ch) + "'";
 	}
 
@@ -141,6 +149,8 @@ public class FontInfo {
 
 	public void close() {
 		try {
+			myWriter.write("\t}\n");
+			myWriter.write("}\n");
 			myWriter.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -296,9 +306,47 @@ public class FontInfo {
 				myWriter.write("\t\tsetMetrics(" + c(c) + ", " + i(metrics[0]) + ", " + i(metrics[1]) + ", " + i(metrics[2]) + ", " + i(metrics[3]) + ");\n");
 			}
 
+			if (ligatures != null) {
+				myWriter.write("\t\tsetLigatures(");
+				for (int i = 0; i < ligatures.length; i += 1) {
+					if (i != 0) {
+						myWriter.write(", ");
+					}
+					myWriter.write(c(ligatures[i]));
+				}
+				myWriter.write(");\n");
+			}
 
+			if (kernCode != null) {
+				myWriter.write("\t\tsetKern(new char[] {");
+				for (int i = 0; i < kernCode.length; i += 1) {
+					if (i != 0) {
+						myWriter.write(", ");
+					}
+					myWriter.write(c(kernCode[i]));
+				}
+				myWriter.write("}, new int[] {");
+				for (int i = 0; i < kernValue.length; i += 1) {
+					if (i != 0) {
+						myWriter.write(", ");
+					}
+					myWriter.write(i(kernValue[i]));
+				}
+				myWriter.write("});\n");
+			}
 
+			if (nextLarger != null) {
+				String cname = nextLarger.getClass().getName();
+				cname = cname.substring(cname.lastIndexOf('.') + 1);
+				cname = cname.toLowerCase();
+				myWriter.write("\t\tsetNextLarger(Configuration.getFonts()." + cname + ", " + c(nextLargerChar) + ");\n");
+			}
 
+			if (extension != null) {
+				myWriter.write("\t\tsetExtension(" + c(extension[0]) + ", " + c(extension[1]) + ", " + c(extension[2]) + ", " + c(extension[3]) + ");\n");
+			}
+
+			myWriter.write("\n");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -175,11 +175,14 @@ public final class TeXFonts {
 	public static void main(String[] args) {
 		new TeXFonts();
 
-		for (FontInfo fi : new ArrayList<>(FontInfo.fonts)) {
+
+		ArrayList<FontInfo> ffi = new ArrayList<>(FontInfo.fonts);
+
+		for (FontInfo fi : ffi) {
 			fi.getExtension('\0');
 		}
 
-		for (FontInfo fi : new ArrayList<>(FontInfo.fonts)) {
+		for (FontInfo fi : ffi) {
 			fi.close();
 		}
 	}
