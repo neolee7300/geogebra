@@ -86,12 +86,12 @@ public class FontInfo {
 	protected CharFont[] nextLarger;
 	protected char[][] extensions;
 
-	public FontInfo(int size, String path, double xHeight, double space,
-			double quad, char skewChar) {
+	public FontInfo(int size, String path, int xHeight, int space,
+			int quad, char skewChar) {
 		this.path = path;
-		this.xHeight = xHeight;
-		this.space = space;
-		this.quad = quad;
+		this.xHeight = xHeight / 1000.;
+		this.space = space / 1000.;
+		this.quad = quad / 1000.;
 		this.skewChar = skewChar;
 		this.size = size == 0 ? NUMBER_OF_CHAR_CODES : size;
 		this.metrics = new double[this.size][];
@@ -220,6 +220,28 @@ public class FontInfo {
 			extensions = new char[size][];
 		}
 		extensions[c] = ext;
+	}
+
+	char current;
+
+	public void setMetrics(char c, Integer... metrics) {
+
+	}
+
+	public void setNextLarger(FontInfo fi, char nextLarger) {
+
+	}
+
+	public void setKern(char[] kernCode, int[] kernValue) {
+
+	}
+
+	public void setLigatures(Char... chars) {
+
+	}
+
+	public void setExtension(char a, char b, char c, char d) {
+
 	}
 
 	public void setMetrics(char c, double[] arr) {
