@@ -94,7 +94,7 @@ public class FontInfo {
 
 	public String c(char ch) {
 		if (ch == '\0') {
-			return "0";
+			return "'\\0'";
 		}
 
 		if (ch < 511) {
@@ -122,7 +122,7 @@ public class FontInfo {
 		this.metrics = new double[this.size][];
 
 		try {
-			myWriter = new FileWriter(name + ".java");
+			myWriter = new FileWriter("fonts/" + name + ".java");
 			myWriter.write("package com.himamis.retex.renderer.share.fonts;\n\n");
 			myWriter.write("import com.himamis.retex.renderer.share.Configuration;\n");
 			myWriter.write("import com.himamis.retex.renderer.share.FontInfo;\n");
@@ -138,7 +138,7 @@ public class FontInfo {
 			myWriter.write("\t\tsuper(" + size + ", ttfPath, " + i(xHeight) + ", " + i(space) + ", " + i(quad) + ", " + c(skewChar) + ");\n");
 			myWriter.write("\t}\n\n");
 
-			myWriter.write("\t@Overrride\n");
+			myWriter.write("\t@Override\n");
 			myWriter.write("\tprotected final void initMetrics() {\n");
 
 			fonts.add(this);
