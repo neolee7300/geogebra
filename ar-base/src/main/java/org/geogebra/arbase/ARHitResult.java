@@ -1,11 +1,11 @@
 package org.geogebra.arbase;
 
-public interface ARHitResult {
+abstract public class ARHitResult {
 
-    Object createAnchor();
+    public abstract Object createAnchor();
 
-    Object getTrackable();
+    public abstract Object getTrackable();
 
-    Object getHit();
+    public abstract Object getHit();
 
 }
