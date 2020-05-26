@@ -56,7 +56,7 @@ public class UniFontInfo extends FontInfo {
 	private final Map<Character, Character> unicode;
 
 	public UniFontInfo(int size, String path, int xHeight, int space,
-			int quad, char skewChar) {
+			int quad, int skewChar) {
 		super(size, path, xHeight, space, quad, skewChar);
 		this.unicode = new HashMap<>(size);
 	}

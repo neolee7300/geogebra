@@ -6,275 +6,275 @@ import com.himamis.retex.renderer.share.FontInfo;
 final class CMTT10 extends FontInfo {
 
 	CMTT10(final String ttfPath) {
-		super(0, ttfPath, 430, 524, 1049, '\0');
+		super(0, ttfPath, 430, 524, 1049, 0);
 	}
 
 	@Override
 	protected final void initMetrics() {
-		setMetrics('\241', 524, 611);
+		setMetrics(161, 524, 611);
 
-		setMetrics('\242', 524, 611);
+		setMetrics(162, 524, 611);
 
-		setMetrics('\243', 524, 611);
+		setMetrics(163, 524, 611);
 
-		setMetrics('\244', 524, 611);
+		setMetrics(164, 524, 611);
 
-		setMetrics('\245', 524, 611);
+		setMetrics(165, 524, 611);
 
-		setMetrics('\246', 524, 611);
+		setMetrics(166, 524, 611);
 
-		setMetrics('\247', 524, 611);
+		setMetrics(167, 524, 611);
 
-		setMetrics('\250', 524, 611);
+		setMetrics(168, 524, 611);
 
-		setMetrics('\251', 524, 611);
+		setMetrics(169, 524, 611);
 
-		setMetrics('\252', 524, 611);
+		setMetrics(170, 524, 611);
 
-		setMetrics('\253', 524, 611);
+		setMetrics(171, 524, 611);
 
-		setMetrics('\256', 524, 611);
+		setMetrics(174, 524, 611);
 
-		setMetrics('\257', 524, 611);
+		setMetrics(175, 524, 611);
 
-		setMetrics('\260', 524, 611);
+		setMetrics(176, 524, 611);
 
-		setMetrics('\261', 524, 388, 222);
+		setMetrics(177, 524, 388, 222);
 
-		setMetrics('\262', 524, 388, 222);
+		setMetrics(178, 524, 388, 222);
 
-		setMetrics('\263', 524, 430);
+		setMetrics(179, 524, 430);
 
-		setMetrics('\264', 524, 430, 222);
+		setMetrics(180, 524, 430, 222);
 
-		setMetrics('\265', 524, 611);
+		setMetrics(181, 524, 611);
 
-		setMetrics('\266', 524, 611);
+		setMetrics(182, 524, 611);
 
-		setMetrics('\267', 524, 565);
+		setMetrics(183, 524, 565);
 
-		setMetrics('\270', 524, 611);
+		setMetrics(184, 524, 611);
 
-		setMetrics('\271', 524, 565);
+		setMetrics(185, 524, 565);
 
-		setMetrics('\272', 524, 611);
+		setMetrics(186, 524, 611);
 
-		setMetrics('\273', 524, 0, 194);
+		setMetrics(187, 524, 0, 194);
 
-		setMetrics('\274', 524, 611);
+		setMetrics(188, 524, 611);
 
-		setMetrics('\275', 524, 430);
+		setMetrics(189, 524, 430);
 
-		setMetrics('\276', 524, 430);
+		setMetrics(190, 524, 430);
 
-		setMetrics('\277', 524, 541, 111);
+		setMetrics(191, 524, 541, 111);
 
-		setMetrics('\300', 524, 611);
+		setMetrics(192, 524, 611);
 
-		setMetrics('\301', 524, 611);
+		setMetrics(193, 524, 611);
 
-		setMetrics('\302', 524, 666, 55);
+		setMetrics(194, 524, 666, 55);
 
-		setMetrics('\303', 524, 219, 111);
+		setMetrics(195, 524, 219, 111);
 
-		setMetrics('\041', 524, 611);
-		setLigatures('\140', '\261');
+		setMetrics(33, 524, 611);
+		setLigatures(96, 177);
 
-		setMetrics('\042', 524, 611);
+		setMetrics(34, 524, 611);
 
-		setMetrics('\043', 524, 611);
+		setMetrics(35, 524, 611);
 
-		setMetrics('\044', 524, 694, 83);
+		setMetrics(36, 524, 694, 83);
 
-		setMetrics('\045', 524, 694, 83);
+		setMetrics(37, 524, 694, 83);
 
-		setMetrics('\046', 524, 611);
+		setMetrics(38, 524, 611);
 
-		setMetrics('\047', 524, 611);
+		setMetrics(39, 524, 611);
 
-		setMetrics('\050', 524, 694, 83);
-		setNextLarger(Configuration.getFonts().cmex10, '\241');
+		setMetrics(40, 524, 694, 83);
+		setNextLarger(Configuration.getFonts().cmex10, 161);
 
-		setMetrics('\051', 524, 694, 83);
-		setNextLarger(Configuration.getFonts().cmex10, '\242');
+		setMetrics(41, 524, 694, 83);
+		setNextLarger(Configuration.getFonts().cmex10, 162);
 
-		setMetrics('\052', 524, 520);
+		setMetrics(42, 524, 520);
 
-		setMetrics('\053', 524, 530, -80);
+		setMetrics(43, 524, 530, -80);
 
-		setMetrics('\054', 524, 125, 138);
+		setMetrics(44, 524, 125, 138);
 
-		setMetrics('\055', 524, 530, -80);
+		setMetrics(45, 524, 530, -80);
 
-		setMetrics('\056', 524, 125);
+		setMetrics(46, 524, 125);
 
-		setMetrics('\057', 524, 694, 83);
-		setNextLarger(Configuration.getFonts().cmex10, '\261');
+		setMetrics(47, 524, 694, 83);
+		setNextLarger(Configuration.getFonts().cmex10, 177);
 
-		setMetrics('\060', 524, 611);
+		setMetrics(48, 524, 611);
 
-		setMetrics('\061', 524, 611);
+		setMetrics(49, 524, 611);
 
-		setMetrics('\062', 524, 611);
+		setMetrics(50, 524, 611);
 
-		setMetrics('\063', 524, 611);
+		setMetrics(51, 524, 611);
 
-		setMetrics('\064', 524, 611);
+		setMetrics(52, 524, 611);
 
-		setMetrics('\065', 524, 611);
+		setMetrics(53, 524, 611);
 
-		setMetrics('\066', 524, 611);
+		setMetrics(54, 524, 611);
 
-		setMetrics('\067', 524, 611);
+		setMetrics(55, 524, 611);
 
-		setMetrics('\070', 524, 611);
+		setMetrics(56, 524, 611);
 
-		setMetrics('\071', 524, 611);
+		setMetrics(57, 524, 611);
 
-		setMetrics('\072', 524, 430);
+		setMetrics(58, 524, 430);
 
-		setMetrics('\073', 524, 430, 138);
+		setMetrics(59, 524, 430, 138);
 
-		setMetrics('\074', 524, 555, -55);
+		setMetrics(60, 524, 555, -55);
 
-		setMetrics('\075', 524, 415, -195);
+		setMetrics(61, 524, 415, -195);
 
-		setMetrics('\076', 524, 555, -55);
+		setMetrics(62, 524, 555, -55);
 
-		setMetrics('\077', 524, 611);
-		setLigatures('\140', '\262');
+		setMetrics(63, 524, 611);
+		setLigatures(96, 178);
 
-		setMetrics('\100', 524, 611);
+		setMetrics(64, 524, 611);
 
-		setMetrics('\101', 524, 611);
+		setMetrics(65, 524, 611);
 
-		setMetrics('\102', 524, 611);
+		setMetrics(66, 524, 611);
 
-		setMetrics('\103', 524, 611);
+		setMetrics(67, 524, 611);
 
-		setMetrics('\104', 524, 611);
+		setMetrics(68, 524, 611);
 
-		setMetrics('\105', 524, 611);
+		setMetrics(69, 524, 611);
 
-		setMetrics('\106', 524, 611);
+		setMetrics(70, 524, 611);
 
-		setMetrics('\107', 524, 611);
+		setMetrics(71, 524, 611);
 
-		setMetrics('\110', 524, 611);
+		setMetrics(72, 524, 611);
 
-		setMetrics('\111', 524, 611);
+		setMetrics(73, 524, 611);
 
-		setMetrics('\112', 524, 611);
+		setMetrics(74, 524, 611);
 
-		setMetrics('\113', 524, 611);
+		setMetrics(75, 524, 611);
 
-		setMetrics('\114', 524, 611);
+		setMetrics(76, 524, 611);
 
-		setMetrics('\115', 524, 611);
+		setMetrics(77, 524, 611);
 
-		setMetrics('\116', 524, 611);
+		setMetrics(78, 524, 611);
 
-		setMetrics('\117', 524, 611);
+		setMetrics(79, 524, 611);
 
-		setMetrics('\120', 524, 611);
+		setMetrics(80, 524, 611);
 
-		setMetrics('\121', 524, 611, 138);
+		setMetrics(81, 524, 611, 138);
 
-		setMetrics('\122', 524, 611);
+		setMetrics(82, 524, 611);
 
-		setMetrics('\123', 524, 611);
+		setMetrics(83, 524, 611);
 
-		setMetrics('\124', 524, 611);
+		setMetrics(84, 524, 611);
 
-		setMetrics('\125', 524, 611);
+		setMetrics(85, 524, 611);
 
-		setMetrics('\126', 524, 611);
+		setMetrics(86, 524, 611);
 
-		setMetrics('\127', 524, 611);
+		setMetrics(87, 524, 611);
 
-		setMetrics('\130', 524, 611);
+		setMetrics(88, 524, 611);
 
-		setMetrics('\131', 524, 611);
+		setMetrics(89, 524, 611);
 
-		setMetrics('\132', 524, 611);
+		setMetrics(90, 524, 611);
 
-		setMetrics('\133', 524, 694, 83);
-		setNextLarger(Configuration.getFonts().cmex10, '\243');
+		setMetrics(91, 524, 694, 83);
+		setNextLarger(Configuration.getFonts().cmex10, 163);
 
-		setMetrics('\134', 524, 694, 83);
+		setMetrics(92, 524, 694, 83);
 
-		setMetrics('\135', 524, 694, 83);
-		setNextLarger(Configuration.getFonts().cmex10, '\244');
+		setMetrics(93, 524, 694, 83);
+		setNextLarger(Configuration.getFonts().cmex10, 164);
 
-		setMetrics('\136', 524, 611);
+		setMetrics(94, 524, 611);
 
-		setMetrics('\137', 524, 0, 95);
+		setMetrics(95, 524, 0, 95);
 
-		setMetrics('\140', 524, 611);
+		setMetrics(96, 524, 611);
 
-		setMetrics('\141', 524, 430);
+		setMetrics(97, 524, 430);
 
-		setMetrics('\142', 524, 611);
+		setMetrics(98, 524, 611);
 
-		setMetrics('\143', 524, 430);
+		setMetrics(99, 524, 430);
 
-		setMetrics('\144', 524, 611);
+		setMetrics(100, 524, 611);
 
-		setMetrics('\145', 524, 430);
+		setMetrics(101, 524, 430);
 
-		setMetrics('\146', 524, 611);
+		setMetrics(102, 524, 611);
 
-		setMetrics('\147', 524, 430, 222);
+		setMetrics(103, 524, 430, 222);
 
-		setMetrics('\150', 524, 611);
+		setMetrics(104, 524, 611);
 
-		setMetrics('\151', 524, 611);
+		setMetrics(105, 524, 611);
 
-		setMetrics('\152', 524, 611, 222);
+		setMetrics(106, 524, 611, 222);
 
-		setMetrics('\153', 524, 611);
+		setMetrics(107, 524, 611);
 
-		setMetrics('\154', 524, 611);
+		setMetrics(108, 524, 611);
 
-		setMetrics('\155', 524, 430);
+		setMetrics(109, 524, 430);
 
-		setMetrics('\156', 524, 430);
+		setMetrics(110, 524, 430);
 
-		setMetrics('\157', 524, 430);
+		setMetrics(111, 524, 430);
 
-		setMetrics('\160', 524, 430, 222);
+		setMetrics(112, 524, 430, 222);
 
-		setMetrics('\161', 524, 430, 222);
+		setMetrics(113, 524, 430, 222);
 
-		setMetrics('\162', 524, 430);
+		setMetrics(114, 524, 430);
 
-		setMetrics('\163', 524, 430);
+		setMetrics(115, 524, 430);
 
-		setMetrics('\164', 524, 553);
+		setMetrics(116, 524, 553);
 
-		setMetrics('\165', 524, 430);
+		setMetrics(117, 524, 430);
 
-		setMetrics('\166', 524, 430);
+		setMetrics(118, 524, 430);
 
-		setMetrics('\167', 524, 430);
+		setMetrics(119, 524, 430);
 
-		setMetrics('\170', 524, 430);
+		setMetrics(120, 524, 430);
 
-		setMetrics('\171', 524, 430, 222);
+		setMetrics(121, 524, 430, 222);
 
-		setMetrics('\172', 524, 430);
+		setMetrics(122, 524, 430);
 
-		setMetrics('\173', 524, 694, 83);
+		setMetrics(123, 524, 694, 83);
 
-		setMetrics('\174', 524, 694, 83);
+		setMetrics(124, 524, 694, 83);
 
-		setMetrics('\175', 524, 694, 83);
+		setMetrics(125, 524, 694, 83);
 
-		setMetrics('\176', 524, 611);
+		setMetrics(126, 524, 611);
 
-		setMetrics('\304', 524, 611);
+		setMetrics(196, 524, 611);
 
-		setMetrics('\305', 524, 57, 191);
+		setMetrics(197, 524, 57, 191);
 
 	}
 }

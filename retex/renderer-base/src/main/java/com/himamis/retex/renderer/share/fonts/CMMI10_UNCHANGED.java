@@ -6,157 +6,157 @@ import com.himamis.retex.renderer.share.FontInfo;
 final class CMMI10_UNCHANGED extends FontInfo {
 
 	CMMI10_UNCHANGED(final String ttfPath) {
-		super(0, ttfPath, 430, 0, 1000, '\304');
+		super(0, ttfPath, 430, 0, 1000, 196);
 	}
 
 	@Override
 	protected final void initMetrics() {
-		setMetrics('\041', 622, 430, 0, 35);
+		setMetrics(33, 622, 430, 0, 35);
 
-		setMetrics('\042', 466, 430);
-		setKern(new char[] {'\304'}, new int[] {83});
+		setMetrics(34, 466, 430);
+		setKern(196, 83);
 
-		setMetrics('\043', 591, 694);
-		setKern(new char[] {'\304'}, new int[] {83});
+		setMetrics(35, 591, 694);
+		setKern(196, 83);
 
-		setMetrics('\044', 828, 430, 0, 27);
+		setMetrics(36, 828, 430, 0, 27);
 
-		setMetrics('\045', 517, 430, 194);
-		setKern(new char[] {'\304'}, new int[] {83});
+		setMetrics(37, 517, 430, 194);
+		setKern(196, 83);
 
-		setMetrics('\046', 362, 430, 97, 79);
-		setKern(new char[] {'\304'}, new int[] {83});
+		setMetrics(38, 362, 430, 97, 79);
+		setKern(196, 83);
 
-		setMetrics('\047', 654, 430, 194);
-		setKern(new char[] {'\304'}, new int[] {83});
+		setMetrics(39, 654, 430, 194);
+		setKern(196, 83);
 
-		setMetrics('\050', 1000, 366, -133);
+		setMetrics(40, 1000, 366, -133);
 
-		setMetrics('\051', 1000, 366, -133);
+		setMetrics(41, 1000, 366, -133);
 
-		setMetrics('\052', 1000, 366, -133);
+		setMetrics(42, 1000, 366, -133);
 
-		setMetrics('\053', 1000, 366, -133);
+		setMetrics(43, 1000, 366, -133);
 
-		setMetrics('\054', 277, 463, -36);
+		setMetrics(44, 277, 463, -36);
 
-		setMetrics('\055', 277, 463, -36);
+		setMetrics(45, 277, 463, -36);
 
-		setMetrics('\056', 500, 465, -34);
+		setMetrics(46, 500, 465, -34);
 
-		setMetrics('\057', 500, 465, -34);
+		setMetrics(47, 500, 465, -34);
 
-		setMetrics('\072', 277, 105);
+		setMetrics(58, 277, 105);
 
-		setMetrics('\073', 277, 105, 194);
+		setMetrics(59, 277, 105, 194);
 
-		setMetrics('\074', 777, 539, 39);
-		setNextLarger(Configuration.getFonts().cmex10, '\253');
+		setMetrics(60, 777, 539, 39);
+		setNextLarger(Configuration.getFonts().cmex10, 171);
 
-		setMetrics('\075', 500, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\261');
+		setMetrics(61, 500, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 177);
 
-		setMetrics('\076', 777, 539, 39);
-		setNextLarger(Configuration.getFonts().cmex10, '\256');
+		setMetrics(62, 777, 539, 39);
+		setNextLarger(Configuration.getFonts().cmex10, 174);
 
-		setMetrics('\077', 500, 465, -34);
+		setMetrics(63, 500, 465, -34);
 
-		setMetrics('\100', 530, 694, 0, 55);
-		setKern(new char[] {'\304'}, new int[] {83});
+		setMetrics(64, 530, 694, 0, 55);
+		setKern(196, 83);
 
-		setMetrics('\133', 388, 750);
+		setMetrics(91, 388, 750);
 
-		setMetrics('\134', 388, 694, 194);
+		setMetrics(92, 388, 694, 194);
 
-		setMetrics('\135', 388, 694, 194);
+		setMetrics(93, 388, 694, 194);
 
-		setMetrics('\136', 1000, 357, -142);
+		setMetrics(94, 1000, 357, -142);
 
-		setMetrics('\137', 1000, 357, -142);
+		setMetrics(95, 1000, 357, -142);
 
-		setMetrics('\140', 416, 694);
-		setKern(new char[] {'\304'}, new int[] {111});
+		setMetrics(96, 416, 694);
+		setKern(196, 111);
 
-		setMetrics('\145', 465, 430);
-		setKern(new char[] {'\304'}, new int[] {55});
+		setMetrics(101, 465, 430);
+		setKern(196, 55);
 
-		setMetrics('\157', 484, 430);
-		setKern(new char[] {'\304'}, new int[] {55});
+		setMetrics(111, 484, 430);
+		setKern(196, 55);
 
-		setMetrics('\256', 639, 430, 0, 3);
-		setKern(new char[] {'\304'}, new int[] {27});
+		setMetrics(174, 639, 430, 0, 3);
+		setKern(196, 27);
 
-		setMetrics('\257', 565, 694, 194, 52);
-		setKern(new char[] {'\304'}, new int[] {83});
+		setMetrics(175, 565, 694, 194, 52);
+		setKern(196, 83);
 
-		setMetrics('\260', 517, 430, 194, 55);
+		setMetrics(176, 517, 430, 194, 55);
 
-		setMetrics('\261', 444, 694, 0, 37);
-		setKern(new char[] {'\073', '\072', '\304'}, new int[] {-55, -55, 55});
+		setMetrics(177, 444, 694, 0, 37);
+		setKern(59, -55, 58, -55, 196, 55);
 
-		setMetrics('\262', 405, 430);
-		setKern(new char[] {'\304'}, new int[] {55});
+		setMetrics(178, 405, 430);
+		setKern(196, 55);
 
-		setMetrics('\263', 437, 694, 194, 73);
-		setKern(new char[] {'\304'}, new int[] {83});
+		setMetrics(179, 437, 694, 194, 73);
+		setKern(196, 83);
 
-		setMetrics('\264', 496, 430, 194, 35);
-		setKern(new char[] {'\304'}, new int[] {55});
+		setMetrics(180, 496, 430, 194, 35);
+		setKern(196, 55);
 
-		setMetrics('\265', 469, 694, 0, 27);
-		setKern(new char[] {'\304'}, new int[] {83});
+		setMetrics(181, 469, 694, 0, 27);
+		setKern(196, 83);
 
-		setMetrics('\266', 353, 430);
-		setKern(new char[] {'\304'}, new int[] {55});
+		setMetrics(182, 353, 430);
+		setKern(196, 55);
 
-		setMetrics('\267', 576, 430);
+		setMetrics(183, 576, 430);
 
-		setMetrics('\270', 583, 694);
+		setMetrics(184, 583, 694);
 
-		setMetrics('\271', 602, 430, 194);
-		setKern(new char[] {'\304'}, new int[] {27});
+		setMetrics(185, 602, 430, 194);
+		setKern(196, 27);
 
-		setMetrics('\272', 493, 430, 0, 63);
-		setKern(new char[] {'\073', '\072', '\304'}, new int[] {-55, -55, 27});
+		setMetrics(186, 493, 430, 0, 63);
+		setKern(59, -55, 58, -55, 196, 27);
 
-		setMetrics('\273', 437, 694, 194, 46);
-		setKern(new char[] {'\304'}, new int[] {111});
+		setMetrics(187, 437, 694, 194, 46);
+		setKern(196, 111);
 
-		setMetrics('\274', 570, 430, 0, 35);
+		setMetrics(188, 570, 430, 0, 35);
 
-		setMetrics('\275', 517, 430, 194);
-		setKern(new char[] {'\304'}, new int[] {83});
+		setMetrics(189, 517, 430, 194);
+		setKern(196, 83);
 
-		setMetrics('\276', 571, 430, 0, 35);
-		setKern(new char[] {'\073', '\072'}, new int[] {-55, -55});
+		setMetrics(190, 571, 430, 0, 35);
+		setKern(59, -55, 58, -55);
 
-		setMetrics('\277', 437, 430, 0, 113);
-		setKern(new char[] {'\073', '\072', '\304'}, new int[] {-55, -55, 27});
+		setMetrics(191, 437, 430, 0, 113);
+		setKern(59, -55, 58, -55, 196, 27);
 
-		setMetrics('\300', 540, 430, 0, 35);
-		setKern(new char[] {'\304'}, new int[] {27});
+		setMetrics(192, 540, 430, 0, 35);
+		setKern(196, 27);
 
-		setMetrics('\301', 595, 694, 194);
-		setKern(new char[] {'\304'}, new int[] {83});
+		setMetrics(193, 595, 694, 194);
+		setKern(196, 83);
 
-		setMetrics('\302', 625, 430, 194);
-		setKern(new char[] {'\304'}, new int[] {55});
+		setMetrics(194, 625, 430, 194);
+		setKern(196, 55);
 
-		setMetrics('\303', 651, 694, 194, 35);
-		setKern(new char[] {'\304'}, new int[] {111});
+		setMetrics(195, 651, 694, 194, 35);
+		setKern(196, 111);
 
-		setMetrics('\173', 322, 430);
-		setKern(new char[] {'\304'}, new int[] {27});
+		setMetrics(123, 322, 430);
+		setKern(196, 27);
 
-		setMetrics('\174', 384, 430, 194);
-		setKern(new char[] {'\304'}, new int[] {83});
+		setMetrics(124, 384, 430, 194);
+		setKern(196, 83);
 
-		setMetrics('\175', 636, 430, 194);
-		setKern(new char[] {'\304'}, new int[] {111});
+		setMetrics(125, 636, 430, 194);
+		setKern(196, 111);
 
-		setMetrics('\176', 500, 714, 0, 153);
+		setMetrics(126, 500, 714, 0, 153);
 
-		setMetrics('\304', 277, 694, 0, 399);
+		setMetrics(196, 277, 694, 0, 399);
 
 	}
 }

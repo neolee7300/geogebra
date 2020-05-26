@@ -5,420 +5,420 @@ import com.himamis.retex.renderer.share.UniFontInfo;
 final class FCTRPG extends UniFontInfo {
 
 	FCTRPG(final String ttfPath) {
-		super(204, ttfPath, 438, 525, 1000, '\0');
+		super(204, ttfPath, 438, 525, 1000, 0);
 	}
 
 	@Override
 	protected final void initMetrics() {
-		setMetrics('\040', 525, 0);
+		setMetrics(32, 525, 0);
 
-		setMetrics('\250', 525, 607);
+		setMetrics(168, 525, 607);
 
-		setMetrics('\u0374', 525, 613);
+		setMetrics(884, 525, 613);
 
-		setMetrics('\u0375', 525, 1, 140);
+		setMetrics(885, 525, 1, 140);
 
-		setMetrics('\u037a', 525, -53, 184);
+		setMetrics(890, 525, -53, 184);
 
-		setMetrics('\u0384', 525, 613);
+		setMetrics(900, 525, 613);
 
-		setMetrics('\u0385', 525, 613);
+		setMetrics(901, 525, 613);
 
-		setMetrics('\u0387', 525, 431);
+		setMetrics(903, 525, 431);
 
-		setMetrics('\u0390', 525, 613, 6);
+		setMetrics(912, 525, 613, 6);
 
-		setMetrics('\u0391', 525, 653);
+		setMetrics(913, 525, 653);
 
-		setMetrics('\u0392', 525, 641);
+		setMetrics(914, 525, 641);
 
-		setMetrics('\u0393', 525, 641);
+		setMetrics(915, 525, 641);
 
-		setMetrics('\u0394', 525, 653);
+		setMetrics(916, 525, 653);
 
-		setMetrics('\u0395', 525, 641);
+		setMetrics(917, 525, 641);
 
-		setMetrics('\u0396', 525, 640);
+		setMetrics(918, 525, 640);
 
-		setMetrics('\u0397', 525, 641);
+		setMetrics(919, 525, 641);
 
-		setMetrics('\u0398', 525, 652, 11);
+		setMetrics(920, 525, 652, 11);
 
-		setMetrics('\u0399', 525, 641);
+		setMetrics(921, 525, 641);
 
-		setMetrics('\u039a', 525, 641);
+		setMetrics(922, 525, 641);
 
-		setMetrics('\u039b', 525, 653);
+		setMetrics(923, 525, 653);
 
-		setMetrics('\u039c', 525, 641);
+		setMetrics(924, 525, 641);
 
-		setMetrics('\u039d', 525, 641);
+		setMetrics(925, 525, 641);
 
-		setMetrics('\u039e', 525, 641);
+		setMetrics(926, 525, 641);
 
-		setMetrics('\u039f', 525, 652, 11);
+		setMetrics(927, 525, 652, 11);
 
-		setMetrics('\u03a0', 525, 641);
+		setMetrics(928, 525, 641);
 
-		setMetrics('\u03a1', 525, 641);
+		setMetrics(929, 525, 641);
 
-		setMetrics('\u03a3', 525, 641);
+		setMetrics(931, 525, 641);
 
-		setMetrics('\u03a4', 525, 641);
+		setMetrics(932, 525, 641);
 
-		setMetrics('\u03a5', 525, 651);
+		setMetrics(933, 525, 651);
 
-		setMetrics('\u03a6', 525, 640);
+		setMetrics(934, 525, 640);
 
-		setMetrics('\u03a7', 525, 641);
+		setMetrics(935, 525, 641);
 
-		setMetrics('\u03a8', 525, 640);
+		setMetrics(936, 525, 640);
 
-		setMetrics('\u03a9', 525, 651);
+		setMetrics(937, 525, 651);
 
-		setMetrics('\u03aa', 525, 783);
+		setMetrics(938, 525, 783);
 
-		setMetrics('\u03ab', 525, 783);
+		setMetrics(939, 525, 783);
 
-		setMetrics('\u03ac', 525, 613, 6, 2);
+		setMetrics(940, 525, 613, 6, 2);
 
-		setMetrics('\u03ad', 525, 613, 11);
+		setMetrics(941, 525, 613, 11);
 
-		setMetrics('\u03ae', 525, 613, 232);
+		setMetrics(942, 525, 613, 232);
 
-		setMetrics('\u03af', 525, 613, 6);
+		setMetrics(943, 525, 613, 6);
 
-		setMetrics('\u03b0', 525, 669, 6);
+		setMetrics(944, 525, 669, 6);
 
-		setMetrics('\u03b1', 525, 438, 6, 2);
+		setMetrics(945, 525, 438, 6, 2);
 
-		setMetrics('\u03b2', 525, 647, 232);
+		setMetrics(946, 525, 647, 232);
 
-		setMetrics('\u03b3', 525, 438, 177);
+		setMetrics(947, 525, 438, 177);
 
-		setMetrics('\u03b4', 525, 637, 5);
+		setMetrics(948, 525, 637, 5);
 
-		setMetrics('\u03b5', 525, 443, 11);
+		setMetrics(949, 525, 443, 11);
 
-		setMetrics('\u03b6', 525, 651, 133);
+		setMetrics(950, 525, 651, 133);
 
-		setMetrics('\u03b7', 525, 442, 232);
+		setMetrics(951, 525, 442, 232);
 
-		setMetrics('\u03b8', 525, 652, 11);
+		setMetrics(952, 525, 652, 11);
 
-		setMetrics('\u03b9', 525, 437, 6);
+		setMetrics(953, 525, 437, 6);
 
-		setMetrics('\u03ba', 525, 445, 13);
+		setMetrics(954, 525, 445, 13);
 
-		setMetrics('\u03bb', 525, 642, 5);
+		setMetrics(955, 525, 642, 5);
 
-		setMetrics('\u03bc', 525, 442, 227);
+		setMetrics(956, 525, 442, 227);
 
-		setMetrics('\u03bd', 525, 438, 5);
+		setMetrics(957, 525, 438, 5);
 
-		setMetrics('\u03be', 525, 651, 133);
+		setMetrics(958, 525, 651, 133);
 
-		setMetrics('\u03bf', 525, 438, 6);
+		setMetrics(959, 525, 438, 6);
 
-		setMetrics('\u03c0', 525, 432, 6);
+		setMetrics(960, 525, 432, 6);
 
-		setMetrics('\u03c1', 525, 437, 221);
+		setMetrics(961, 525, 437, 221);
 
-		setMetrics('\u03c2', 525, 437, 111);
+		setMetrics(962, 525, 437, 111);
 
-		setMetrics('\u03c3', 525, 437, 5);
+		setMetrics(963, 525, 437, 5);
 
-		setMetrics('\u03c4', 525, 431, 6);
+		setMetrics(964, 525, 431, 6);
 
-		setMetrics('\u03c5', 525, 443, 6);
+		setMetrics(965, 525, 443, 6);
 
-		setMetrics('\u03c6', 525, 443, 232);
+		setMetrics(966, 525, 443, 232);
 
-		setMetrics('\u03c7', 525, 439, 229);
+		setMetrics(967, 525, 439, 229);
 
-		setMetrics('\u03c8', 525, 651, 232);
+		setMetrics(968, 525, 651, 232);
 
-		setMetrics('\u03c9', 525, 442, 6);
+		setMetrics(969, 525, 442, 6);
 
-		setMetrics('\u03ca', 525, 641, 6);
+		setMetrics(970, 525, 641, 6);
 
-		setMetrics('\u03cb', 525, 640, 6);
+		setMetrics(971, 525, 640, 6);
 
-		setMetrics('\u03cc', 525, 613, 6);
+		setMetrics(972, 525, 613, 6);
 
-		setMetrics('\u03cd', 525, 613, 6);
+		setMetrics(973, 525, 613, 6);
 
-		setMetrics('\u03ce', 525, 613, 6);
+		setMetrics(974, 525, 613, 6);
 
-		setMetrics('\u03d8', 525, 647);
+		setMetrics(984, 525, 647);
 
-		setMetrics('\u03d9', 525, 609, 55);
+		setMetrics(985, 525, 609, 55);
 
-		setMetrics('\u03da', 525, 641, 28);
+		setMetrics(986, 525, 641, 28);
 
-		setMetrics('\u03db', 525, 443, 18);
+		setMetrics(987, 525, 443, 18);
 
-		setMetrics('\u03dc', 525, 641);
+		setMetrics(988, 525, 641);
 
-		setMetrics('\u03dd', 525, 432, 221);
+		setMetrics(989, 525, 432, 221);
 
-		setMetrics('\u03df', 525, 542, 101);
+		setMetrics(991, 525, 542, 101);
 
-		setMetrics('\u03e0', 525, 667);
+		setMetrics(992, 525, 667);
 
-		setMetrics('\u03e1', 525, 640, 11);
+		setMetrics(993, 525, 640, 11);
 
-		setMetrics('\u1f00', 525, 640, 6, 2);
+		setMetrics(7936, 525, 640, 6, 2);
 
-		setMetrics('\u1f01', 525, 640, 6, 2);
+		setMetrics(7937, 525, 640, 6, 2);
 
-		setMetrics('\u1f02', 525, 640, 6, 2);
+		setMetrics(7938, 525, 640, 6, 2);
 
-		setMetrics('\u1f03', 525, 640, 6, 2);
+		setMetrics(7939, 525, 640, 6, 2);
 
-		setMetrics('\u1f04', 525, 640, 6, 2);
+		setMetrics(7940, 525, 640, 6, 2);
 
-		setMetrics('\u1f05', 525, 640, 6, 2);
+		setMetrics(7941, 525, 640, 6, 2);
 
-		setMetrics('\u1f06', 525, 696, 6, 2);
+		setMetrics(7942, 525, 696, 6, 2);
 
-		setMetrics('\u1f07', 525, 696, 6, 2);
+		setMetrics(7943, 525, 696, 6, 2);
 
-		setMetrics('\u1f10', 525, 640, 11);
+		setMetrics(7952, 525, 640, 11);
 
-		setMetrics('\u1f11', 525, 640, 11);
+		setMetrics(7953, 525, 640, 11);
 
-		setMetrics('\u1f12', 525, 640, 11);
+		setMetrics(7954, 525, 640, 11);
 
-		setMetrics('\u1f13', 525, 640, 11);
+		setMetrics(7955, 525, 640, 11);
 
-		setMetrics('\u1f14', 525, 640, 11);
+		setMetrics(7956, 525, 640, 11);
 
-		setMetrics('\u1f15', 525, 640, 11);
+		setMetrics(7957, 525, 640, 11);
 
-		setMetrics('\u1f20', 525, 640, 232);
+		setMetrics(7968, 525, 640, 232);
 
-		setMetrics('\u1f21', 525, 640, 232);
+		setMetrics(7969, 525, 640, 232);
 
-		setMetrics('\u1f22', 525, 640, 232);
+		setMetrics(7970, 525, 640, 232);
 
-		setMetrics('\u1f23', 525, 640, 232);
+		setMetrics(7971, 525, 640, 232);
 
-		setMetrics('\u1f24', 525, 640, 232);
+		setMetrics(7972, 525, 640, 232);
 
-		setMetrics('\u1f25', 525, 640, 232);
+		setMetrics(7973, 525, 640, 232);
 
-		setMetrics('\u1f26', 525, 696, 232);
+		setMetrics(7974, 525, 696, 232);
 
-		setMetrics('\u1f27', 525, 696, 232);
+		setMetrics(7975, 525, 696, 232);
 
-		setMetrics('\u1f30', 525, 640, 6);
+		setMetrics(7984, 525, 640, 6);
 
-		setMetrics('\u1f31', 525, 640, 6);
+		setMetrics(7985, 525, 640, 6);
 
-		setMetrics('\u1f32', 525, 640, 6);
+		setMetrics(7986, 525, 640, 6);
 
-		setMetrics('\u1f33', 525, 640, 6);
+		setMetrics(7987, 525, 640, 6);
 
-		setMetrics('\u1f34', 525, 640, 6);
+		setMetrics(7988, 525, 640, 6);
 
-		setMetrics('\u1f35', 525, 640, 6);
+		setMetrics(7989, 525, 640, 6);
 
-		setMetrics('\u1f36', 525, 696, 6);
+		setMetrics(7990, 525, 696, 6);
 
-		setMetrics('\u1f37', 525, 696, 6);
+		setMetrics(7991, 525, 696, 6);
 
-		setMetrics('\u1f40', 525, 640, 6);
+		setMetrics(8000, 525, 640, 6);
 
-		setMetrics('\u1f41', 525, 640, 6);
+		setMetrics(8001, 525, 640, 6);
 
-		setMetrics('\u1f42', 525, 640, 6);
+		setMetrics(8002, 525, 640, 6);
 
-		setMetrics('\u1f43', 525, 640, 6);
+		setMetrics(8003, 525, 640, 6);
 
-		setMetrics('\u1f44', 525, 640, 6);
+		setMetrics(8004, 525, 640, 6);
 
-		setMetrics('\u1f45', 525, 640, 6);
+		setMetrics(8005, 525, 640, 6);
 
-		setMetrics('\u1f50', 525, 640, 6);
+		setMetrics(8016, 525, 640, 6);
 
-		setMetrics('\u1f51', 525, 640, 6);
+		setMetrics(8017, 525, 640, 6);
 
-		setMetrics('\u1f52', 525, 640, 6);
+		setMetrics(8018, 525, 640, 6);
 
-		setMetrics('\u1f53', 525, 640, 6);
+		setMetrics(8019, 525, 640, 6);
 
-		setMetrics('\u1f54', 525, 640, 6);
+		setMetrics(8020, 525, 640, 6);
 
-		setMetrics('\u1f55', 525, 640, 6);
+		setMetrics(8021, 525, 640, 6);
 
-		setMetrics('\u1f56', 525, 696, 6);
+		setMetrics(8022, 525, 696, 6);
 
-		setMetrics('\u1f57', 525, 696, 6);
+		setMetrics(8023, 525, 696, 6);
 
-		setMetrics('\u1f60', 525, 640, 6);
+		setMetrics(8032, 525, 640, 6);
 
-		setMetrics('\u1f61', 525, 640, 6);
+		setMetrics(8033, 525, 640, 6);
 
-		setMetrics('\u1f62', 525, 640, 6);
+		setMetrics(8034, 525, 640, 6);
 
-		setMetrics('\u1f63', 525, 640, 6);
+		setMetrics(8035, 525, 640, 6);
 
-		setMetrics('\u1f64', 525, 640, 6);
+		setMetrics(8036, 525, 640, 6);
 
-		setMetrics('\u1f65', 525, 640, 6);
+		setMetrics(8037, 525, 640, 6);
 
-		setMetrics('\u1f66', 525, 696, 6);
+		setMetrics(8038, 525, 696, 6);
 
-		setMetrics('\u1f67', 525, 696, 6);
+		setMetrics(8039, 525, 696, 6);
 
-		setMetrics('\u1f70', 525, 613, 6, 2);
+		setMetrics(8048, 525, 613, 6, 2);
 
-		setMetrics('\u1f72', 525, 614, 11);
+		setMetrics(8050, 525, 614, 11);
 
-		setMetrics('\u1f74', 525, 614, 232);
+		setMetrics(8052, 525, 614, 232);
 
-		setMetrics('\u1f76', 525, 613, 6);
+		setMetrics(8054, 525, 613, 6);
 
-		setMetrics('\u1f78', 525, 614, 6);
+		setMetrics(8056, 525, 614, 6);
 
-		setMetrics('\u1f7a', 525, 613, 6);
+		setMetrics(8058, 525, 613, 6);
 
-		setMetrics('\u1f7c', 525, 614, 6);
+		setMetrics(8060, 525, 614, 6);
 
-		setMetrics('\u1f80', 525, 640, 184, 2);
+		setMetrics(8064, 525, 640, 184, 2);
 
-		setMetrics('\u1f81', 525, 640, 184, 2);
+		setMetrics(8065, 525, 640, 184, 2);
 
-		setMetrics('\u1f82', 525, 640, 184, 2);
+		setMetrics(8066, 525, 640, 184, 2);
 
-		setMetrics('\u1f83', 525, 640, 184, 2);
+		setMetrics(8067, 525, 640, 184, 2);
 
-		setMetrics('\u1f84', 525, 640, 184, 2);
+		setMetrics(8068, 525, 640, 184, 2);
 
-		setMetrics('\u1f85', 525, 640, 184, 2);
+		setMetrics(8069, 525, 640, 184, 2);
 
-		setMetrics('\u1f86', 525, 696, 184, 2);
+		setMetrics(8070, 525, 696, 184, 2);
 
-		setMetrics('\u1f87', 525, 696, 184, 2);
+		setMetrics(8071, 525, 696, 184, 2);
 
-		setMetrics('\u1f90', 525, 640, 232);
+		setMetrics(8080, 525, 640, 232);
 
-		setMetrics('\u1f91', 525, 640, 232);
+		setMetrics(8081, 525, 640, 232);
 
-		setMetrics('\u1f92', 525, 640, 232);
+		setMetrics(8082, 525, 640, 232);
 
-		setMetrics('\u1f93', 525, 640, 232);
+		setMetrics(8083, 525, 640, 232);
 
-		setMetrics('\u1f94', 525, 640, 232);
+		setMetrics(8084, 525, 640, 232);
 
-		setMetrics('\u1f95', 525, 640, 232);
+		setMetrics(8085, 525, 640, 232);
 
-		setMetrics('\u1f96', 525, 696, 232);
+		setMetrics(8086, 525, 696, 232);
 
-		setMetrics('\u1f97', 525, 696, 232);
+		setMetrics(8087, 525, 696, 232);
 
-		setMetrics('\u1fa0', 525, 640, 184);
+		setMetrics(8096, 525, 640, 184);
 
-		setMetrics('\u1fa1', 525, 640, 184);
+		setMetrics(8097, 525, 640, 184);
 
-		setMetrics('\u1fa2', 525, 640, 184);
+		setMetrics(8098, 525, 640, 184);
 
-		setMetrics('\u1fa3', 525, 640, 184);
+		setMetrics(8099, 525, 640, 184);
 
-		setMetrics('\u1fa4', 525, 640, 184);
+		setMetrics(8100, 525, 640, 184);
 
-		setMetrics('\u1fa5', 525, 640, 184);
+		setMetrics(8101, 525, 640, 184);
 
-		setMetrics('\u1fa6', 525, 696, 184);
+		setMetrics(8102, 525, 696, 184);
 
-		setMetrics('\u1fa7', 525, 696, 184);
+		setMetrics(8103, 525, 696, 184);
 
-		setMetrics('\u1fb2', 525, 613, 184, 2);
+		setMetrics(8114, 525, 613, 184, 2);
 
-		setMetrics('\u1fb3', 525, 438, 184, 2);
+		setMetrics(8115, 525, 438, 184, 2);
 
-		setMetrics('\u1fb4', 525, 613, 184, 2);
+		setMetrics(8116, 525, 613, 184, 2);
 
-		setMetrics('\u1fb6', 525, 641, 6, 2);
+		setMetrics(8118, 525, 641, 6, 2);
 
-		setMetrics('\u1fb7', 525, 641, 184, 2);
+		setMetrics(8119, 525, 641, 184, 2);
 
-		setMetrics('\u1fbc', 525, 653, 184);
+		setMetrics(8124, 525, 653, 184);
 
-		setMetrics('\u1fbe', 525, 137, 135);
+		setMetrics(8126, 525, 137, 135);
 
-		setMetrics('\u1fbf', 525, 640);
+		setMetrics(8127, 525, 640);
 
-		setMetrics('\u1fc0', 525, 641);
+		setMetrics(8128, 525, 641);
 
-		setMetrics('\u1fc1', 525, 696);
+		setMetrics(8129, 525, 696);
 
-		setMetrics('\u1fc2', 525, 614, 232);
+		setMetrics(8130, 525, 614, 232);
 
-		setMetrics('\u1fc3', 525, 442, 232);
+		setMetrics(8131, 525, 442, 232);
 
-		setMetrics('\u1fc4', 525, 613, 232);
+		setMetrics(8132, 525, 613, 232);
 
-		setMetrics('\u1fc6', 525, 641, 232);
+		setMetrics(8134, 525, 641, 232);
 
-		setMetrics('\u1fc7', 525, 641, 232);
+		setMetrics(8135, 525, 641, 232);
 
-		setMetrics('\u1fcc', 525, 641, 184);
+		setMetrics(8140, 525, 641, 184);
 
-		setMetrics('\u1fcd', 525, 640);
-		setKern(new char[] {'\u0391', '\u039f', '\u1fbc'}, new int[] {-87, -29, -87});
+		setMetrics(8141, 525, 640);
+		setKern(913, -87, 927, -29, 8124, -87);
 
-		setMetrics('\u1fce', 525, 640);
+		setMetrics(8142, 525, 640);
 
-		setMetrics('\u1fcf', 525, 696);
+		setMetrics(8143, 525, 696);
 
-		setMetrics('\u1fd2', 525, 613, 6);
+		setMetrics(8146, 525, 613, 6);
 
-		setMetrics('\u1fd6', 525, 641, 6);
+		setMetrics(8150, 525, 641, 6);
 
-		setMetrics('\u1fd7', 525, 696, 6);
+		setMetrics(8151, 525, 696, 6);
 
-		setMetrics('\u1fdd', 525, 640);
-		setKern(new char[] {'\u0391', '\u039f', '\u1fbc'}, new int[] {-87, -29, -87});
+		setMetrics(8157, 525, 640);
+		setKern(913, -87, 927, -29, 8124, -87);
 
-		setMetrics('\u1fde', 525, 640);
+		setMetrics(8158, 525, 640);
 
-		setMetrics('\u1fdf', 525, 696);
+		setMetrics(8159, 525, 696);
 
-		setMetrics('\u1fe2', 525, 668, 6);
+		setMetrics(8162, 525, 668, 6);
 
-		setMetrics('\u1fe4', 525, 640, 221);
+		setMetrics(8164, 525, 640, 221);
 
-		setMetrics('\u1fe5', 525, 640, 221);
+		setMetrics(8165, 525, 640, 221);
 
-		setMetrics('\u1fe6', 525, 641, 6);
+		setMetrics(8166, 525, 641, 6);
 
-		setMetrics('\u1fe7', 525, 696, 6);
+		setMetrics(8167, 525, 696, 6);
 
-		setMetrics('\u1fed', 525, 613);
+		setMetrics(8173, 525, 613);
 
-		setMetrics('\u1fef', 525, 614);
+		setMetrics(8175, 525, 614);
 
-		setMetrics('\u1ff2', 525, 614, 184);
+		setMetrics(8178, 525, 614, 184);
 
-		setMetrics('\u1ff3', 525, 442, 184);
+		setMetrics(8179, 525, 442, 184);
 
-		setMetrics('\u1ff4', 525, 613, 184);
+		setMetrics(8180, 525, 613, 184);
 
-		setMetrics('\u1ff6', 525, 641, 6);
+		setMetrics(8182, 525, 641, 6);
 
-		setMetrics('\u1ff7', 525, 641, 184);
+		setMetrics(8183, 525, 641, 184);
 
-		setMetrics('\u1ffc', 525, 651, 184);
+		setMetrics(8188, 525, 651, 184);
 
-		setMetrics('\u1ffe', 525, 640);
+		setMetrics(8190, 525, 640);
 
-		setMetrics('\u2019', 525, 641);
+		setMetrics(8217, 525, 641);
 
-		setMetrics('\u2329', 525, 695, 83);
+		setMetrics(9001, 525, 695, 83);
 
-		setMetrics('\u232a', 525, 695, 83);
+		setMetrics(9002, 525, 695, 83);
 
 	}
 }

@@ -5,22 +5,22 @@ import com.himamis.retex.renderer.share.FontInfo;
 final class JLMTT10 extends FontInfo {
 
 	JLMTT10(final String ttfPath) {
-		super(0, ttfPath, 0, 333, 1000, '\0');
+		super(0, ttfPath, 0, 333, 1000, 0);
 	}
 
 	@Override
 	protected final void initMetrics() {
-		setMetrics('\041', 516, 441);
+		setMetrics(33, 516, 441);
 
-		setMetrics('\044', 516, 441);
+		setMetrics(36, 516, 441);
 
-		setMetrics('\042', 516, 441);
+		setMetrics(34, 516, 441);
 
-		setMetrics('\043', 516, 441);
+		setMetrics(35, 516, 441);
 
-		setMetrics('\045', 516, 695);
+		setMetrics(37, 516, 695);
 
-		setMetrics('\046', 516, 695);
+		setMetrics(38, 516, 695);
 
 	}
 }

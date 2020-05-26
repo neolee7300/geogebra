@@ -6,258 +6,258 @@ import com.himamis.retex.renderer.share.FontInfo;
 final class MSBM10 extends FontInfo {
 
 	MSBM10(final String ttfPath) {
-		super(0, ttfPath, 462, 300, 1000, '\0');
+		super(0, ttfPath, 462, 300, 1000, 0);
 	}
 
 	@Override
 	protected final void initMetrics() {
-		setMetrics('\241', 777, 757, 251);
+		setMetrics(161, 777, 757, 251);
 
-		setMetrics('\242', 777, 757, 251);
+		setMetrics(162, 777, 757, 251);
 
-		setMetrics('\243', 777, 793, 302);
+		setMetrics(163, 777, 793, 302);
 
-		setMetrics('\244', 777, 793, 302);
+		setMetrics(164, 777, 793, 302);
 
-		setMetrics('\245', 777, 705, 205);
+		setMetrics(165, 777, 705, 205);
 
-		setMetrics('\246', 777, 705, 205);
+		setMetrics(166, 777, 705, 205);
 
-		setMetrics('\247', 777, 705, 205);
+		setMetrics(167, 777, 705, 205);
 
-		setMetrics('\250', 777, 705, 205);
+		setMetrics(168, 777, 705, 205);
 
-		setMetrics('\251', 777, 757, 251);
+		setMetrics(169, 777, 757, 251);
 
-		setMetrics('\252', 777, 757, 251);
+		setMetrics(170, 777, 757, 251);
 
-		setMetrics('\253', 777, 793, 302);
+		setMetrics(171, 777, 793, 302);
 
-		setMetrics('\256', 777, 793, 302);
+		setMetrics(174, 777, 793, 302);
 
-		setMetrics('\257', 777, 635, 135);
+		setMetrics(175, 777, 635, 135);
 
-		setMetrics('\260', 777, 635, 135);
+		setMetrics(176, 777, 635, 135);
 
-		setMetrics('\261', 777, 793, 302);
+		setMetrics(177, 777, 793, 302);
 
-		setMetrics('\262', 777, 793, 302);
+		setMetrics(178, 777, 793, 302);
 
-		setMetrics('\263', 777, 741, 232);
+		setMetrics(179, 777, 741, 232);
 
-		setMetrics('\264', 777, 741, 232);
+		setMetrics(180, 777, 741, 232);
 
-		setMetrics('\265', 777, 741, 232);
+		setMetrics(181, 777, 741, 232);
 
-		setMetrics('\266', 777, 741, 232);
+		setMetrics(182, 777, 741, 232);
 
-		setMetrics('\267', 777, 919, 419);
+		setMetrics(183, 777, 919, 419);
 
-		setMetrics('\270', 777, 919, 419);
+		setMetrics(184, 777, 919, 419);
 
-		setMetrics('\271', 777, 757, 251);
+		setMetrics(185, 777, 757, 251);
 
-		setMetrics('\272', 777, 757, 251);
+		setMetrics(186, 777, 757, 251);
 
-		setMetrics('\273', 777, 757, 261);
+		setMetrics(187, 777, 757, 261);
 
-		setMetrics('\274', 777, 757, 261);
+		setMetrics(188, 777, 757, 261);
 
-		setMetrics('\275', 777, 757, 261);
+		setMetrics(189, 777, 757, 261);
 
-		setMetrics('\276', 777, 757, 261);
+		setMetrics(190, 777, 757, 261);
 
-		setMetrics('\277', 777, 366, -133);
+		setMetrics(191, 777, 366, -133);
 
-		setMetrics('\300', 777, 793, 302);
+		setMetrics(192, 777, 793, 302);
 
-		setMetrics('\301', 888, 688, 194);
+		setMetrics(193, 888, 688, 194);
 
-		setMetrics('\302', 888, 741, 194);
+		setMetrics(194, 888, 741, 194);
 
-		setMetrics('\303', 777, 635, 135);
+		setMetrics(195, 777, 635, 135);
 
-		setMetrics('\041', 777, 635, 135);
+		setMetrics(33, 777, 635, 135);
 
-		setMetrics('\042', 777, 757, 251);
+		setMetrics(34, 777, 757, 251);
 
-		setMetrics('\043', 777, 757, 251);
+		setMetrics(35, 777, 757, 251);
 
-		setMetrics('\044', 777, 793, 284);
+		setMetrics(36, 777, 793, 284);
 
-		setMetrics('\045', 777, 793, 284);
+		setMetrics(37, 777, 793, 284);
 
-		setMetrics('\046', 777, 757, 251);
+		setMetrics(38, 777, 757, 251);
 
-		setMetrics('\047', 777, 757, 251);
+		setMetrics(39, 777, 757, 251);
 
-		setMetrics('\050', 777, 635, 135);
+		setMetrics(40, 777, 635, 135);
 
-		setMetrics('\051', 777, 635, 135);
+		setMetrics(41, 777, 635, 135);
 
-		setMetrics('\052', 777, 793, 302);
+		setMetrics(42, 777, 793, 302);
 
-		setMetrics('\053', 777, 793, 302);
+		setMetrics(43, 777, 793, 302);
 
-		setMetrics('\054', 500, 741, 251);
+		setMetrics(44, 500, 741, 251);
 
-		setMetrics('\055', 277, 741, 251);
+		setMetrics(45, 277, 741, 251);
 
-		setMetrics('\056', 222, 581, 81);
+		setMetrics(46, 222, 581, 81);
 
-		setMetrics('\057', 388, 581, 81);
+		setMetrics(47, 388, 581, 81);
 
-		setMetrics('\060', 611, 688);
+		setMetrics(48, 611, 688);
 
-		setMetrics('\061', 722, 688);
+		setMetrics(49, 722, 688);
 
-		setMetrics('\062', 611, 688);
+		setMetrics(50, 611, 688);
 
-		setMetrics('\063', 722, 688);
+		setMetrics(51, 722, 688);
 
-		setMetrics('\064', 777, 793, 302);
+		setMetrics(52, 777, 793, 302);
 
-		setMetrics('\065', 777, 793, 302);
+		setMetrics(53, 777, 793, 302);
 
-		setMetrics('\066', 777, 705, 205);
+		setMetrics(54, 777, 705, 205);
 
-		setMetrics('\067', 777, 705, 205);
+		setMetrics(55, 777, 705, 205);
 
-		setMetrics('\070', 1000, 366, -133);
+		setMetrics(56, 1000, 366, -133);
 
-		setMetrics('\071', 1000, 366, -133);
+		setMetrics(57, 1000, 366, -133);
 
-		setMetrics('\072', 1000, 366, -133);
+		setMetrics(58, 1000, 366, -133);
 
-		setMetrics('\073', 1000, 366, -133);
+		setMetrics(59, 1000, 366, -133);
 
-		setMetrics('\074', 1000, 366, -133);
+		setMetrics(60, 1000, 366, -133);
 
-		setMetrics('\075', 1000, 366, -133);
+		setMetrics(61, 1000, 366, -133);
 
-		setMetrics('\076', 777, 581, 81);
+		setMetrics(62, 777, 581, 81);
 
-		setMetrics('\077', 777, 581, 81);
+		setMetrics(63, 777, 581, 81);
 
-		setMetrics('\100', 555, 688);
+		setMetrics(64, 555, 688);
 
-		setMetrics('\101', 722, 688);
+		setMetrics(65, 722, 688);
 
-		setMetrics('\102', 666, 688);
+		setMetrics(66, 666, 688);
 
-		setMetrics('\103', 722, 688);
+		setMetrics(67, 722, 688);
 
-		setMetrics('\104', 722, 688);
+		setMetrics(68, 722, 688);
 
-		setMetrics('\105', 666, 688);
+		setMetrics(69, 666, 688);
 
-		setMetrics('\106', 611, 688);
+		setMetrics(70, 611, 688);
 
-		setMetrics('\107', 777, 688);
+		setMetrics(71, 777, 688);
 
-		setMetrics('\110', 777, 688);
+		setMetrics(72, 777, 688);
 
-		setMetrics('\111', 388, 688);
+		setMetrics(73, 388, 688);
 
-		setMetrics('\112', 500, 688, 166);
+		setMetrics(74, 500, 688, 166);
 
-		setMetrics('\113', 777, 688);
+		setMetrics(75, 777, 688);
 
-		setMetrics('\114', 666, 688);
+		setMetrics(76, 666, 688);
 
-		setMetrics('\115', 944, 688);
+		setMetrics(77, 944, 688);
 
-		setMetrics('\116', 722, 688);
+		setMetrics(78, 722, 688);
 
-		setMetrics('\117', 777, 688, 166);
+		setMetrics(79, 777, 688, 166);
 
-		setMetrics('\120', 611, 688);
+		setMetrics(80, 611, 688);
 
-		setMetrics('\121', 777, 688, 166);
+		setMetrics(81, 777, 688, 166);
 
-		setMetrics('\122', 722, 688);
+		setMetrics(82, 722, 688);
 
-		setMetrics('\123', 555, 688);
+		setMetrics(83, 555, 688);
 
-		setMetrics('\124', 666, 688);
+		setMetrics(84, 666, 688);
 
-		setMetrics('\125', 722, 688);
+		setMetrics(85, 722, 688);
 
-		setMetrics('\126', 722, 688);
+		setMetrics(86, 722, 688);
 
-		setMetrics('\127', 1000, 688);
+		setMetrics(87, 1000, 688);
 
-		setMetrics('\130', 722, 688);
+		setMetrics(88, 722, 688);
 
-		setMetrics('\131', 722, 688);
+		setMetrics(89, 722, 688);
 
-		setMetrics('\132', 666, 688);
+		setMetrics(90, 666, 688);
 
-		setMetrics('\133', 1888, 825);
-		setNextLarger(Configuration.getFonts().msbm10, '\134');
+		setMetrics(91, 1888, 825);
+		setNextLarger(Configuration.getFonts().msbm10, 92);
 
-		setMetrics('\134', 2333, 825);
+		setMetrics(92, 2333, 825);
 
-		setMetrics('\135', 1888, 825);
-		setNextLarger(Configuration.getFonts().msbm10, '\136');
+		setMetrics(93, 1888, 825);
+		setNextLarger(Configuration.getFonts().msbm10, 94);
 
-		setMetrics('\136', 2333, 899);
+		setMetrics(94, 2333, 899);
 
-		setMetrics('\140', 555, 688);
+		setMetrics(96, 555, 688);
 
-		setMetrics('\141', 638, 688);
+		setMetrics(97, 638, 688);
 
-		setMetrics('\146', 722, 688);
+		setMetrics(102, 722, 688);
 
-		setMetrics('\147', 555, 688);
+		setMetrics(103, 555, 688);
 
-		setMetrics('\150', 777, 463, -36);
+		setMetrics(104, 777, 463, -36);
 
-		setMetrics('\151', 666, 688);
+		setMetrics(105, 666, 688);
 
-		setMetrics('\152', 444, 688);
+		setMetrics(106, 444, 688);
 
-		setMetrics('\153', 666, 688);
+		setMetrics(107, 666, 688);
 
-		setMetrics('\154', 777, 539, 39);
+		setMetrics(108, 777, 539, 39);
 
-		setMetrics('\155', 777, 539, 39);
+		setMetrics(109, 777, 539, 39);
 
-		setMetrics('\156', 777, 581, 81);
+		setMetrics(110, 777, 581, 81);
 
-		setMetrics('\157', 777, 581, 81);
+		setMetrics(111, 777, 581, 81);
 
-		setMetrics('\160', 222, 581, 81);
+		setMetrics(112, 222, 581, 81);
 
-		setMetrics('\161', 388, 581, 81);
+		setMetrics(113, 388, 581, 81);
 
-		setMetrics('\162', 777, 581, 81);
+		setMetrics(114, 777, 581, 81);
 
-		setMetrics('\163', 777, 366, -133);
+		setMetrics(115, 777, 366, -133);
 
-		setMetrics('\164', 777, 483, -16);
+		setMetrics(116, 777, 483, -16);
 
-		setMetrics('\165', 777, 581, 81);
+		setMetrics(117, 777, 581, 81);
 
-		setMetrics('\166', 777, 757, 261);
+		setMetrics(118, 777, 757, 261);
 
-		setMetrics('\167', 777, 757, 261);
+		setMetrics(119, 777, 757, 261);
 
-		setMetrics('\170', 1000, 430);
+		setMetrics(120, 1000, 430);
 
-		setMetrics('\171', 1000, 430);
+		setMetrics(121, 1000, 430);
 
-		setMetrics('\172', 777, 581, 81);
+		setMetrics(122, 777, 581, 81);
 
-		setMetrics('\173', 666, 430, 0, 40);
+		setMetrics(123, 666, 430, 0, 40);
 
-		setMetrics('\174', 555, 688);
+		setMetrics(124, 555, 688);
 
-		setMetrics('\175', 540, 688);
+		setMetrics(125, 540, 688);
 
-		setMetrics('\176', 540, 688);
+		setMetrics(126, 540, 688);
 
-		setMetrics('\304', 429, 430);
+		setMetrics(196, 429, 430);
 
 	}
 }

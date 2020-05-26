@@ -5,467 +5,467 @@ import com.himamis.retex.renderer.share.UniFontInfo;
 final class FCSBPG extends UniFontInfo {
 
 	FCSBPG(final String ttfPath) {
-		super(204, ttfPath, 472, 255, 1000, '\0');
+		super(204, ttfPath, 472, 255, 1000, 0);
 	}
 
 	@Override
 	protected final void initMetrics() {
-		setMetrics('\040', 255, 0);
+		setMetrics(32, 255, 0);
 
-		setMetrics('\250', 244, 630, 0, 56);
+		setMetrics(168, 244, 630, 0, 56);
 
-		setMetrics('\u0374', 214, 695);
+		setMetrics(884, 214, 695);
 
-		setMetrics('\u0375', 214, 1, 188);
+		setMetrics(885, 214, 1, 188);
 
-		setMetrics('\u037a', 122, -67, 247);
+		setMetrics(890, 122, -67, 247);
 
-		setMetrics('\u0384', 183, 695);
-		setKern(new char[] {'\u0391', '\u039f', '\u03a9', '\u1fbc', '\u1ffc'}, new int[] {-122, -61, -31, -122, -31});
+		setMetrics(900, 183, 695);
+		setKern(913, -122, 927, -61, 937, -31, 8124, -122, 8188, -31);
 
-		setMetrics('\u0385', 305, 695);
+		setMetrics(901, 305, 695);
 
-		setMetrics('\u0387', 305, 459);
+		setMetrics(903, 305, 459);
 
-		setMetrics('\u0390', 275, 695, 10);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(912, 275, 695, 10);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u0391', 733, 687);
-		setKern(new char[] {'\u0398', '\u039f', '\u03a4', '\u03a5', '\u03a6', '\u03a8', '\u03ab'}, new int[] {-92, -92, -92, -153, -92, -134, -153});
+		setMetrics(913, 733, 687);
+		setKern(920, -92, 927, -92, 932, -92, 933, -153, 934, -92, 936, -134, 939, -153);
 
-		setMetrics('\u0392', 733, 687);
+		setMetrics(914, 733, 687);
 
-		setMetrics('\u0393', 580, 684);
-		setKern(new char[] {'\u0391', '\u0394', '\u039b', '\u1fbc'}, new int[] {-147, -122, -134, -147});
+		setMetrics(915, 580, 684);
+		setKern(913, -147, 916, -122, 923, -134, 8124, -147);
 
-		setMetrics('\u0394', 916, 687);
-		setKern(new char[] {'\u039f', '\u03a5', '\u03ab'}, new int[] {-37, -153, -153});
+		setMetrics(916, 916, 687);
+		setKern(927, -37, 933, -153, 939, -153);
 
-		setMetrics('\u0395', 642, 684);
+		setMetrics(917, 642, 684);
 
-		setMetrics('\u0396', 672, 687);
+		setMetrics(918, 672, 687);
 
-		setMetrics('\u0397', 794, 687);
+		setMetrics(919, 794, 687);
 
-		setMetrics('\u0398', 855, 709, 22);
-		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-92, -92});
+		setMetrics(920, 855, 709, 22);
+		setKern(913, -92, 8124, -92);
 
-		setMetrics('\u0399', 308, 687);
+		setMetrics(921, 308, 687);
 
-		setMetrics('\u039a', 764, 687);
-		setKern(new char[] {'\u039f'}, new int[] {-92});
+		setMetrics(922, 764, 687);
+		setKern(927, -92);
 
-		setMetrics('\u039b', 672, 687);
-		setKern(new char[] {'\u039f', '\u03a5', '\u03ab'}, new int[] {-37, -110, -110});
+		setMetrics(923, 672, 687);
+		setKern(927, -37, 933, -110, 939, -110);
 
-		setMetrics('\u039c', 978, 687);
+		setMetrics(924, 978, 687);
 
-		setMetrics('\u039d', 794, 687);
-		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-92, -92});
+		setMetrics(925, 794, 687);
+		setKern(913, -92, 8124, -92);
 
-		setMetrics('\u039e', 733, 681);
+		setMetrics(926, 733, 681);
 
-		setMetrics('\u039f', 794, 710, 22);
-		setKern(new char[] {'\u0391', '\u03a3', '\u1fbc'}, new int[] {-92, -61, -92});
+		setMetrics(927, 794, 710, 22);
+		setKern(913, -92, 931, -61, 8124, -92);
 
-		setMetrics('\u03a0', 794, 684);
+		setMetrics(928, 794, 684);
 
-		setMetrics('\u03a1', 703, 687);
-		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-183, -183});
+		setMetrics(929, 703, 687);
+		setKern(913, -183, 8124, -183);
 
-		setMetrics('\u03a3', 794, 687);
-		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-31, -31});
+		setMetrics(931, 794, 687);
+		setKern(913, -31, 8124, -31);
 
-		setMetrics('\u03a4', 733, 681);
-		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-92, -92});
+		setMetrics(932, 733, 681);
+		setKern(913, -92, 8124, -92);
 
-		setMetrics('\u03a5', 855, 709);
-		setKern(new char[] {'\u0391', '\u0394', '\u039b', '\u1fbc'}, new int[] {-153, -153, -153, -153});
+		setMetrics(933, 855, 709);
+		setKern(913, -153, 916, -153, 923, -153, 8124, -153);
 
-		setMetrics('\u03a6', 794, 687);
-		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-92, -92});
+		setMetrics(934, 794, 687);
+		setKern(913, -92, 8124, -92);
 
-		setMetrics('\u03a7', 733, 687);
+		setMetrics(935, 733, 687);
 
-		setMetrics('\u03a8', 855, 687);
-		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-134, -134});
+		setMetrics(936, 855, 687);
+		setKern(913, -134, 8124, -134);
 
-		setMetrics('\u03a9', 794, 709);
+		setMetrics(937, 794, 709);
 
-		setMetrics('\u03aa', 308, 847, 0, 10);
+		setMetrics(938, 308, 847, 0, 10);
 
-		setMetrics('\u03ab', 855, 847);
-		setKern(new char[] {'\u0391', '\u0394', '\u039b', '\u1fbc'}, new int[] {-153, -153, -153, -153});
+		setMetrics(939, 855, 847);
+		setKern(913, -153, 916, -153, 923, -153, 8124, -153);
 
-		setMetrics('\u03ac', 550, 695, 11, 61);
+		setMetrics(940, 550, 695, 11, 61);
 
-		setMetrics('\u03ad', 473, 695, 22);
+		setMetrics(941, 473, 695, 22);
 
-		setMetrics('\u03ae', 550, 695, 272);
+		setMetrics(942, 550, 695, 272);
 
-		setMetrics('\u03af', 275, 695, 10);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(943, 275, 695, 10);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u03b0', 550, 695, 11);
+		setMetrics(944, 550, 695, 11);
 
-		setMetrics('\u03b1', 550, 471, 11, 61);
+		setMetrics(945, 550, 471, 11, 61);
 
-		setMetrics('\u03b2', 550, 706, 271);
+		setMetrics(946, 550, 706, 271);
 
-		setMetrics('\u03b3', 611, 471, 228);
+		setMetrics(947, 611, 471, 228);
 
-		setMetrics('\u03b4', 519, 707, 11);
+		setMetrics(948, 519, 707, 11);
 
-		setMetrics('\u03b5', 473, 482, 22);
+		setMetrics(949, 473, 482, 22);
 
-		setMetrics('\u03b6', 519, 718, 186);
+		setMetrics(950, 519, 718, 186);
 
-		setMetrics('\u03b7', 550, 482, 272);
+		setMetrics(951, 550, 482, 272);
 
-		setMetrics('\u03b8', 626, 706, 11);
+		setMetrics(952, 626, 706, 11);
 
-		setMetrics('\u03b9', 275, 470, 10);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(953, 275, 470, 10);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u03ba', 580, 487, 27);
+		setMetrics(954, 580, 487, 27);
 
-		setMetrics('\u03bb', 550, 697, 10);
+		setMetrics(955, 550, 697, 10);
 
-		setMetrics('\u03bc', 586, 482, 266, 1);
+		setMetrics(956, 586, 482, 266, 1);
 
-		setMetrics('\u03bd', 519, 472, 10);
+		setMetrics(957, 519, 472, 10);
 
-		setMetrics('\u03be', 519, 718, 186);
+		setMetrics(958, 519, 718, 186);
 
-		setMetrics('\u03bf', 580, 471, 11);
-		setKern(new char[] {'\u03b3', '\u03bb', '\u03bd', '\u03c4', '\u03c7'}, new int[] {-31, -31, -24, -24, -31});
+		setMetrics(959, 580, 471, 11);
+		setKern(947, -31, 955, -31, 957, -24, 964, -24, 967, -31);
 
-		setMetrics('\u03c0', 565, 459, 11, 27);
+		setMetrics(960, 565, 459, 11, 27);
 
-		setMetrics('\u03c1', 519, 471, 266);
+		setMetrics(961, 519, 471, 266);
 
-		setMetrics('\u03c2', 489, 471, 125);
+		setMetrics(962, 489, 471, 125);
 
-		setMetrics('\u03c3', 626, 459, 12);
+		setMetrics(963, 626, 459, 12);
 
-		setMetrics('\u03c4', 504, 460, 11);
-		setKern(new char[] {'\u03ac', '\u03b1', '\u03bf', '\u03c9', '\u03cc', '\u03ce', '\u1f00', '\u1f01', '\u1f04', '\u1f05', '\u1f06', '\u1f07', '\u1f40', '\u1f41', '\u1f44', '\u1f45', '\u1f60', '\u1f61', '\u1f64', '\u1f65', '\u1f66', '\u1f67', '\u1f70', '\u1f78', '\u1f7c', '\u1f80', '\u1f81', '\u1f84', '\u1f85', '\u1f86', '\u1f87', '\u1fa0', '\u1fa1', '\u1fa4', '\u1fa5', '\u1fa6', '\u1fa7', '\u1fb2', '\u1fb4', '\u1fb6', '\u1fb7', '\u1ff2', '\u1ff4', '\u1ff6', '\u1ff7'}, new int[] {-31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31, -31});
+		setMetrics(964, 504, 460, 11);
+		setKern(940, -31, 945, -31, 959, -31, 969, -31, 972, -31, 974, -31, 7936, -31, 7937, -31, 7940, -31, 7941, -31, 7942, -31, 7943, -31, 8000, -31, 8001, -31, 8004, -31, 8005, -31, 8032, -31, 8033, -31, 8036, -31, 8037, -31, 8038, -31, 8039, -31, 8048, -31, 8056, -31, 8060, -31, 8064, -31, 8065, -31, 8068, -31, 8069, -31, 8070, -31, 8071, -31, 8096, -31, 8097, -31, 8100, -31, 8101, -31, 8102, -31, 8103, -31, 8114, -31, 8116, -31, 8118, -31, 8119, -31, 8178, -31, 8180, -31, 8182, -31, 8183, -31);
 
-		setMetrics('\u03c5', 550, 492, 10);
+		setMetrics(965, 550, 492, 10);
 
-		setMetrics('\u03c6', 642, 486, 272);
+		setMetrics(966, 642, 486, 272);
 
-		setMetrics('\u03c7', 611, 473, 263);
+		setMetrics(967, 611, 473, 263);
 
-		setMetrics('\u03c8', 642, 718, 272);
+		setMetrics(968, 642, 718, 272);
 
-		setMetrics('\u03c9', 733, 481, 11);
+		setMetrics(969, 733, 481, 11);
 
-		setMetrics('\u03ca', 275, 641, 10, 1);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(970, 275, 641, 10, 1);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u03cb', 550, 640, 10);
+		setMetrics(971, 550, 640, 10);
 
-		setMetrics('\u03cc', 580, 695, 11);
-		setKern(new char[] {'\u03b3', '\u03bb', '\u03bd', '\u03c4', '\u03c7'}, new int[] {-31, -31, -24, -24, -31});
+		setMetrics(972, 580, 695, 11);
+		setKern(947, -31, 955, -31, 957, -24, 964, -24, 967, -31);
 
-		setMetrics('\u03cd', 550, 695, 10);
+		setMetrics(973, 550, 695, 10);
 
-		setMetrics('\u03ce', 733, 695, 11);
+		setMetrics(974, 733, 695, 11);
 
-		setMetrics('\u03d8', 550, 698);
+		setMetrics(984, 550, 698);
 
-		setMetrics('\u03d9', 550, 646, 77);
+		setMetrics(985, 550, 646, 77);
 
-		setMetrics('\u03da', 855, 682, 1);
+		setMetrics(986, 855, 682, 1);
 
-		setMetrics('\u03db', 550, 481);
+		setMetrics(987, 550, 481);
 
-		setMetrics('\u03dc', 611, 684);
+		setMetrics(988, 611, 684);
 
-		setMetrics('\u03dd', 550, 461, 249);
+		setMetrics(989, 550, 461, 249);
 
-		setMetrics('\u03df', 428, 577, 75);
+		setMetrics(991, 428, 577, 75);
 
-		setMetrics('\u03e0', 703, 686);
+		setMetrics(992, 703, 686);
 
-		setMetrics('\u03e1', 794, 695);
+		setMetrics(993, 794, 695);
 
-		setMetrics('\u1f00', 550, 696, 11, 61);
+		setMetrics(7936, 550, 696, 11, 61);
 
-		setMetrics('\u1f01', 550, 696, 11, 61);
+		setMetrics(7937, 550, 696, 11, 61);
 
-		setMetrics('\u1f02', 550, 696, 11, 61);
+		setMetrics(7938, 550, 696, 11, 61);
 
-		setMetrics('\u1f03', 550, 696, 11, 61);
+		setMetrics(7939, 550, 696, 11, 61);
 
-		setMetrics('\u1f04', 550, 696, 11, 61);
+		setMetrics(7940, 550, 696, 11, 61);
 
-		setMetrics('\u1f05', 550, 696, 11, 61);
+		setMetrics(7941, 550, 696, 11, 61);
 
-		setMetrics('\u1f06', 550, 695, 11, 61);
+		setMetrics(7942, 550, 695, 11, 61);
 
-		setMetrics('\u1f07', 550, 695, 11, 61);
+		setMetrics(7943, 550, 695, 11, 61);
 
-		setMetrics('\u1f10', 473, 696, 22);
+		setMetrics(7952, 473, 696, 22);
 
-		setMetrics('\u1f11', 473, 696, 22);
+		setMetrics(7953, 473, 696, 22);
 
-		setMetrics('\u1f12', 473, 696, 22);
+		setMetrics(7954, 473, 696, 22);
 
-		setMetrics('\u1f13', 473, 696, 22);
+		setMetrics(7955, 473, 696, 22);
 
-		setMetrics('\u1f14', 473, 696, 22);
+		setMetrics(7956, 473, 696, 22);
 
-		setMetrics('\u1f15', 473, 696, 22);
+		setMetrics(7957, 473, 696, 22);
 
-		setMetrics('\u1f20', 550, 696, 272);
+		setMetrics(7968, 550, 696, 272);
 
-		setMetrics('\u1f21', 550, 696, 272);
+		setMetrics(7969, 550, 696, 272);
 
-		setMetrics('\u1f22', 550, 696, 272);
+		setMetrics(7970, 550, 696, 272);
 
-		setMetrics('\u1f23', 550, 696, 272);
+		setMetrics(7971, 550, 696, 272);
 
-		setMetrics('\u1f24', 550, 696, 272);
+		setMetrics(7972, 550, 696, 272);
 
-		setMetrics('\u1f25', 550, 696, 272);
+		setMetrics(7973, 550, 696, 272);
 
-		setMetrics('\u1f26', 550, 695, 272);
+		setMetrics(7974, 550, 695, 272);
 
-		setMetrics('\u1f27', 550, 695, 272);
+		setMetrics(7975, 550, 695, 272);
 
-		setMetrics('\u1f30', 275, 696, 10);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(7984, 275, 696, 10);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u1f31', 275, 696, 10);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(7985, 275, 696, 10);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u1f32', 275, 696, 10);
+		setMetrics(7986, 275, 696, 10);
 
-		setMetrics('\u1f33', 275, 696, 10);
+		setMetrics(7987, 275, 696, 10);
 
-		setMetrics('\u1f34', 275, 696, 10);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(7988, 275, 696, 10);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u1f35', 275, 696, 10);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(7989, 275, 696, 10);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u1f36', 275, 696, 10, 16);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(7990, 275, 696, 10, 16);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u1f37', 275, 696, 10, 16);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(7991, 275, 696, 10, 16);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u1f40', 580, 696, 11);
-		setKern(new char[] {'\u03b3', '\u03bb', '\u03bd', '\u03c4', '\u03c7'}, new int[] {-31, -31, -24, -24, -31});
+		setMetrics(8000, 580, 696, 11);
+		setKern(947, -31, 955, -31, 957, -24, 964, -24, 967, -31);
 
-		setMetrics('\u1f41', 580, 696, 11);
-		setKern(new char[] {'\u03b3', '\u03bb', '\u03bd', '\u03c4', '\u03c7'}, new int[] {-31, -31, -24, -24, -31});
+		setMetrics(8001, 580, 696, 11);
+		setKern(947, -31, 955, -31, 957, -24, 964, -24, 967, -31);
 
-		setMetrics('\u1f42', 580, 696, 11);
+		setMetrics(8002, 580, 696, 11);
 
-		setMetrics('\u1f43', 580, 696, 11);
+		setMetrics(8003, 580, 696, 11);
 
-		setMetrics('\u1f44', 580, 696, 11);
-		setKern(new char[] {'\u03b3', '\u03bb', '\u03bd', '\u03c4', '\u03c7'}, new int[] {-31, -31, -24, -24, -31});
+		setMetrics(8004, 580, 696, 11);
+		setKern(947, -31, 955, -31, 957, -24, 964, -24, 967, -31);
 
-		setMetrics('\u1f45', 580, 696, 11);
-		setKern(new char[] {'\u03b3', '\u03bb', '\u03bd', '\u03c4', '\u03c7'}, new int[] {-31, -31, -24, -24, -31});
+		setMetrics(8005, 580, 696, 11);
+		setKern(947, -31, 955, -31, 957, -24, 964, -24, 967, -31);
 
-		setMetrics('\u1f50', 550, 696, 10);
+		setMetrics(8016, 550, 696, 10);
 
-		setMetrics('\u1f51', 550, 696, 10);
+		setMetrics(8017, 550, 696, 10);
 
-		setMetrics('\u1f52', 550, 696, 10);
+		setMetrics(8018, 550, 696, 10);
 
-		setMetrics('\u1f53', 550, 696, 10);
+		setMetrics(8019, 550, 696, 10);
 
-		setMetrics('\u1f54', 550, 696, 10);
+		setMetrics(8020, 550, 696, 10);
 
-		setMetrics('\u1f55', 550, 696, 10);
+		setMetrics(8021, 550, 696, 10);
 
-		setMetrics('\u1f56', 550, 695, 10);
+		setMetrics(8022, 550, 695, 10);
 
-		setMetrics('\u1f57', 550, 695, 10);
+		setMetrics(8023, 550, 695, 10);
 
-		setMetrics('\u1f60', 733, 696, 11);
+		setMetrics(8032, 733, 696, 11);
 
-		setMetrics('\u1f61', 733, 696, 11);
+		setMetrics(8033, 733, 696, 11);
 
-		setMetrics('\u1f62', 733, 696, 11);
+		setMetrics(8034, 733, 696, 11);
 
-		setMetrics('\u1f63', 733, 696, 11);
+		setMetrics(8035, 733, 696, 11);
 
-		setMetrics('\u1f64', 733, 696, 11);
+		setMetrics(8036, 733, 696, 11);
 
-		setMetrics('\u1f65', 733, 696, 11);
+		setMetrics(8037, 733, 696, 11);
 
-		setMetrics('\u1f66', 733, 695, 11);
+		setMetrics(8038, 733, 695, 11);
 
-		setMetrics('\u1f67', 733, 695, 11);
+		setMetrics(8039, 733, 695, 11);
 
-		setMetrics('\u1f70', 550, 695, 11, 61);
+		setMetrics(8048, 550, 695, 11, 61);
 
-		setMetrics('\u1f72', 473, 695, 22);
+		setMetrics(8050, 473, 695, 22);
 
-		setMetrics('\u1f74', 550, 695, 272);
+		setMetrics(8052, 550, 695, 272);
 
-		setMetrics('\u1f76', 275, 695, 10);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(8054, 275, 695, 10);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u1f78', 580, 695, 11);
-		setKern(new char[] {'\u03b3', '\u03bb', '\u03bd', '\u03c4', '\u03c7'}, new int[] {-31, -31, -24, -24, -31});
+		setMetrics(8056, 580, 695, 11);
+		setKern(947, -31, 955, -31, 957, -24, 964, -24, 967, -31);
 
-		setMetrics('\u1f7a', 550, 695, 10);
+		setMetrics(8058, 550, 695, 10);
 
-		setMetrics('\u1f7c', 733, 695, 11);
+		setMetrics(8060, 733, 695, 11);
 
-		setMetrics('\u1f80', 550, 696, 247, 61);
+		setMetrics(8064, 550, 696, 247, 61);
 
-		setMetrics('\u1f81', 550, 696, 247, 61);
+		setMetrics(8065, 550, 696, 247, 61);
 
-		setMetrics('\u1f82', 550, 696, 247, 61);
+		setMetrics(8066, 550, 696, 247, 61);
 
-		setMetrics('\u1f83', 550, 696, 247, 61);
+		setMetrics(8067, 550, 696, 247, 61);
 
-		setMetrics('\u1f84', 550, 696, 247, 61);
+		setMetrics(8068, 550, 696, 247, 61);
 
-		setMetrics('\u1f85', 550, 696, 247, 61);
+		setMetrics(8069, 550, 696, 247, 61);
 
-		setMetrics('\u1f86', 550, 695, 247, 61);
+		setMetrics(8070, 550, 695, 247, 61);
 
-		setMetrics('\u1f87', 550, 695, 247, 61);
+		setMetrics(8071, 550, 695, 247, 61);
 
-		setMetrics('\u1f90', 550, 696, 272);
+		setMetrics(8080, 550, 696, 272);
 
-		setMetrics('\u1f91', 550, 696, 272);
+		setMetrics(8081, 550, 696, 272);
 
-		setMetrics('\u1f92', 550, 696, 272);
+		setMetrics(8082, 550, 696, 272);
 
-		setMetrics('\u1f93', 550, 696, 272);
+		setMetrics(8083, 550, 696, 272);
 
-		setMetrics('\u1f94', 550, 696, 272);
+		setMetrics(8084, 550, 696, 272);
 
-		setMetrics('\u1f95', 550, 696, 272);
+		setMetrics(8085, 550, 696, 272);
 
-		setMetrics('\u1f96', 550, 695, 272);
+		setMetrics(8086, 550, 695, 272);
 
-		setMetrics('\u1f97', 550, 695, 272);
+		setMetrics(8087, 550, 695, 272);
 
-		setMetrics('\u1fa0', 733, 696, 247);
+		setMetrics(8096, 733, 696, 247);
 
-		setMetrics('\u1fa1', 733, 696, 247);
+		setMetrics(8097, 733, 696, 247);
 
-		setMetrics('\u1fa2', 733, 696, 247);
+		setMetrics(8098, 733, 696, 247);
 
-		setMetrics('\u1fa3', 733, 696, 247);
+		setMetrics(8099, 733, 696, 247);
 
-		setMetrics('\u1fa4', 733, 696, 247);
+		setMetrics(8100, 733, 696, 247);
 
-		setMetrics('\u1fa5', 733, 696, 247);
+		setMetrics(8101, 733, 696, 247);
 
-		setMetrics('\u1fa6', 733, 695, 247);
+		setMetrics(8102, 733, 695, 247);
 
-		setMetrics('\u1fa7', 733, 695, 247);
+		setMetrics(8103, 733, 695, 247);
 
-		setMetrics('\u1fb2', 550, 695, 247, 61);
+		setMetrics(8114, 550, 695, 247, 61);
 
-		setMetrics('\u1fb3', 550, 471, 247, 61);
+		setMetrics(8115, 550, 471, 247, 61);
 
-		setMetrics('\u1fb4', 550, 695, 247, 61);
+		setMetrics(8116, 550, 695, 247, 61);
 
-		setMetrics('\u1fb6', 550, 640, 11, 61);
+		setMetrics(8118, 550, 640, 11, 61);
 
-		setMetrics('\u1fb7', 550, 640, 247, 61);
+		setMetrics(8119, 550, 640, 247, 61);
 
-		setMetrics('\u1fbc', 733, 687, 247);
-		setKern(new char[] {'\u0398', '\u039f', '\u03a4', '\u03a5', '\u03a6', '\u03a8', '\u03ab'}, new int[] {-92, -92, -92, -153, -92, -134, -153});
+		setMetrics(8124, 733, 687, 247);
+		setKern(920, -92, 927, -92, 932, -92, 933, -153, 934, -92, 936, -134, 939, -153);
 
-		setMetrics('\u1fbe', 244, 155, 153);
+		setMetrics(8126, 244, 155, 153);
 
-		setMetrics('\u1fbf', 244, 696);
-		setKern(new char[] {'\u0391', '\u039f', '\u03a9', '\u1fbc', '\u1ffc'}, new int[] {-153, -61, -31, -153, -31});
+		setMetrics(8127, 244, 696);
+		setKern(913, -153, 927, -61, 937, -31, 8124, -153, 8188, -31);
 
-		setMetrics('\u1fc0', 367, 640);
-		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-122, -122});
+		setMetrics(8128, 367, 640);
+		setKern(913, -122, 8124, -122);
 
-		setMetrics('\u1fc1', 489, 696);
+		setMetrics(8129, 489, 696);
 
-		setMetrics('\u1fc2', 550, 695, 272);
+		setMetrics(8130, 550, 695, 272);
 
-		setMetrics('\u1fc3', 550, 482, 272);
+		setMetrics(8131, 550, 482, 272);
 
-		setMetrics('\u1fc4', 550, 695, 272);
+		setMetrics(8132, 550, 695, 272);
 
-		setMetrics('\u1fc6', 550, 640, 272);
+		setMetrics(8134, 550, 640, 272);
 
-		setMetrics('\u1fc7', 550, 640, 272);
+		setMetrics(8135, 550, 640, 272);
 
-		setMetrics('\u1fcc', 794, 687, 247);
+		setMetrics(8140, 794, 687, 247);
 
-		setMetrics('\u1fcd', 305, 696);
-		setKern(new char[] {'\u0391', '\u039f', '\u1fbc'}, new int[] {-92, -31, -92});
+		setMetrics(8141, 305, 696);
+		setKern(913, -92, 927, -31, 8124, -92);
 
-		setMetrics('\u1fce', 305, 696);
-		setKern(new char[] {'\u0391', '\u039f', '\u1fbc'}, new int[] {-92, -31, -92});
+		setMetrics(8142, 305, 696);
+		setKern(913, -92, 927, -31, 8124, -92);
 
-		setMetrics('\u1fcf', 367, 696);
-		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-122, -122});
+		setMetrics(8143, 367, 696);
+		setKern(913, -122, 8124, -122);
 
-		setMetrics('\u1fd2', 275, 695, 10);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(8146, 275, 695, 10);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u1fd6', 275, 640, 10, 16);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(8150, 275, 640, 10, 16);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u1fd7', 275, 696, 10, 16);
-		setKern(new char[] {'\u03b3', '\u03b7', '\u03b8', '\u03bd', '\u03bf', '\u03c2', '\u03c3', '\u03c4', '\u03c7'}, new int[] {-31, -18, -18, -61, -31, -31, -31, -31, -31});
+		setMetrics(8151, 275, 696, 10, 16);
+		setKern(947, -31, 951, -18, 952, -18, 957, -61, 959, -31, 962, -31, 963, -31, 964, -31, 967, -31);
 
-		setMetrics('\u1fdd', 305, 696);
-		setKern(new char[] {'\u0391', '\u039f', '\u1fbc'}, new int[] {-92, -31, -92});
+		setMetrics(8157, 305, 696);
+		setKern(913, -92, 927, -31, 8124, -92);
 
-		setMetrics('\u1fde', 305, 696);
-		setKern(new char[] {'\u0391', '\u039f', '\u1fbc'}, new int[] {-92, -31, -92});
+		setMetrics(8158, 305, 696);
+		setKern(913, -92, 927, -31, 8124, -92);
 
-		setMetrics('\u1fdf', 367, 696);
-		setKern(new char[] {'\u0391', '\u1fbc'}, new int[] {-122, -122});
+		setMetrics(8159, 367, 696);
+		setKern(913, -122, 8124, -122);
 
-		setMetrics('\u1fe2', 550, 695, 10);
+		setMetrics(8162, 550, 695, 10);
 
-		setMetrics('\u1fe4', 519, 696, 266);
+		setMetrics(8164, 519, 696, 266);
 
-		setMetrics('\u1fe5', 519, 696, 266);
+		setMetrics(8165, 519, 696, 266);
 
-		setMetrics('\u1fe6', 550, 640, 10);
+		setMetrics(8166, 550, 640, 10);
 
-		setMetrics('\u1fe7', 550, 695, 10);
+		setMetrics(8167, 550, 695, 10);
 
-		setMetrics('\u1fed', 305, 695);
+		setMetrics(8173, 305, 695);
 
-		setMetrics('\u1fef', 183, 695);
-		setKern(new char[] {'\u0391', '\u039f', '\u03a9', '\u1fbc', '\u1ffc'}, new int[] {-122, -61, -31, -122, -31});
+		setMetrics(8175, 183, 695);
+		setKern(913, -122, 927, -61, 937, -31, 8124, -122, 8188, -31);
 
-		setMetrics('\u1ff2', 733, 695, 247);
+		setMetrics(8178, 733, 695, 247);
 
-		setMetrics('\u1ff3', 733, 481, 247);
+		setMetrics(8179, 733, 481, 247);
 
-		setMetrics('\u1ff4', 733, 695, 247);
+		setMetrics(8180, 733, 695, 247);
 
-		setMetrics('\u1ff6', 733, 641, 11);
+		setMetrics(8182, 733, 641, 11);
 
-		setMetrics('\u1ff7', 733, 641, 247);
+		setMetrics(8183, 733, 641, 247);
 
-		setMetrics('\u1ffc', 794, 709, 247);
+		setMetrics(8188, 794, 709, 247);
 
-		setMetrics('\u1ffe', 244, 696);
-		setKern(new char[] {'\u0391', '\u039f', '\u03a9', '\u1fbc', '\u1ffc'}, new int[] {-183, -61, -31, -183, -31});
+		setMetrics(8190, 244, 696);
+		setKern(913, -183, 927, -61, 937, -31, 8124, -183, 8188, -31);
 
-		setMetrics('\u2019', 305, 696);
+		setMetrics(8217, 305, 696);
 
-		setMetrics('\u2329', 428, 751, 250);
+		setMetrics(9001, 428, 751, 250);
 
-		setMetrics('\u232a', 428, 751, 250);
+		setMetrics(9002, 428, 751, 250);
 
 	}
 }

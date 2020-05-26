@@ -6,310 +6,310 @@ import com.himamis.retex.renderer.share.FontInfo;
 final class CMBSY10 extends FontInfo {
 
 	CMBSY10(final String ttfPath) {
-		super(0, ttfPath, 444, 0, 1149, '\0');
+		super(0, ttfPath, 444, 0, 1149, 0);
 	}
 
 	@Override
 	protected final void initMetrics() {
-		setMetrics('\241', 894, 633, 133);
+		setMetrics(161, 894, 633, 133);
 
-		setMetrics('\242', 319, 473, -26);
+		setMetrics(162, 319, 473, -26);
 
-		setMetrics('\243', 894, 633, 133);
+		setMetrics(163, 894, 633, 133);
 
-		setMetrics('\244', 574, 472, -27);
+		setMetrics(164, 574, 472, -27);
 
-		setMetrics('\245', 894, 633, 133);
+		setMetrics(165, 894, 633, 133);
 
-		setMetrics('\246', 574, 473, -26);
+		setMetrics(166, 574, 473, -26);
 
-		setMetrics('\247', 894, 633, 133);
+		setMetrics(167, 894, 633, 133);
 
-		setMetrics('\250', 894, 633, 133);
+		setMetrics(168, 894, 633, 133);
 
-		setMetrics('\251', 894, 633, 133);
+		setMetrics(169, 894, 633, 133);
 
-		setMetrics('\252', 894, 633, 133);
+		setMetrics(170, 894, 633, 133);
 
-		setMetrics('\253', 894, 633, 133);
+		setMetrics(171, 894, 633, 133);
 
-		setMetrics('\256', 894, 633, 133);
+		setMetrics(174, 894, 633, 133);
 
-		setMetrics('\257', 894, 633, 133);
+		setMetrics(175, 894, 633, 133);
 
-		setMetrics('\260', 1149, 694, 194);
+		setMetrics(176, 1149, 694, 194);
 
-		setMetrics('\261', 574, 473, -26);
+		setMetrics(177, 574, 473, -26);
 
-		setMetrics('\262', 574, 473, -26);
+		setMetrics(178, 574, 473, -26);
 
-		setMetrics('\263', 894, 502, 2);
+		setMetrics(179, 894, 502, 2);
 
-		setMetrics('\264', 894, 502, 2);
+		setMetrics(180, 894, 502, 2);
 
-		setMetrics('\265', 894, 696, 196);
+		setMetrics(181, 894, 696, 196);
 
-		setMetrics('\266', 894, 696, 196);
+		setMetrics(182, 894, 696, 196);
 
-		setMetrics('\267', 894, 696, 196);
+		setMetrics(183, 894, 696, 196);
 
-		setMetrics('\270', 894, 696, 196);
+		setMetrics(184, 894, 696, 196);
 
-		setMetrics('\271', 894, 696, 196);
+		setMetrics(185, 894, 696, 196);
 
-		setMetrics('\272', 894, 696, 196);
+		setMetrics(186, 894, 696, 196);
 
-		setMetrics('\273', 894, 391, -108);
+		setMetrics(187, 894, 391, -108);
 
-		setMetrics('\274', 894, 524, 24);
+		setMetrics(188, 894, 524, 24);
 
-		setMetrics('\275', 894, 585, 85);
+		setMetrics(189, 894, 585, 85);
 
-		setMetrics('\276', 894, 585, 85);
+		setMetrics(190, 894, 585, 85);
 
-		setMetrics('\277', 1149, 585, 85);
+		setMetrics(191, 1149, 585, 85);
 
-		setMetrics('\300', 1149, 585, 85);
+		setMetrics(192, 1149, 585, 85);
 
-		setMetrics('\301', 894, 585, 85);
+		setMetrics(193, 894, 585, 85);
 
-		setMetrics('\302', 894, 585, 85);
+		setMetrics(194, 894, 585, 85);
 
-		setMetrics('\303', 1149, 391, -108);
+		setMetrics(195, 1149, 391, -108);
 
-		setMetrics('\041', 1149, 391, -108);
+		setMetrics(33, 1149, 391, -108);
 
-		setMetrics('\042', 574, 694, 194);
-		setNextLarger(Configuration.getFonts().cmex10, '\170');
+		setMetrics(34, 574, 694, 194);
+		setNextLarger(Configuration.getFonts().cmex10, 120);
 
-		setMetrics('\043', 574, 694, 194);
-		setNextLarger(Configuration.getFonts().cmex10, '\171');
+		setMetrics(35, 574, 694, 194);
+		setNextLarger(Configuration.getFonts().cmex10, 121);
 
-		setMetrics('\044', 1149, 391, -108);
+		setMetrics(36, 1149, 391, -108);
 
-		setMetrics('\045', 1149, 694, 194);
+		setMetrics(37, 1149, 694, 194);
 
-		setMetrics('\046', 1149, 694, 194);
+		setMetrics(38, 1149, 694, 194);
 
-		setMetrics('\047', 894, 502, 2);
+		setMetrics(39, 894, 502, 2);
 
-		setMetrics('\050', 1149, 391, -108);
+		setMetrics(40, 1149, 391, -108);
 
-		setMetrics('\051', 1149, 391, -108);
+		setMetrics(41, 1149, 391, -108);
 
-		setMetrics('\052', 702, 694, 194);
-		setNextLarger(Configuration.getFonts().cmex10, '\176');
+		setMetrics(42, 702, 694, 194);
+		setNextLarger(Configuration.getFonts().cmex10, 126);
 
-		setMetrics('\053', 702, 694, 194);
-		setNextLarger(Configuration.getFonts().cmex10, '\304');
+		setMetrics(43, 702, 694, 194);
+		setNextLarger(Configuration.getFonts().cmex10, 196);
 
-		setMetrics('\054', 1149, 391, -108);
+		setMetrics(44, 1149, 391, -108);
 
-		setMetrics('\055', 1149, 694, 194);
+		setMetrics(45, 1149, 694, 194);
 
-		setMetrics('\056', 1149, 694, 194);
+		setMetrics(46, 1149, 694, 194);
 
-		setMetrics('\057', 894, 444);
+		setMetrics(47, 894, 444);
 
-		setMetrics('\060', 344, 555);
+		setMetrics(48, 344, 555);
 
-		setMetrics('\061', 1149, 444);
+		setMetrics(49, 1149, 444);
 
-		setMetrics('\062', 766, 585, 85);
+		setMetrics(50, 766, 585, 85);
 
-		setMetrics('\063', 766, 585, 85);
+		setMetrics(51, 766, 585, 85);
 
-		setMetrics('\064', 1022, 694, 194);
+		setMetrics(52, 1022, 694, 194);
 
-		setMetrics('\065', 1022, 694, 194);
+		setMetrics(53, 1022, 694, 194);
 
-		setMetrics('\066', 0, 694, 194);
+		setMetrics(54, 0, 694, 194);
 
-		setMetrics('\067', 0, 391, -108);
+		setMetrics(55, 0, 391, -108);
 
-		setMetrics('\070', 638, 694);
+		setMetrics(56, 638, 694);
 
-		setMetrics('\071', 638, 694);
+		setMetrics(57, 638, 694);
 
-		setMetrics('\072', 766, 444);
+		setMetrics(58, 766, 444);
 
-		setMetrics('\073', 574, 750, 55);
+		setMetrics(59, 574, 750, 55);
 
-		setMetrics('\074', 830, 694);
+		setMetrics(60, 830, 694);
 
-		setMetrics('\075', 830, 694);
+		setMetrics(61, 830, 694);
 
-		setMetrics('\076', 894, 694);
+		setMetrics(62, 894, 694);
 
-		setMetrics('\077', 894, 694);
+		setMetrics(63, 894, 694);
 
-		setMetrics('\100', 702, 694);
+		setMetrics(64, 702, 694);
 
-		setMetrics('\101', 920, 686);
-		setKern(new char[] {'\060'}, new int[] {223});
+		setMetrics(65, 920, 686);
+		setKern(48, 223);
 
-		setMetrics('\102', 747, 686, 0, 22);
-		setKern(new char[] {'\060'}, new int[] {159});
+		setMetrics(66, 747, 686, 0, 22);
+		setKern(48, 159);
 
-		setMetrics('\103', 612, 686, 0, 47);
-		setKern(new char[] {'\060'}, new int[] {159});
+		setMetrics(67, 612, 686, 0, 47);
+		setKern(48, 159);
 
-		setMetrics('\104', 892, 686, 0, 31);
-		setKern(new char[] {'\060'}, new int[] {95});
+		setMetrics(68, 892, 686, 0, 31);
+		setKern(48, 95);
 
-		setMetrics('\105', 606, 686, 0, 82);
-		setKern(new char[] {'\060'}, new int[] {127});
+		setMetrics(69, 606, 686, 0, 82);
+		setKern(48, 127);
 
-		setMetrics('\106', 814, 686, 0, 101);
-		setKern(new char[] {'\060'}, new int[] {127});
+		setMetrics(70, 814, 686, 0, 101);
+		setKern(48, 127);
 
-		setMetrics('\107', 681, 686, 97, 55);
-		setKern(new char[] {'\060'}, new int[] {127});
+		setMetrics(71, 681, 686, 97, 55);
+		setKern(48, 127);
 
-		setMetrics('\110', 987, 686);
-		setKern(new char[] {'\060'}, new int[] {127});
+		setMetrics(72, 987, 686);
+		setKern(48, 127);
 
-		setMetrics('\111', 642, 686, 0, 81);
-		setKern(new char[] {'\060'}, new int[] {31});
+		setMetrics(73, 642, 686, 0, 81);
+		setKern(48, 31);
 
-		setMetrics('\112', 779, 686, 97, 187);
-		setKern(new char[] {'\060'}, new int[] {191});
+		setMetrics(74, 779, 686, 97, 187);
+		setKern(48, 191);
 
-		setMetrics('\113', 871, 686);
-		setKern(new char[] {'\060'}, new int[] {63});
+		setMetrics(75, 871, 686);
+		setKern(48, 63);
 
-		setMetrics('\114', 788, 686);
-		setKern(new char[] {'\060'}, new int[] {159});
+		setMetrics(76, 788, 686);
+		setKern(48, 159);
 
-		setMetrics('\115', 1377, 686);
-		setKern(new char[] {'\060'}, new int[] {159});
+		setMetrics(77, 1377, 686);
+		setKern(48, 159);
 
-		setMetrics('\116', 937, 686, 0, 152);
-		setKern(new char[] {'\060'}, new int[] {95});
+		setMetrics(78, 937, 686, 0, 152);
+		setKern(48, 95);
 
-		setMetrics('\117', 905, 686, 0, 31);
-		setKern(new char[] {'\060'}, new int[] {127});
+		setMetrics(79, 905, 686, 0, 31);
+		setKern(48, 127);
 
-		setMetrics('\120', 809, 686, 0, 84);
-		setKern(new char[] {'\060'}, new int[] {95});
+		setMetrics(80, 809, 686, 0, 84);
+		setKern(48, 95);
 
-		setMetrics('\121', 939, 686, 97);
-		setKern(new char[] {'\060'}, new int[] {127});
+		setMetrics(81, 939, 686, 97);
+		setKern(48, 127);
 
-		setMetrics('\122', 989, 686);
-		setKern(new char[] {'\060'}, new int[] {95});
+		setMetrics(82, 989, 686);
+		setKern(48, 95);
 
-		setMetrics('\123', 696, 686, 0, 71);
-		setKern(new char[] {'\060'}, new int[] {159});
+		setMetrics(83, 696, 686, 0, 71);
+		setKern(48, 159);
 
-		setMetrics('\124', 644, 686, 0, 267);
-		setKern(new char[] {'\060'}, new int[] {31});
+		setMetrics(84, 644, 686, 0, 267);
+		setKern(48, 31);
 
-		setMetrics('\125', 714, 686, 0, 101);
-		setKern(new char[] {'\060'}, new int[] {95});
+		setMetrics(85, 714, 686, 0, 101);
+		setKern(48, 95);
 
-		setMetrics('\126', 737, 686, 0, 84);
-		setKern(new char[] {'\060'}, new int[] {31});
+		setMetrics(86, 737, 686, 0, 84);
+		setKern(48, 31);
 
-		setMetrics('\127', 1168, 686, 0, 84);
-		setKern(new char[] {'\060'}, new int[] {95});
+		setMetrics(87, 1168, 686, 0, 84);
+		setKern(48, 95);
 
-		setMetrics('\130', 816, 686, 0, 147);
-		setKern(new char[] {'\060'}, new int[] {159});
+		setMetrics(88, 816, 686, 0, 147);
+		setKern(48, 159);
 
-		setMetrics('\131', 758, 686, 97, 84);
-		setKern(new char[] {'\060'}, new int[] {95});
+		setMetrics(89, 758, 686, 97, 84);
+		setKern(48, 95);
 
-		setMetrics('\132', 818, 686, 0, 81);
-		setKern(new char[] {'\060'}, new int[] {159});
+		setMetrics(90, 818, 686, 0, 81);
+		setKern(48, 159);
 
-		setMetrics('\133', 766, 555);
+		setMetrics(91, 766, 555);
 
-		setMetrics('\134', 766, 555);
+		setMetrics(92, 766, 555);
 
-		setMetrics('\135', 766, 555);
+		setMetrics(93, 766, 555);
 
-		setMetrics('\136', 766, 555);
+		setMetrics(94, 766, 555);
 
-		setMetrics('\137', 766, 555);
+		setMetrics(95, 766, 555);
 
-		setMetrics('\140', 702, 694);
+		setMetrics(96, 702, 694);
 
-		setMetrics('\141', 702, 694);
+		setMetrics(97, 702, 694);
 
-		setMetrics('\142', 511, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\245');
+		setMetrics(98, 511, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 165);
 
-		setMetrics('\143', 511, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\246');
+		setMetrics(99, 511, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 166);
 
-		setMetrics('\144', 511, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\247');
+		setMetrics(100, 511, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 167);
 
-		setMetrics('\145', 511, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\250');
+		setMetrics(101, 511, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 168);
 
-		setMetrics('\146', 574, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\251');
+		setMetrics(102, 574, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 169);
 
-		setMetrics('\147', 574, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\252');
+		setMetrics(103, 574, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 170);
 
-		setMetrics('\150', 447, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\253');
+		setMetrics(104, 447, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 171);
 
-		setMetrics('\151', 447, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\256');
+		setMetrics(105, 447, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 174);
 
-		setMetrics('\152', 319, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\257');
+		setMetrics(106, 319, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 175);
 
-		setMetrics('\153', 574, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\260');
+		setMetrics(107, 574, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 176);
 
-		setMetrics('\154', 574, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\077');
+		setMetrics(108, 574, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 63);
 
-		setMetrics('\155', 702, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\167');
+		setMetrics(109, 702, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 119);
 
-		setMetrics('\156', 574, 750, 250);
-		setNextLarger(Configuration.getFonts().cmex10, '\262');
+		setMetrics(110, 574, 750, 250);
+		setNextLarger(Configuration.getFonts().cmex10, 178);
 
-		setMetrics('\157', 319, 694, 194);
+		setMetrics(111, 319, 694, 194);
 
-		setMetrics('\160', 958, 60, 940);
-		setNextLarger(Configuration.getFonts().cmex10, '\160');
+		setMetrics(112, 958, 60, 940);
+		setNextLarger(Configuration.getFonts().cmex10, 112);
 
-		setMetrics('\161', 899, 686);
+		setMetrics(113, 899, 686);
 
-		setMetrics('\162', 958, 686);
+		setMetrics(114, 958, 686);
 
-		setMetrics('\163', 568, 694, 194, 127);
+		setMetrics(115, 568, 694, 194, 127);
 
-		setMetrics('\164', 766, 555);
+		setMetrics(116, 766, 555);
 
-		setMetrics('\165', 766, 555);
+		setMetrics(117, 766, 555);
 
-		setMetrics('\166', 894, 696, 196);
+		setMetrics(118, 894, 696, 196);
 
-		setMetrics('\167', 894, 696, 196);
+		setMetrics(119, 894, 696, 196);
 
-		setMetrics('\170', 526, 694, 194);
+		setMetrics(120, 526, 694, 194);
 
-		setMetrics('\171', 511, 694, 194);
+		setMetrics(121, 511, 694, 194);
 
-		setMetrics('\172', 511, 694, 194);
+		setMetrics(122, 511, 694, 194);
 
-		setMetrics('\173', 702, 694, 194);
+		setMetrics(123, 702, 694, 194);
 
-		setMetrics('\174', 894, 694, 129);
+		setMetrics(124, 894, 694, 129);
 
-		setMetrics('\175', 894, 694, 129);
+		setMetrics(125, 894, 694, 129);
 
-		setMetrics('\176', 894, 694, 129);
+		setMetrics(126, 894, 694, 129);
 
-		setMetrics('\304', 894, 694, 129);
+		setMetrics(196, 894, 694, 129);
 
 	}
 }

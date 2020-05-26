@@ -87,12 +87,12 @@ public class FontInfo {
 	protected char[][] extensions;
 
 	public FontInfo(int size, String path, int xHeight, int space,
-			int quad, char skewChar) {
+			int quad, int skewChar) {
 		this.path = path;
 		this.xHeight = xHeight / 1000.;
 		this.space = space / 1000.;
 		this.quad = quad / 1000.;
-		this.skewChar = skewChar;
+		this.skewChar = (char) skewChar;
 		this.size = size == 0 ? NUMBER_OF_CHAR_CODES : size;
 		this.metrics = new double[this.size][];
 	}
@@ -224,8 +224,8 @@ public class FontInfo {
 
 	char current;
 
-	public void setMetrics(char c, int... metrics) {
-		current = c;
+	public void setMetrics(int c, int... metrics) {
+		current = (char) c;
 
 		if (metrics.length == 2) {
 			setMetrics(current, new double[] {metrics[0] / 1000., metrics[1] / 1000., 0, 0});
@@ -236,24 +236,24 @@ public class FontInfo {
 		}
 	}
 
-	public void setNextLarger(FontInfo fi, char nextLarger) {
-		setNextLarger(current, nextLarger, fi);
+	public void setNextLarger(FontInfo fi, int nextLarger) {
+		setNextLarger(current, (char) nextLarger, fi);
 	}
 
-	public void setKern(char[] kernCode, int[] kernValue) {
-		for (int i = 0; i < kernCode.length; i++) {
-			addKern(current, kernCode[i], kernValue[i] / 1000.);
+	public void setKern(int... kerns) {
+		for (int i = 0; i < kerns.length; i += 2) {
+			addKern(current, (char) kerns[i], kerns[i + 1] / 1000.);
 		}
 	}
 
-	public void setLigatures(char... chars) {
+	public void setLigatures(int... chars) {
 		for (int i = 0; i < chars.length; i += 2) {
-			addLigature(current, chars[i], chars[i + 1]);
+			addLigature(current, (char) chars[i], (char) chars[i + 1]);
 		}
 	}
 
-	public void setExtension(char... cc) {
-		setExtension(current, cc);
+	public void setExtension(int a, int b, int c, int d) {
+		setExtension(current, new char[] {(char) a, (char) b, (char) c, (char) d});
 	}
 
 	public void setMetrics(char c, double[] arr) {
